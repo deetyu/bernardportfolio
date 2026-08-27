@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, ArrowDown } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { ProjectCard } from "@/components/shared/ProjectCard";
@@ -20,7 +20,6 @@ const projectImages: Record<string, string> = {
   "selected-marks": marksHero,
 };
 
-const skillTags = ["Logofolio", "Branding", "Packaging", "Art Direction"];
 
 const services = [
   {
@@ -41,72 +40,70 @@ export default function Index() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-dvh flex items-center justify-center overflow-hidden pt-24 md:pt-32">
-        {/* Ambient Color Blobs */}
-        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <div className="absolute top-[16%] right-[24%] w-52 h-52 md:w-72 md:h-72 rounded-full bg-blob-green blur-[70px] opacity-70 animate-blob" />
-          <div className="absolute top-[10%] right-[10%] w-60 h-60 md:w-80 md:h-80 rounded-full bg-blob-blue blur-[80px] opacity-60 animate-blob [animation-delay:-4s]" />
-          <div className="absolute top-[38%] right-[18%] w-56 h-56 md:w-72 md:h-72 rounded-full bg-blob-orange blur-[75px] opacity-60 animate-blob [animation-delay:-8s]" />
-        </div>
+      <section className="min-h-dvh flex items-center pt-24 md:pt-32 pb-16 md:pb-24 px-6 md:px-12 lg:px-20">
+        <div className="container-editorial w-full border-t border-divider pt-10 md:pt-14">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10 lg:gap-16">
+            {/* Name + Statement */}
+            <div className="space-y-8">
+              <ScrollReveal>
+                <header className="space-y-2">
+                  <p className="text-xs font-semibold uppercase tracking-widest text-ink-muted">
+                    Senior Brand &amp; Visual Designer
+                  </p>
+                  <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl tracking-tight text-ink leading-[0.9]">
+                    Bernardo
+                    <br />
+                    Orozco
+                  </h1>
+                </header>
+              </ScrollReveal>
 
-        <div className="relative z-10 container-editorial px-6 md:px-12 lg:px-20 py-16 md:py-24 flex flex-col items-center text-center">
-          {/* Headline with Circular Badge */}
-          <div className="relative">
-            <ScrollReveal>
-              <h1 className="font-serif italic text-ink leading-[0.85] tracking-tight text-[clamp(3.5rem,13vw,10.5rem)] select-none">
-                Bernardo
-                <br />
-                Orozco
-              </h1>
-            </ScrollReveal>
+              <ScrollReveal delay={150}>
+                <p className="max-w-xl text-xl md:text-2xl text-ink-light leading-snug">
+                  Strategic design leader with 8+ years of experience building
+                  visual systems that scale. Based in Guadalajara, Mexico —
+                  available for remote senior roles worldwide.
+                </p>
+              </ScrollReveal>
+            </div>
 
-            {/* Rotating Circular Badge */}
-            <ScrollReveal
-              delay={200}
-              className="absolute -top-10 -right-8 md:-top-14 md:-right-24 w-28 h-28 md:w-44 md:h-44 pointer-events-none"
-            >
-              <svg viewBox="0 0 100 100" className="w-full h-full animate-spin-slow">
-                <defs>
-                  <path
-                    id="heroBadgePath"
-                    d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
-                  />
-                </defs>
-                <text className="fill-ink font-sans font-medium uppercase text-[8px] tracking-[0.22em]">
-                  <textPath href="#heroBadgePath">
-                    Senior Brand Designer • Creative Direction •
-                  </textPath>
-                </text>
-              </svg>
+            {/* Meta Column */}
+            <ScrollReveal delay={250}>
+              <dl className="flex flex-col gap-5 text-sm font-medium border-l border-divider pl-8 shrink-0">
+                <div className="flex flex-col">
+                  <dt className="text-ink-muted uppercase text-[10px] tracking-widest mb-1">Experience</dt>
+                  <dd className="text-ink">8+ Years Professional</dd>
+                </div>
+                <div className="flex flex-col">
+                  <dt className="text-ink-muted uppercase text-[10px] tracking-widest mb-1">Location</dt>
+                  <dd className="text-ink">Guadalajara / Remote</dd>
+                </div>
+                <div className="flex flex-col">
+                  <dt className="text-ink-muted uppercase text-[10px] tracking-widest mb-1">Availability</dt>
+                  <dd className="text-ink">Full-time / Senior Roles</dd>
+                </div>
+              </dl>
             </ScrollReveal>
           </div>
 
-          {/* Skill Pill Tags */}
-          <ScrollReveal delay={300}>
-            <div className="mt-14 md:mt-20 flex flex-wrap justify-center gap-3 max-w-2xl">
-              {skillTags.map((tag) => (
-                <span
-                  key={tag}
-                  className="px-6 py-2 rounded-full border border-ink/15 text-sm font-medium text-ink/70 bg-cream/50 backdrop-blur-sm transition-all duration-300 hover:border-ink hover:text-ink cursor-default"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal delay={400} className="mt-10 md:mt-12">
-            <Link to="/work" className="arrow-link text-ink">
-              View Selected Work
-              <ArrowRight size={18} strokeWidth={1.5} />
-            </Link>
-          </ScrollReveal>
-
-          {/* Scroll Indicator */}
-          <ScrollReveal delay={500} className="hidden lg:block mt-16">
-            <div className="flex flex-col items-center gap-3 text-ink-muted">
-              <div className="w-px h-12 bg-divider origin-top animate-line-grow" />
-              <ArrowDown size={16} strokeWidth={1.5} className="animate-bounce" />
+          {/* CTAs */}
+          <ScrollReveal delay={350}>
+            <div className="mt-14 md:mt-16 flex flex-wrap gap-4">
+              <Link
+                to="/work"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-ink text-cream text-sm font-semibold hover:opacity-80 transition-opacity duration-200"
+              >
+                View Selected Work
+                <ArrowRight size={16} strokeWidth={1.5} />
+              </Link>
+              <a
+                href="/Bernardo_Orozco_Portfolio.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-8 py-4 border border-divider text-ink text-sm font-semibold hover:border-ink transition-colors duration-200"
+              >
+                Download Portfolio
+              </a>
             </div>
           </ScrollReveal>
         </div>
