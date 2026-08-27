@@ -44,6 +44,11 @@
     --ink-muted: 0 0% 48%;
     --divider: 40 10% 88%;
 
+    /* Hero Blob Accents */
+    --blob-blue: 210 90% 78%;
+    --blob-green: 115 80% 80%;
+    --blob-orange: 36 95% 76%;
+
     /* Sidebar */
     --sidebar-background: 45 15% 97%;
     --sidebar-foreground: 0 0% 29%;
@@ -91,6 +96,10 @@
     --ink-light: 45 15% 75%;
     --ink-muted: 45 10% 55%;
     --divider: 0 0% 18%;
+
+    --blob-blue: 210 70% 55%;
+    --blob-green: 115 55% 50%;
+    --blob-orange: 36 80% 58%;
 
     --sidebar-background: 0 0% 10%;
     --sidebar-foreground: 45 15% 75%;
@@ -208,6 +217,28 @@
 }
 
 @layer utilities {
+  /* Hero Blob Colors */
+  .bg-blob-blue {
+    background-color: hsl(var(--blob-blue));
+  }
+
+  .bg-blob-green {
+    background-color: hsl(var(--blob-green));
+  }
+
+  .bg-blob-orange {
+    background-color: hsl(var(--blob-orange));
+  }
+
+  /* Hero Animations */
+  .animate-spin-slow {
+    animation: spin 18s linear infinite;
+  }
+
+  .animate-blob {
+    animation: blob-float 12s ease-in-out infinite;
+  }
+
   /* Text Colors */
   .text-ink {
     color: hsl(var(--ink));
