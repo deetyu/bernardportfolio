@@ -38,28 +38,15 @@ export default function About() {
       {/* Hero Section */}
       <section className="pt-32 md:pt-40 pb-16 md:pb-24">
         <div className="container-editorial px-6 md:px-12 lg:px-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-end">
-            <div className="lg:col-span-7">
-              <ScrollReveal>
-                <p className="eyebrow mb-6">About</p>
-              </ScrollReveal>
-              <ScrollReveal delay={100}>
-                <h1 className="text-ink">
-                  Designing identities that grow with you.
-                </h1>
-              </ScrollReveal>
-            </div>
-            <div className="lg:col-span-5">
-              <ScrollReveal delay={200}>
-                <div className="aspect-[4/5] overflow-hidden">
-                  <img
-                    src={marksHero}
-                    alt="Selected marks by Bernardo Orozco"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </ScrollReveal>
-            </div>
+          <div className="max-w-4xl">
+            <ScrollReveal>
+              <p className="eyebrow mb-6">About</p>
+            </ScrollReveal>
+            <ScrollReveal delay={100}>
+              <h1 className="text-ink">
+                Designing identities that grow with you.
+              </h1>
+            </ScrollReveal>
           </div>
         </div>
       </section>
