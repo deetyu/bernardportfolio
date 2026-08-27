@@ -8,31 +8,31 @@ import { HorizontalScrollGallery } from "@/components/shared/HorizontalScrollGal
 import { Button } from "@/components/ui/button";
 import { projects } from "@/data/projects";
 
-import northlightHero from "@/assets/projects/northlight-hero.jpg";
-import meridianHero from "@/assets/projects/meridian-hero.jpg";
-import emberHero from "@/assets/projects/ember-hero.jpg";
-import stillwaterHero from "@/assets/projects/stillwater-hero.jpg";
+import aryaHero from "@/assets/projects/arya-hero.jpg";
+import sturioHero from "@/assets/projects/sturio-hero.jpg";
+import haciendaHero from "@/assets/projects/hacienda-hero.jpg";
+import marksHero from "@/assets/projects/marks-hero.jpg";
 import portraitMain from "@/assets/portrait-main.jpg";
 
 const projectImages: Record<string, string> = {
-  "northlight-studio": northlightHero,
-  "meridian-architects": meridianHero,
-  "ember-and-co": emberHero,
-  "stillwater-journal": stillwaterHero,
+  "arya-cosmetics": aryaHero,
+  "sturio": sturioHero,
+  "ex-hacienda-de-cedros": haciendaHero,
+  "selected-marks": marksHero,
 };
 
 const services = [
   {
     title: "Brand Strategy",
-    description: "Positioning and narrative frameworks that create lasting differentiation.",
+    description: "Positioning and narrative frameworks that create lasting differentiation for growing brands.",
   },
   {
     title: "Visual Identity",
-    description: "Distinctive design systems built on strategic foundations.",
+    description: "Distinctive design systems built on strategic foundations and made to scale.",
   },
   {
     title: "Art Direction",
-    description: "Creative guidance that brings brand visions to life with precision.",
+    description: "Creative guidance that brings brand visions to life with precision across every touchpoint.",
   },
 ];
 
@@ -46,16 +46,16 @@ export default function Index() {
             {/* Text Content */}
             <div className="lg:col-span-7 order-2 lg:order-1">
               <ScrollReveal>
-                <p className="eyebrow mb-6">Design & Brand Strategy</p>
+                <p className="eyebrow mb-6">Senior Brand & Visual Designer</p>
               </ScrollReveal>
               <ScrollReveal delay={100}>
                 <h1 className="text-ink mb-8">
-                  Editorial Portfolio
+                  Bernardo Orozco
                 </h1>
               </ScrollReveal>
               <ScrollReveal delay={200}>
                 <p className="text-lg md:text-xl text-ink-light max-w-xl mb-10">
-                  Refined portfolio for creatives
+                  Identity systems for brands ready to grow into themselves. 8+ years helping startups and growing businesses build distinctive, scalable brands.
                 </p>
               </ScrollReveal>
 
@@ -76,7 +76,7 @@ export default function Index() {
                 <div className="aspect-[4/5] bg-cream-darker overflow-hidden">
                   <img
                     src={portraitMain}
-                    alt="Elena Vance - Designer"
+                    alt="Bernardo Orozco - Designer"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -143,14 +143,12 @@ export default function Index() {
               </ScrollReveal>
               <ScrollReveal delay={100}>
                 <blockquote className="font-serif text-3xl md:text-4xl text-ink leading-snug mb-8">
-                  "Good design is invisible. It solves problems without drawing attention to itself."
+                  "I specialize in building visual systems that stay consistent long after the project ends."
                 </blockquote>
               </ScrollReveal>
               <ScrollReveal delay={200}>
                 <p className="text-ink-light mb-8">
-                  With over a decade of experience working with brands across industries, 
-                  I bring a strategic approach to every project. My work is rooted in the 
-                  belief that the best brands are built on clarity, consistency, and restraint.
+                  I'm a Senior Brand & Visual Designer with 8+ years of experience helping startups and growing businesses build distinctive, scalable brands. Since 2022 I've run my own independent studio, working directly with founders across technology, esports, hospitality, e-commerce, and consumer brands.
                 </p>
               </ScrollReveal>
               <ScrollReveal delay={300}>
@@ -167,7 +165,7 @@ export default function Index() {
                 <div className="aspect-[4/5] bg-cream-darker overflow-hidden">
                   <img
                     src={portraitMain}
-                    alt="Elena Vance portrait"
+                    alt="Bernardo Orozco portrait"
                     className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                   />
                 </div>
@@ -220,8 +218,7 @@ export default function Index() {
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <p className="text-ink-light mb-10 max-w-xl mx-auto">
-                Currently accepting new projects for Q1 2025. I'd love to hear about 
-                what you're building.
+                Open to senior brand & visual design roles and long-term identity system projects. I'd love to hear what you're building.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={200}>

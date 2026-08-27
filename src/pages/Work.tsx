@@ -3,16 +3,16 @@ import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { ProjectCard } from "@/components/shared/ProjectCard";
 import { projects } from "@/data/projects";
 
-import northlightHero from "@/assets/projects/northlight-hero.jpg";
-import meridianHero from "@/assets/projects/meridian-hero.jpg";
-import emberHero from "@/assets/projects/ember-hero.jpg";
-import stillwaterHero from "@/assets/projects/stillwater-hero.jpg";
+import aryaHero from "@/assets/projects/arya-hero.jpg";
+import sturioHero from "@/assets/projects/sturio-hero.jpg";
+import haciendaHero from "@/assets/projects/hacienda-hero.jpg";
+import marksHero from "@/assets/projects/marks-hero.jpg";
 
 const projectImages: Record<string, string> = {
-  "northlight-studio": northlightHero,
-  "meridian-architects": meridianHero,
-  "ember-and-co": emberHero,
-  "stillwater-journal": stillwaterHero,
+  "arya-cosmetics": aryaHero,
+  "sturio": sturioHero,
+  "ex-hacienda-de-cedros": haciendaHero,
+  "selected-marks": marksHero,
 };
 
 export default function Work() {
@@ -68,8 +68,7 @@ export default function Work() {
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <p className="text-ink-light">
-                I'm always open to exploring new collaborations. 
-                Reach out to discuss how we might work together.
+                I'm always open to exploring new collaborations. Reach out to discuss how we might work together.
               </p>
             </ScrollReveal>
           </div>

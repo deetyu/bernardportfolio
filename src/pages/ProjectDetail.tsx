@@ -4,16 +4,22 @@ import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { projects } from "@/data/projects";
 
-import northlightHero from "@/assets/projects/northlight-hero.jpg";
-import meridianHero from "@/assets/projects/meridian-hero.jpg";
-import emberHero from "@/assets/projects/ember-hero.jpg";
-import stillwaterHero from "@/assets/projects/stillwater-hero.jpg";
+import aryaHero from "@/assets/projects/arya-hero.jpg";
+import aryaDetail1 from "@/assets/projects/arya-detail-1.jpg";
+import aryaDetail2 from "@/assets/projects/arya-detail-2.jpg";
+import sturioHero from "@/assets/projects/sturio-hero.jpg";
+import sturioDetail1 from "@/assets/projects/sturio-detail-1.jpg";
+import sturioDetail2 from "@/assets/projects/sturio-detail-2.jpg";
+import haciendaHero from "@/assets/projects/hacienda-hero.jpg";
+import haciendaDetail1 from "@/assets/projects/hacienda-detail-1.jpg";
+import haciendaDetail2 from "@/assets/projects/hacienda-detail-2.jpg";
+import marksHero from "@/assets/projects/marks-hero.jpg";
 
 const projectImages: Record<string, string[]> = {
-  "northlight-studio": [northlightHero, meridianHero, emberHero],
-  "meridian-architects": [meridianHero, stillwaterHero, northlightHero],
-  "ember-and-co": [emberHero, northlightHero, stillwaterHero],
-  "stillwater-journal": [stillwaterHero, emberHero, meridianHero],
+  "arya-cosmetics": [aryaHero, aryaDetail1, aryaDetail2],
+  "sturio": [sturioHero, sturioDetail1, sturioDetail2],
+  "ex-hacienda-de-cedros": [haciendaHero, haciendaDetail1, haciendaDetail2],
+  "selected-marks": [marksHero, marksHero, marksHero],
 };
 
 export default function ProjectDetail() {
@@ -27,7 +33,7 @@ export default function ProjectDetail() {
   }
 
   const nextProject = projects[(projectIndex + 1) % projects.length];
-  const images = projectImages[slug!] || [northlightHero];
+  const images = projectImages[slug!] || [aryaHero];
 
   return (
     <Layout>
