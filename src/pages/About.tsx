@@ -53,8 +53,8 @@ export default function About() {
               <ScrollReveal delay={200}>
                 <div className="aspect-[4/5] overflow-hidden">
                   <img
-                    src={portraitMain}
-                    alt="Bernardo Orozco"
+                    src={marksHero}
+                    alt="Selected marks by Bernardo Orozco"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -150,8 +150,8 @@ export default function About() {
               <ScrollReveal>
                 <div className="aspect-[16/10] overflow-hidden">
                   <img
-                    src={workspace}
-                    alt="Bernardo's workspace"
+                    src={haciendaHero}
+                    alt="Ex Hacienda de Cedros brand imagery"
                     className="w-full h-full object-cover"
                   />
                 </div>
