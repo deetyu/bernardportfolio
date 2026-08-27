@@ -12,7 +12,6 @@ import aryaHero from "@/assets/projects/arya-hero.jpg";
 import sturioHero from "@/assets/projects/sturio-hero.jpg";
 import haciendaHero from "@/assets/projects/hacienda-hero.jpg";
 import marksHero from "@/assets/projects/marks-hero.jpg";
-import portraitMain from "@/assets/portrait-main.jpg";
 
 const projectImages: Record<string, string> = {
   "arya-cosmetics": aryaHero,
@@ -20,6 +19,8 @@ const projectImages: Record<string, string> = {
   "ex-hacienda-de-cedros": haciendaHero,
   "selected-marks": marksHero,
 };
+
+const skillTags = ["Logofolio", "Branding", "Packaging", "Art Direction"];
 
 const services = [
   {

@@ -291,3 +291,15 @@
     display: none;
   }
 }
+
+@keyframes blob-float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(12px, -18px) scale(1.06);
+  }
+  66% {
+    transform: translate(-10px, 10px) scale(0.95);
+  }
+}
