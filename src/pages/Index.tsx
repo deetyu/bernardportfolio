@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, ArrowDown } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { ProjectCard } from "@/components/shared/ProjectCard";
@@ -20,7 +20,6 @@ const projectImages: Record<string, string> = {
   "selected-marks": marksHero,
 };
 
-const skillTags = ["Logofolio", "Branding", "Packaging", "Art Direction"];
 
 const services = [
   {
