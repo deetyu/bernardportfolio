@@ -1,47 +1,45 @@
 import { Link } from "react-router-dom";
-
-const navLinks = [
-  { name: "Work", path: "/work" },
-  { name: "About", path: "/about" },
-  { name: "Services", path: "/services" },
-  { name: "Contact", path: "/contact" },
-];
+import { ArrowUpRight } from "lucide-react";
 
 const socialLinks = [
-  { name: "Instagram", url: "https://instagram.com" },
-  { name: "LinkedIn", url: "https://linkedin.com" },
-  { name: "Twitter", url: "https://twitter.com" },
+  { name: "Behance", href: "https://www.behance.net/btm20" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/boboteme/" },
+  { name: "Email", href: "mailto:boboteme@gmail.com" },
 ];
 
-export function Footer() {
+const navLinks = [
+  { name: "Work", href: "/work" },
+  { name: "About", href: "/about" },
+  { name: "Services", href: "/services" },
+  { name: "Contact", href: "/contact" },
+];
+
+export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-cream-dark border-t border-divider">
-      <div className="container-editorial px-6 md:px-12 lg:px-20 py-16 md:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8">
-          {/* Logo & Tagline */}
-          <div className="md:col-span-4">
-            <Link
-              to="/"
-              className="font-serif text-2xl text-ink transition-opacity duration-300 hover:opacity-70"
-            >
-              Elena Vance
+    <footer className="bg-ink text-cream py-16 md:py-20">
+      <div className="container-editorial px-6 md:px-12 lg:px-20">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 pb-12 md:pb-16 border-b border-cream/20">
+          {/* Brand */}
+          <div className="md:col-span-5">
+            <Link to="/" className="font-serif text-2xl md:text-3xl text-cream block mb-4">
+              Bernardo Orozco
             </Link>
-            <p className="mt-4 text-sm text-ink-muted max-w-xs">
-              Designer and brand strategist crafting distinctive identities with intention and restraint.
+            <p className="text-cream/60 max-w-sm">
+              Senior Brand & Visual Designer crafting distinctive identities and scalable design systems.
             </p>
           </div>
 
           {/* Navigation */}
-          <div className="md:col-span-3 md:col-start-6">
-            <h4 className="eyebrow mb-4">Navigation</h4>
+          <div className="md:col-span-3 md:col-start-7">
+            <p className="text-xs uppercase tracking-widest text-cream/40 mb-6">Navigation</p>
             <ul className="space-y-3">
               {navLinks.map((link) => (
-                <li key={link.path}>
+                <li key={link.name}>
                   <Link
-                    to={link.path}
-                    className="text-sm text-ink-light transition-colors duration-300 hover:text-ink"
+                    to={link.href}
+                    className="text-cream/80 hover:text-cream transition-colors duration-300"
                   >
                     {link.name}
                   </Link>
@@ -52,17 +50,18 @@ export function Footer() {
 
           {/* Social */}
           <div className="md:col-span-3">
-            <h4 className="eyebrow mb-4">Connect</h4>
+            <p className="text-xs uppercase tracking-widest text-cream/40 mb-6">Connect</p>
             <ul className="space-y-3">
               {socialLinks.map((link) => (
                 <li key={link.name}>
                   <a
-                    href={link.url}
+                    href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-ink-light transition-colors duration-300 hover:text-ink"
+                    className="inline-flex items-center gap-2 text-cream/80 hover:text-cream transition-colors duration-300"
                   >
                     {link.name}
+                    <ArrowUpRight size={14} strokeWidth={1.5} />
                   </a>
                 </li>
               ))}
@@ -70,13 +69,12 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Bottom */}
-        <div className="mt-16 pt-8 border-t border-divider flex flex-col md:flex-row md:items-center justify-between gap-4">
-          <p className="text-xs text-ink-muted">
-            © {currentYear} Elena Vance. All rights reserved.
+        <div className="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <p className="text-sm text-cream/40">
+            © {currentYear} Bernardo Orozco. All rights reserved.
           </p>
-          <p className="text-xs text-ink-muted">
-            New York, NY
+          <p className="text-sm text-cream/40">
+            Designed & built with intention.
           </p>
         </div>
       </div>
