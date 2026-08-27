@@ -4,8 +4,6 @@ import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { Button } from "@/components/ui/button";
 
-import marksHero from "@/assets/projects/marks-hero.jpg";
-import haciendaHero from "@/assets/projects/hacienda-hero.jpg";
 
 const values = [
   {
