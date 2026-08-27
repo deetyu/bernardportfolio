@@ -4,8 +4,6 @@ import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { Button } from "@/components/ui/button";
 
-import marksHero from "@/assets/projects/marks-hero.jpg";
-import haciendaHero from "@/assets/projects/hacienda-hero.jpg";
 
 const values = [
   {
@@ -38,28 +36,15 @@ export default function About() {
       {/* Hero Section */}
       <section className="pt-32 md:pt-40 pb-16 md:pb-24">
         <div className="container-editorial px-6 md:px-12 lg:px-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-end">
-            <div className="lg:col-span-7">
-              <ScrollReveal>
-                <p className="eyebrow mb-6">About</p>
-              </ScrollReveal>
-              <ScrollReveal delay={100}>
-                <h1 className="text-ink">
-                  Designing identities that grow with you.
-                </h1>
-              </ScrollReveal>
-            </div>
-            <div className="lg:col-span-5">
-              <ScrollReveal delay={200}>
-                <div className="aspect-[4/5] overflow-hidden">
-                  <img
-                    src={marksHero}
-                    alt="Selected marks by Bernardo Orozco"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </ScrollReveal>
-            </div>
+          <div className="max-w-4xl">
+            <ScrollReveal>
+              <p className="eyebrow mb-6">About</p>
+            </ScrollReveal>
+            <ScrollReveal delay={100}>
+              <h1 className="text-ink">
+                Designing identities that grow with you.
+              </h1>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -145,28 +130,15 @@ export default function About() {
       {/* Personal */}
       <section className="section-padding bg-cream-dark">
         <div className="container-editorial px-6 md:px-12 lg:px-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            <div className="lg:col-span-6">
-              <ScrollReveal>
-                <div className="aspect-[16/10] overflow-hidden">
-                  <img
-                    src={haciendaHero}
-                    alt="Ex Hacienda de Cedros brand imagery"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </ScrollReveal>
-            </div>
-            <div className="lg:col-span-5 lg:col-start-8">
-              <ScrollReveal delay={100}>
-                <p className="eyebrow mb-4">Beyond Work</p>
-              </ScrollReveal>
-              <ScrollReveal delay={200}>
-                <p className="text-ink-light">
-                  Design is a lens through which I see the world. Outside the studio, I'm drawn to architecture, typography, and the quiet details that make spaces and objects memorable. I believe creativity is fueled by curiosity — and by taking time to simply observe.
-                </p>
-              </ScrollReveal>
-            </div>
+          <div className="max-w-3xl">
+            <ScrollReveal delay={100}>
+              <p className="eyebrow mb-4">Beyond Work</p>
+            </ScrollReveal>
+            <ScrollReveal delay={200}>
+              <p className="text-ink-light">
+                Design is a lens through which I see the world. Outside the studio, I'm drawn to architecture, typography, and the quiet details that make spaces and objects memorable. I believe creativity is fueled by curiosity — and by taking time to simply observe.
+              </p>
+            </ScrollReveal>
           </div>
         </div>
       </section>
