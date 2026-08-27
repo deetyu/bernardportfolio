@@ -132,28 +132,15 @@ export default function About() {
       {/* Personal */}
       <section className="section-padding bg-cream-dark">
         <div className="container-editorial px-6 md:px-12 lg:px-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            <div className="lg:col-span-6">
-              <ScrollReveal>
-                <div className="aspect-[16/10] overflow-hidden">
-                  <img
-                    src={haciendaHero}
-                    alt="Ex Hacienda de Cedros brand imagery"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </ScrollReveal>
-            </div>
-            <div className="lg:col-span-5 lg:col-start-8">
-              <ScrollReveal delay={100}>
-                <p className="eyebrow mb-4">Beyond Work</p>
-              </ScrollReveal>
-              <ScrollReveal delay={200}>
-                <p className="text-ink-light">
-                  Design is a lens through which I see the world. Outside the studio, I'm drawn to architecture, typography, and the quiet details that make spaces and objects memorable. I believe creativity is fueled by curiosity — and by taking time to simply observe.
-                </p>
-              </ScrollReveal>
-            </div>
+          <div className="max-w-3xl">
+            <ScrollReveal delay={100}>
+              <p className="eyebrow mb-4">Beyond Work</p>
+            </ScrollReveal>
+            <ScrollReveal delay={200}>
+              <p className="text-ink-light">
+                Design is a lens through which I see the world. Outside the studio, I'm drawn to architecture, typography, and the quiet details that make spaces and objects memorable. I believe creativity is fueled by curiosity — and by taking time to simply observe.
+              </p>
+            </ScrollReveal>
           </div>
         </div>
       </section>
