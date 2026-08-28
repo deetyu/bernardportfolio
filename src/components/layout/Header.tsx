@@ -40,10 +40,11 @@ export default function Header() {
           {/* Logo */}
           <Link 
             to="/" 
-            className="font-serif text-xl md:text-2xl text-ink tracking-tight"
+            className="font-serif italic text-xl md:text-2xl text-ink tracking-tight"
           >
-            Bernardo Orozco
+            Portfolio
           </Link>
+
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8 lg:gap-12">

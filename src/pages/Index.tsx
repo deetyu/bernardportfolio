@@ -41,54 +41,61 @@ export default function Index() {
     <Layout>
       {/* Hero Section */}
       <section className="min-h-dvh flex items-center pt-24 md:pt-32 pb-16 md:pb-24 px-6 md:px-12 lg:px-20">
-        <div className="container-editorial w-full border-t border-divider pt-10 md:pt-14">
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10 lg:gap-16">
-            {/* Name + Statement */}
-            <div className="space-y-8">
-              <ScrollReveal>
-                <header className="space-y-2">
-                  <p className="text-xs font-semibold uppercase tracking-widest text-ink-muted">
-                    Senior Brand &amp; Visual Designer
-                  </p>
-                  <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl tracking-tight text-ink leading-[0.9]">
-                    Bernardo
-                    <br />
-                    Orozco
-                  </h1>
-                </header>
-              </ScrollReveal>
-
-              <ScrollReveal delay={150}>
-                <p className="max-w-xl text-xl md:text-2xl text-ink-light leading-snug">
-                  Strategic design leader with 8+ years of experience building
-                  visual systems that scale. Based in Guadalajara, Mexico —
-                  available for remote senior roles worldwide.
-                </p>
-              </ScrollReveal>
+        <div className="container-editorial w-full">
+          {/* Masthead rule */}
+          <ScrollReveal>
+            <div className="flex items-baseline justify-between border-b border-ink pb-4">
+              <p className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-ink">
+                Senior Brand &amp; Visual Designer
+              </p>
+              <p className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-ink-muted">
+                Vol. 01 — 2026
+              </p>
             </div>
+          </ScrollReveal>
 
-            {/* Meta Column */}
-            <ScrollReveal delay={250}>
-              <dl className="flex flex-col gap-5 text-sm font-medium border-l border-divider pl-8 shrink-0">
-                <div className="flex flex-col">
-                  <dt className="text-ink-muted uppercase text-[10px] tracking-widest mb-1">Experience</dt>
-                  <dd className="text-ink">8+ Years Professional</dd>
-                </div>
-                <div className="flex flex-col">
-                  <dt className="text-ink-muted uppercase text-[10px] tracking-widest mb-1">Location</dt>
-                  <dd className="text-ink">Guadalajara / Remote</dd>
-                </div>
-                <div className="flex flex-col">
-                  <dt className="text-ink-muted uppercase text-[10px] tracking-widest mb-1">Availability</dt>
-                  <dd className="text-ink">Full-time / Senior Roles</dd>
-                </div>
+          {/* Title */}
+          <ScrollReveal delay={100}>
+            <h1 className="font-serif italic text-[22vw] md:text-[16vw] lg:text-[14vw] leading-[0.82] tracking-[-0.03em] text-ink mt-8 md:mt-12">
+              Portfolio
+            </h1>
+          </ScrollReveal>
+
+          {/* Editorial columns */}
+          <div className="mt-10 md:mt-14 border-t border-divider pt-8 md:pt-10 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10">
+            <ScrollReveal delay={200} className="md:col-span-5">
+              <p className="font-serif text-2xl md:text-3xl leading-[1.25] text-ink">
+                Strategic design leader with 8+ years building visual systems that scale.
+              </p>
+            </ScrollReveal>
+
+            <ScrollReveal delay={280} className="md:col-span-4">
+              <p className="text-base text-ink-light leading-relaxed">
+                Brand identity, packaging and art direction for startups and
+                growing companies. Based in Guadalajara, Mexico — available for
+                remote senior roles worldwide.
+              </p>
+            </ScrollReveal>
+
+            <ScrollReveal delay={340} className="md:col-span-3">
+              <dl className="divide-y divide-divider border-t border-divider text-sm">
+                {[
+                  ["Experience", "8+ Years"],
+                  ["Location", "Guadalajara / Remote"],
+                  ["Availability", "Senior Roles"],
+                ].map(([label, value]) => (
+                  <div key={label} className="flex items-baseline justify-between gap-4 py-3">
+                    <dt className="text-[10px] uppercase tracking-widest text-ink-muted">{label}</dt>
+                    <dd className="text-ink text-right">{value}</dd>
+                  </div>
+                ))}
               </dl>
             </ScrollReveal>
           </div>
 
           {/* CTAs */}
-          <ScrollReveal delay={350}>
-            <div className="mt-14 md:mt-16 flex flex-wrap gap-4">
+          <ScrollReveal delay={420}>
+            <div className="mt-10 md:mt-14 flex flex-wrap gap-4 border-t border-ink pt-8">
               <Link
                 to="/work"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-ink text-cream text-sm font-semibold hover:opacity-80 transition-opacity duration-200"
@@ -108,6 +115,7 @@ export default function Index() {
           </ScrollReveal>
         </div>
       </section>
+
 
       {/* Horizontal Scroll Gallery */}
       <HorizontalScrollGallery />
