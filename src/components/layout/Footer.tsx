@@ -23,9 +23,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 pb-12 md:pb-16 border-b border-cream/20">
           {/* Brand */}
           <div className="md:col-span-5">
-            <Link to="/" className="font-serif text-2xl md:text-3xl text-cream block mb-4">
-              Bernardo Orozco
+            <Link to="/" className="font-serif italic text-2xl md:text-3xl text-cream block mb-4">
+              Portfolio
             </Link>
+
             <p className="text-cream/60 max-w-sm">
               Senior Brand & Visual Designer crafting distinctive identities and scalable design systems.
             </p>
@@ -71,8 +72,9 @@ export default function Footer() {
 
         <div className="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <p className="text-sm text-cream/40">
-            © {currentYear} Bernardo Orozco. All rights reserved.
+            © {currentYear} — All rights reserved.
           </p>
+
           <p className="text-sm text-cream/40">
             Designed & built with intention.
           </p>
