@@ -1,6 +1,20 @@
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { projectImage } from "@/data/projectImages";
-import type { ProjectSection } from "@/data/projects";
+export type ProjectSectionItem = {
+  image: string;
+  label?: string;
+  caption?: string;
+  ratio?: string;
+};
+
+export type ProjectSection = {
+  title: string;
+  kicker?: string;
+  description?: string;
+  footnote?: string;
+  layout?: "single" | "two" | "three";
+  items: ProjectSectionItem[];
+};
 
 const ratioClass: Record<string, string> = {
   landscape: "aspect-[16/10]",
