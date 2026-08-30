@@ -41,7 +41,7 @@ export default function Header() {
             to="/" 
             className="font-serif italic text-xl md:text-2xl text-ink tracking-tight"
           >
-            Portfolio
+            Bernardo Orozco
           </Link>
 
 
