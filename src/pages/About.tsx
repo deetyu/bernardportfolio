@@ -36,7 +36,7 @@ export default function About() {
     <Layout>
       {/* Hero Section */}
       <section className="pt-32 md:pt-40 pb-16 md:pb-24">
-        <div className="container-editorial px-6 md:px-12 lg:px-20">
+        <div className="container-editorial">
           <div className="max-w-4xl">
             <ScrollReveal>
               <p className="eyebrow mb-6">About</p>
@@ -79,8 +79,8 @@ export default function About() {
       </section>
 
       {/* Values */}
-      <section className="section-padding bg-cream-dark">
-        <div className="container-editorial px-6 md:px-12 lg:px-20">
+      <section className="py-24 md:py-32 lg:py-40 px-6 md:px-12 lg:px-20 bg-cream-dark">
+        <div className="container-editorial">
           <ScrollReveal>
             <p className="eyebrow mb-16 md:mb-20">Approach</p>
           </ScrollReveal>
@@ -91,7 +91,7 @@ export default function About() {
                 <div>
                   <span className="text-sm text-ink-muted tracking-wide">{value.number}</span>
                   <h3 className="font-serif text-2xl text-ink mt-4 mb-4">{value.title}</h3>
-                  <p className="text-ink-light">{value.description}</p>
+                  <p className="text-lg text-ink-light">{value.description}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -100,8 +100,8 @@ export default function About() {
       </section>
 
       {/* Recognition */}
-      <section className="section-padding border-t border-divider">
-        <div className="container-editorial px-6 md:px-12 lg:px-20">
+      <section className="py-24 md:py-32 lg:py-40 px-6 md:px-12 lg:px-20 border-t border-divider">
+        <div className="container-editorial">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
             <div className="lg:col-span-4">
               <ScrollReveal>
@@ -113,7 +113,7 @@ export default function About() {
               <div className="divide-y divide-divider">
                 {recognition.map((item, index) => (
                   <ScrollReveal key={item.name} delay={index * 50}>
-                    <div className="py-6 flex items-center justify-between">
+                    <div className="py-7 flex items-center justify-between gap-6">
                       <div>
                         <h4 className="font-serif text-lg text-ink">{item.name}</h4>
                         <p className="text-sm text-ink-muted">{item.type}</p>
@@ -130,7 +130,7 @@ export default function About() {
 
       {/* CTA */}
       <section className="py-24 md:py-36 lg:py-44 px-6 md:px-12 lg:px-20 bg-cream-darker">
-        <div className="container-editorial px-6 md:px-12 lg:px-20">
+        <div className="container-editorial">
           <div className="max-w-3xl mx-auto text-center">
             <ScrollReveal>
               <h2 className="text-ink mb-6">
@@ -138,7 +138,7 @@ export default function About() {
               </h2>
             </ScrollReveal>
             <ScrollReveal delay={100}>
-              <p className="text-ink-light mb-10 max-w-xl mx-auto">
+              <p className="text-lg md:text-xl text-ink-light mb-10 max-w-xl mx-auto">
                 I'm open to senior brand & visual design roles and select long-term identity system projects.
               </p>
             </ScrollReveal>
