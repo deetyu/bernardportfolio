@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 const socialLinks = [
   { name: "LinkedIn", href: "https://www.linkedin.com/in/boboteme/" },
   { name: "Behance", href: "https://www.behance.net/btm20" },
-  { name: "Instagram", href: "https://www.instagram.com/" },
+  
   { name: "Email", href: "mailto:boboteme@gmail.com" },
 ];
 
@@ -73,7 +73,6 @@ export default function Footer() {
 
         <div className="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <p className="text-sm text-ink-muted">© {currentYear} — All rights reserved.</p>
-          <p className="text-sm text-ink-muted">Designed &amp; built with intention.</p>
         </div>
       </div>
     </footer>

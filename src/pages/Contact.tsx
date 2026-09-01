@@ -6,7 +6,7 @@ const links = [
   { name: "Email", handle: "boboteme@gmail.com", href: "mailto:boboteme@gmail.com" },
   { name: "LinkedIn", handle: "linkedin.com/in/boboteme", href: "https://www.linkedin.com/in/boboteme/" },
   { name: "Behance", handle: "behance.net/btm20", href: "https://www.behance.net/btm20" },
-  { name: "Full Portfolio", handle: "View portfolio PDF", href: "/Bernardo_Orozco_Portfolio.pdf" },
+  { name: "Download CV", handle: "Download CV", href: "/Bernardo_Orozco_Portfolio.pdf" },
 ];
 
 export default function Contact() {
@@ -17,9 +17,6 @@ export default function Contact() {
           <ScrollReveal>
             <div className="flex items-baseline justify-between border-b border-ink pb-4">
               <p className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-ink">Contact</p>
-              <p className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-ink-muted">
-                Guadalajara / Remote
-              </p>
             </div>
           </ScrollReveal>
 
@@ -33,10 +30,6 @@ export default function Contact() {
             <ScrollReveal delay={180} className="md:col-span-5">
               <p className="font-serif text-2xl md:text-3xl leading-[1.25] text-ink">
                 Open to senior brand &amp; visual design opportunities — remote or on-site.
-              </p>
-              <p className="mt-6 text-base text-ink-light">
-                The fastest way to reach me is by email. I usually reply within
-                two business days.
               </p>
             </ScrollReveal>
 
