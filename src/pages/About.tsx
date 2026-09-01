@@ -24,9 +24,10 @@ const values = [
 ];
 
 const recognition = [
+  { name: "Experience", type: "Senior Brand & Visual Designer", year: "8+ years" },
   { name: "Independent Studio", type: "Since 2022", year: "Guadalajara, Mexico" },
-  { name: "Client Industries", type: "Technology, Hospitality, E-commerce, Consumer Brands", year: "LATAM & Remote" },
-  { name: "Core Disciplines", type: "Brand Identity, Visual Systems, Art Direction", year: "8+ years" },
+  { name: "Core Disciplines", type: "Brand Identity, Visual Systems, Art Direction", year: "" },
+  { name: "Client Industries", type: "Technology, Esports, Hospitality, E-commerce, Consumer Brands", year: "LATAM & Remote" },
   { name: "Behance", type: "Selected work", year: "behance.net/btm20" },
 ];
 
