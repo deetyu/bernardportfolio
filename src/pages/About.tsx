@@ -128,24 +128,8 @@ export default function About() {
         </div>
       </section>
 
-      {/* Personal */}
-      <section className="section-padding bg-cream-dark">
-        <div className="container-editorial px-6 md:px-12 lg:px-20">
-          <div className="max-w-3xl">
-            <ScrollReveal delay={100}>
-              <p className="eyebrow mb-4">Beyond Work</p>
-            </ScrollReveal>
-            <ScrollReveal delay={200}>
-              <p className="text-ink-light">
-                Design is a lens through which I see the world. Outside the studio, I'm drawn to architecture, typography, and the quiet details that make spaces and objects memorable. I believe creativity is fueled by curiosity — and by taking time to simply observe.
-              </p>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
-      <section className="section-padding bg-cream-darker">
+      <section className="py-24 md:py-36 lg:py-44 px-6 md:px-12 lg:px-20 bg-cream-darker">
         <div className="container-editorial px-6 md:px-12 lg:px-20">
           <div className="max-w-3xl mx-auto text-center">
             <ScrollReveal>
