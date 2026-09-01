@@ -29,7 +29,7 @@ export default function Contact() {
           <div className="mt-10 md:mt-14 border-t border-divider pt-8 grid grid-cols-1 md:grid-cols-12 gap-10">
             <ScrollReveal delay={180} className="md:col-span-5">
               <p className="font-serif text-2xl md:text-3xl leading-[1.25] text-ink">
-                Open to senior brand &amp; visual design opportunities — remote or on-site.
+                Open to senior brand &amp; visual design opportunities.
               </p>
             </ScrollReveal>
 
