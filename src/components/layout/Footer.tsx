@@ -31,7 +31,7 @@ export default function Footer() {
             </Link>
             <p className="text-ink-muted max-w-sm text-base">
               Senior Brand &amp; Visual Designer. Brand systems, packaging and
-              digital design — Guadalajara / Remote.
+              digital design.
             </p>
           </div>
 
