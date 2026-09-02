@@ -185,8 +185,7 @@ export default function Index() {
             <ScrollReveal delay={120}>
               <p className="mt-8 text-ink-light">
                 Senior Brand &amp; Visual Designer with 8+ years of experience
-                across identity, packaging and campaign design — working directly
-                with founders and in-house teams from strategy through rollout.
+                across identity, packaging and campaign design.
               </p>
             </ScrollReveal>
           
