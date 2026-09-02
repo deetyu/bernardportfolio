@@ -12,11 +12,6 @@ const featured = [
   { slug: "selected-marks", image: "marks-hero", ratio: "aspect-[4/5]", tags: ["Logofolio"] },
 ];
 
-const socials = [
-  { name: "LinkedIn", href: "https://www.linkedin.com/in/boboteme/" },
-  { name: "Behance", href: "https://www.behance.net/btm20" },
-  { name: "Email", href: "mailto:boboteme@gmail.com" },
-];
 
 export default function Index() {
   const bySlug = Object.fromEntries(projects.map((p) => [p.slug, p]));
