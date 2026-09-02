@@ -42,15 +42,14 @@ export default function Index() {
             <ScrollReveal delay={180} className="md:col-span-5">
               <p className="font-serif text-2xl md:text-3xl leading-[1.25] text-ink">
                 Eight years of brand identity, packaging and art direction —
-                collected as case studies, not a sales pitch.
+                presented through selected case studies.
               </p>
             </ScrollReveal>
 
             <ScrollReveal delay={260} className="md:col-span-4">
               <p className="text-base text-ink-light leading-relaxed">
-                Selected work for founders and teams across technology,
-                hospitality, esports and consumer goods. Based in Guadalajara,
-                Mexico — open to senior roles, remote or on-site.
+                Selected work across technology, hospitality, esports and
+                consumer brands.
               </p>
             </ScrollReveal>
 
