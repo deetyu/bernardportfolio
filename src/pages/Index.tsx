@@ -46,12 +46,6 @@ export default function Index() {
               </p>
             </ScrollReveal>
 
-            <ScrollReveal delay={260} className="md:col-span-6">
-              <p className="text-base text-ink-light leading-relaxed">
-                Selected work across technology, hospitality, esports and
-                consumer brands.
-              </p>
-            </ScrollReveal>
 
           </div>
 
