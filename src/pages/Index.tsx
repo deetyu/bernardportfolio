@@ -39,34 +39,20 @@ export default function Index() {
           </ScrollReveal>
 
           <div className="mt-10 md:mt-14 border-t border-divider pt-8 md:pt-10 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10">
-            <ScrollReveal delay={180} className="md:col-span-5">
+            <ScrollReveal delay={180} className="md:col-span-6">
               <p className="font-serif text-2xl md:text-3xl leading-[1.25] text-ink">
                 Eight years of brand identity, packaging and art direction —
                 presented through selected case studies.
               </p>
             </ScrollReveal>
 
-            <ScrollReveal delay={260} className="md:col-span-4">
+            <ScrollReveal delay={260} className="md:col-span-6">
               <p className="text-base text-ink-light leading-relaxed">
                 Selected work across technology, hospitality, esports and
                 consumer brands.
               </p>
             </ScrollReveal>
 
-            <ScrollReveal delay={320} className="md:col-span-3">
-              <dl className="divide-y divide-divider border-t border-divider text-sm">
-                {[
-                  ["Experience", "8+ Years"],
-                  ["Location", "Guadalajara / Remote"],
-                  ["Projects", `${projects.length} Case Studies`],
-                ].map(([label, value]) => (
-                  <div key={label} className="flex items-baseline justify-between gap-4 py-3">
-                    <dt className="text-[10px] uppercase tracking-widest text-ink-muted">{label}</dt>
-                    <dd className="text-ink text-right">{value}</dd>
-                  </div>
-                ))}
-              </dl>
-            </ScrollReveal>
           </div>
 
           <ScrollReveal delay={400}>
