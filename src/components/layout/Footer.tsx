@@ -30,8 +30,8 @@ export default function Footer() {
               Portfolio
             </Link>
             <p className="text-ink-muted max-w-sm text-base">
-              Senior Brand &amp; Visual Designer. Brand systems, packaging and
-              digital design.
+              Senior Brand &amp; Visual Designer. Brand identity, visual systems,
+              packaging and digital design.
             </p>
           </div>
 

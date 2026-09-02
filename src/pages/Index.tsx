@@ -12,11 +12,6 @@ const featured = [
   { slug: "selected-marks", image: "marks-hero", ratio: "aspect-[4/5]", tags: ["Logofolio"] },
 ];
 
-const socials = [
-  { name: "LinkedIn", href: "https://www.linkedin.com/in/boboteme/" },
-  { name: "Behance", href: "https://www.behance.net/btm20" },
-  { name: "Email", href: "mailto:boboteme@gmail.com" },
-];
 
 export default function Index() {
   const bySlug = Object.fromEntries(projects.map((p) => [p.slug, p]));
@@ -195,25 +190,7 @@ export default function Index() {
                 with founders and in-house teams from strategy through rollout.
               </p>
             </ScrollReveal>
-            <ScrollReveal delay={200}>
-              <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3 border-t border-divider pt-6">
-                <Link to="/about" className="arrow-link text-ink">
-                  About me
-                  <ArrowRight size={16} strokeWidth={1.5} />
-                </Link>
-                {socials.map((s) => (
-                  <a
-                    key={s.name}
-                    href={s.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="editorial-link text-sm text-ink-muted hover:text-ink transition-colors duration-300"
-                  >
-                    {s.name}
-                  </a>
-                ))}
-              </div>
-            </ScrollReveal>
+          
           </div>
         </div>
       </section>
