@@ -33,18 +33,16 @@ export default function Index() {
           </ScrollReveal>
 
           <ScrollReveal delay={100}>
-            <h1 className="font-serif text-[13vw] md:text-[9vw] lg:text-[7.5vw] leading-[0.92] tracking-[-0.03em] text-ink mt-8 md:mt-12">
-              Senior Brand &amp;
-              <br />
-              <span className="italic">Visual Designer</span>
+            <h1 className="font-serif text-[9vw] md:text-[6.5vw] lg:text-[5.4vw] leading-[1.02] tracking-[-0.03em] text-ink mt-8 md:mt-12 whitespace-nowrap">
+              Senior Brand &amp; Visual Designer
             </h1>
           </ScrollReveal>
 
           <div className="mt-10 md:mt-14 border-t border-divider pt-8 md:pt-10 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10">
             <ScrollReveal delay={180} className="md:col-span-7">
               <p className="font-serif text-2xl md:text-3xl leading-[1.25] text-ink">
-                Transformando conceptos complejos en identidades memorables a
-                través de 8 años de trayectoria en branding y dirección de arte.
+                Turning complex concepts into memorable identities through
+                eight years of branding and art direction.
               </p>
             </ScrollReveal>
           </div>
