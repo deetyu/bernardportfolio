@@ -23,8 +23,8 @@ export default function Index() {
         <div className="container-editorial w-full">
           <ScrollReveal>
             <div className="flex items-baseline justify-between border-b border-ink pb-4">
-              <p className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-ink">
-                Bernardo Orozco
+              <p className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-ink-muted">
+                Portfolio
               </p>
               <p className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-ink-muted">
                 Vol. 01 — 2026
@@ -32,11 +32,18 @@ export default function Index() {
             </div>
           </ScrollReveal>
 
-          <ScrollReveal delay={100}>
-            <h1 className="font-serif text-[9vw] md:text-[6.5vw] lg:text-[5.4vw] leading-[1.02] tracking-[-0.03em] text-ink mt-8 md:mt-12 whitespace-nowrap">
+          <ScrollReveal delay={80}>
+            <p className="font-serif text-[7vw] md:text-[4.6vw] lg:text-[3.8vw] leading-[1.05] tracking-[-0.02em] text-ink mt-8 md:mt-12">
+              Bernardo Orozco
+            </p>
+          </ScrollReveal>
+
+          <ScrollReveal delay={140}>
+            <h1 className="font-serif text-[13vw] md:text-[8vw] lg:text-[6.6vw] leading-[0.95] tracking-[-0.04em] text-ink mt-2 md:mt-3 md:whitespace-nowrap">
               Senior Brand &amp; Visual Designer
             </h1>
           </ScrollReveal>
+
 
           <div className="mt-10 md:mt-14 border-t border-divider pt-8 md:pt-10 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10">
             <ScrollReveal delay={180} className="md:col-span-7">
@@ -86,65 +93,56 @@ export default function Index() {
             </div>
           </ScrollReveal>
 
-          <div className="space-y-16 md:space-y-24">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 lg:gap-x-16 gap-y-16 md:gap-y-20">
             {featured.map((item, index) => {
               const project = bySlug[item.slug];
               if (!project) return null;
-              const flip = index % 2 === 1;
 
               return (
-                <ScrollReveal key={item.slug} delay={60}>
-                  <Link
-                    to={`/work/${project.slug}`}
-                    className="group grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 items-end"
-                  >
-                    <div
-                      className={`md:col-span-7 ${flip ? "md:order-2 md:col-start-6" : ""}`}
-                    >
-                      <div className={`overflow-hidden bg-cream-darker ${item.ratio} md:aspect-[16/10]`}>
-                        <img
-                          src={projectImage(item.image)}
-                          alt={`${project.title} — ${project.category}`}
-                          loading="lazy"
-                          className="project-card-image w-full h-full object-cover"
-                        />
-                      </div>
+                <ScrollReveal key={item.slug} delay={index * 60}>
+                  <Link to={`/work/${project.slug}`} className="group block">
+                    <div className="overflow-hidden bg-cream-darker aspect-[4/3]">
+                      <img
+                        src={projectImage(item.image)}
+                        alt={`${project.title} — ${project.category}`}
+                        loading="lazy"
+                        className="project-card-image w-full h-full object-cover"
+                      />
                     </div>
 
-                    <div className={`md:col-span-4 ${flip ? "md:order-1 md:col-start-1" : "md:col-start-9"}`}>
-                      <div className="flex items-baseline gap-4 border-t border-ink pt-4">
-                        <span className="font-serif text-2xl text-ink">
-                          {String(index + 1).padStart(2, "0")}
-                        </span>
-                        <div>
-                          <h3 className="font-serif text-3xl md:text-4xl text-ink leading-tight group-hover:opacity-70 transition-opacity duration-300">
-                            {project.title}
-                          </h3>
-                          <p className="mt-2 text-[10px] uppercase tracking-[0.25em] text-ink-muted">
-                            {project.category} · {project.year}
-                          </p>
-                        </div>
-                      </div>
-                      <p className="mt-5 text-base text-ink-light leading-relaxed">
-                        {project.overview}
-                      </p>
-                      <div className="mt-5 flex flex-wrap gap-x-4 gap-y-1">
-                        {item.tags.map((tag) => (
-                          <span key={tag} className="text-[10px] uppercase tracking-[0.2em] text-ink-muted">
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                      <span className="arrow-link mt-6 text-ink">
-                        Read case study
-                        <ArrowRight size={16} strokeWidth={1.5} />
+                    <div className="mt-6 flex items-baseline gap-4 border-t border-ink pt-4">
+                      <span className="font-serif text-2xl text-ink">
+                        {String(index + 1).padStart(2, "0")}
                       </span>
+                      <div>
+                        <h3 className="font-serif text-3xl md:text-4xl text-ink leading-tight group-hover:opacity-70 transition-opacity duration-300">
+                          {project.title}
+                        </h3>
+                        <p className="mt-2 text-[10px] uppercase tracking-[0.25em] text-ink-muted">
+                          {project.category}
+                        </p>
+                      </div>
                     </div>
+                    <p className="mt-5 text-base text-ink-light leading-relaxed">
+                      {project.overview}
+                    </p>
+                    <div className="mt-5 flex flex-wrap gap-x-4 gap-y-1">
+                      {item.tags.map((tag) => (
+                        <span key={tag} className="text-[10px] uppercase tracking-[0.2em] text-ink-muted">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <span className="arrow-link mt-6 text-ink">
+                      Read case study
+                      <ArrowRight size={16} strokeWidth={1.5} />
+                    </span>
                   </Link>
                 </ScrollReveal>
               );
             })}
           </div>
+
         </div>
       </section>
 
