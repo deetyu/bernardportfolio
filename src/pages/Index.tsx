@@ -54,7 +54,7 @@ export default function Index() {
                 href="#work"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-ink text-cream text-sm font-semibold hover:opacity-80 transition-opacity duration-200"
               >
-                Explorar Trabajo
+                Explore Work
                 <ArrowRight size={16} strokeWidth={1.5} />
               </a>
               <a
@@ -63,7 +63,7 @@ export default function Index() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-4 border border-divider text-ink text-sm font-semibold hover:border-ink transition-colors duration-200"
               >
-                Descargar CV (PDF)
+                Download CV (PDF)
               </a>
             </div>
           </ScrollReveal>
