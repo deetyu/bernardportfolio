@@ -39,7 +39,7 @@ export default function Index() {
           </ScrollReveal>
 
           <ScrollReveal delay={140}>
-            <h1 className="font-serif text-[11.5vw] md:text-[8.4vw] lg:text-[7.2vw] leading-[0.95] tracking-[-0.04em] text-ink mt-2 md:mt-3 whitespace-nowrap">
+            <h1 className="font-serif text-[13vw] md:text-[8vw] lg:text-[6.6vw] leading-[0.95] tracking-[-0.04em] text-ink mt-2 md:mt-3 md:whitespace-nowrap">
               Senior Brand &amp; Visual Designer
             </h1>
           </ScrollReveal>
