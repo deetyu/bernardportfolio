@@ -23,8 +23,8 @@ export default function Index() {
         <div className="container-editorial w-full">
           <ScrollReveal>
             <div className="flex items-baseline justify-between border-b border-ink pb-4">
-              <p className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-ink">
-                Bernardo Orozco
+              <p className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-ink-muted">
+                Portfolio
               </p>
               <p className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-ink-muted">
                 Vol. 01 — 2026
@@ -32,11 +32,18 @@ export default function Index() {
             </div>
           </ScrollReveal>
 
-          <ScrollReveal delay={100}>
-            <h1 className="font-serif text-[9vw] md:text-[6.5vw] lg:text-[5.4vw] leading-[1.02] tracking-[-0.03em] text-ink mt-8 md:mt-12 whitespace-nowrap">
+          <ScrollReveal delay={80}>
+            <p className="font-serif text-[7vw] md:text-[4.6vw] lg:text-[3.8vw] leading-[1.05] tracking-[-0.02em] text-ink mt-8 md:mt-12">
+              Bernardo Orozco
+            </p>
+          </ScrollReveal>
+
+          <ScrollReveal delay={140}>
+            <h1 className="font-serif text-[11.5vw] md:text-[8.4vw] lg:text-[7.2vw] leading-[0.95] tracking-[-0.04em] text-ink mt-2 md:mt-3 whitespace-nowrap">
               Senior Brand &amp; Visual Designer
             </h1>
           </ScrollReveal>
+
 
           <div className="mt-10 md:mt-14 border-t border-divider pt-8 md:pt-10 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10">
             <ScrollReveal delay={180} className="md:col-span-7">
