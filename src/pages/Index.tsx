@@ -146,29 +146,29 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Colophon / About note */}
+      {/* Closing note */}
       <section className="section-padding bg-cream-dark border-t border-divider">
-        <div className="container-editorial grid grid-cols-1 md:grid-cols-12 gap-10">
-          <ScrollReveal className="md:col-span-4">
-            <p className="eyebrow">Colophon</p>
-          </ScrollReveal>
-          <div className="md:col-span-7 md:col-start-6">
+        <div className="container-editorial">
+          <div className="max-w-4xl mx-auto text-center">
             <ScrollReveal>
-              <blockquote className="font-serif text-3xl md:text-4xl italic text-ink leading-snug">
+              <blockquote className="font-serif text-4xl md:text-6xl italic text-ink leading-[1.15] tracking-tight">
                 “I build visual systems that stay consistent long after the
                 project ends.”
               </blockquote>
             </ScrollReveal>
             <ScrollReveal delay={120}>
-              <p className="mt-8 text-ink-light">
-                Senior Brand &amp; Visual Designer with 8+ years of experience
-                across identity, packaging and campaign design.
-              </p>
+              <div className="mt-10 flex flex-col items-center gap-5">
+                <span className="block h-px w-16 bg-divider" />
+                <p className="text-sm md:text-base tracking-wide text-ink-light">
+                  Senior Brand &amp; Visual Designer with 8+ years of experience
+                  across identity, packaging and campaign design.
+                </p>
+              </div>
             </ScrollReveal>
-          
           </div>
         </div>
       </section>
+
     </Layout>
   );
 }
