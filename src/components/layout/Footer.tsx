@@ -1,59 +1,42 @@
-import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 
 const socialLinks = [
   { name: "LinkedIn", href: "https://www.linkedin.com/in/bernardo-orozco/" },
   { name: "Behance", href: "https://www.behance.net/btm20/" },
-  
   { name: "Email", href: "mailto:boboteme@gmail.com" },
 ];
-
-
-
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-background border-t border-divider py-16 md:py-20">
+    <footer className="bg-background border-t border-divider py-8 md:py-10">
       <div className="container-editorial px-6 md:px-12 lg:px-20">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 pb-12 md:pb-16 border-b border-divider">
-          <div className="md:col-span-5">
-            <Link
-              to="/"
-              className="font-display text-2xl md:text-3xl font-medium tracking-[-0.04em] text-ink block mb-4"
-            >
-              Portfolio
-            </Link>
-            <p className="text-ink-muted max-w-sm text-base">
-              Senior Brand &amp; Visual Designer. Brand identity, visual systems,
-              packaging and digital design.
+        <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-6">
+          <div>
+            <p className="font-serif text-lg text-ink leading-tight">Bernardo Orozco</p>
+            <p className="mt-1 text-[10px] uppercase tracking-[0.25em] text-ink-muted">
+              Senior Brand &amp; Visual Designer
             </p>
           </div>
 
-          <div className="md:col-span-3 md:col-start-10">
+          <ul className="flex flex-wrap items-center gap-x-6 gap-y-2">
+            {socialLinks.map((link) => (
+              <li key={link.name}>
+                <a
+                  href={link.href}
+                  target={link.href.startsWith("mailto:") ? undefined : "_blank"}
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-sm text-ink-light hover:text-ink transition-colors duration-300"
+                >
+                  {link.name}
+                  <ArrowUpRight size={13} strokeWidth={1.5} />
+                </a>
+              </li>
+            ))}
+          </ul>
 
-            <p className="eyebrow mb-6">Connect</p>
-            <ul className="space-y-3">
-              {socialLinks.map((link) => (
-                <li key={link.name}>
-                  <a
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-ink-light hover:text-ink transition-colors duration-300"
-                  >
-                    {link.name}
-                    <ArrowUpRight size={14} strokeWidth={1.5} />
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        <div className="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-          <p className="text-sm text-ink-muted">© {currentYear} — All rights reserved.</p>
+          <p className="text-xs text-ink-muted">© {currentYear} — All rights reserved.</p>
         </div>
       </div>
     </footer>

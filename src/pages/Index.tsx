@@ -179,28 +179,30 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Closing note */}
-      <section className="section-padding bg-cream-dark border-t border-divider">
+      {/* Closing CTA */}
+      <section className="border-t border-divider py-16 md:py-24 px-6 md:px-12 lg:px-20">
         <div className="container-editorial">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-3xl">
             <ScrollReveal>
-              <blockquote className="font-serif text-4xl md:text-6xl italic text-ink leading-[1.15] tracking-tight">
-                “I build visual systems that stay consistent long after the
-                project ends.”
-              </blockquote>
+              <h2 className="font-serif italic text-ink leading-[1.1]">
+                Let's build a visual system that lasts.
+              </h2>
             </ScrollReveal>
-            <ScrollReveal delay={120}>
-              <div className="mt-10 flex flex-col items-center gap-5">
-                <span className="block h-px w-16 bg-divider" />
-                <p className="text-sm md:text-base tracking-wide text-ink-light">
-                  Senior Brand &amp; Visual Designer with 8+ years of experience
-                  across identity, packaging and campaign design.
-                </p>
-              </div>
+            <ScrollReveal delay={100}>
+              <p className="mt-6 text-base md:text-lg text-ink-light">
+                Available for selected freelance and remote opportunities.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal delay={180}>
+              <Link to="/contact" className="arrow-link mt-8 text-ink">
+                Get in touch
+                <ArrowRight size={16} strokeWidth={1.5} />
+              </Link>
             </ScrollReveal>
           </div>
         </div>
       </section>
+
 
     </Layout>
   );
