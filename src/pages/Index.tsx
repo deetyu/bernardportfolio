@@ -2,8 +2,20 @@ import { Link } from "react-router-dom";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
+import { MaskReveal } from "@/components/shared/MaskReveal";
 import { projects } from "@/data/projects";
 import { projectImage } from "@/data/projectImages";
+
+const marqueeItems = [
+  "Brand Identity",
+  "Visual Systems",
+  "Packaging",
+  "Art Direction",
+  "Campaigns",
+  "Editorial Design",
+  "Digital Storefronts",
+];
+
 
 const featured = [
   { slug: "arya-cosmetics", image: "arya-hero", ratio: "aspect-[4/5]", tags: ["Brand", "Packaging"] },
@@ -32,17 +44,20 @@ export default function Index() {
             </div>
           </ScrollReveal>
 
-          <ScrollReveal delay={80}>
-            <p className="font-serif text-[7vw] md:text-[4.6vw] lg:text-[3.8vw] leading-[1.05] tracking-[-0.02em] text-ink mt-8 md:mt-12">
+          <MaskReveal delay={120} className="mt-8 md:mt-12">
+            <span className="block font-serif text-[7vw] md:text-[4.6vw] lg:text-[3.8vw] leading-[1.05] tracking-[-0.02em] text-ink">
               Bernardo Orozco
-            </p>
-          </ScrollReveal>
+            </span>
+          </MaskReveal>
 
-          <ScrollReveal delay={140}>
-            <h1 className="font-serif text-[13vw] md:text-[8vw] lg:text-[6.6vw] leading-[0.95] tracking-[-0.04em] text-ink mt-2 md:mt-3 md:whitespace-nowrap">
-              Senior Brand &amp; Visual Designer
-            </h1>
-          </ScrollReveal>
+          <h1 className="mt-2 md:mt-3">
+            <MaskReveal delay={260}>
+              <span className="block font-serif text-[13vw] md:text-[8vw] lg:text-[6.6vw] leading-[0.95] tracking-[-0.04em] text-ink md:whitespace-nowrap">
+                Senior Brand &amp; Visual Designer
+              </span>
+            </MaskReveal>
+          </h1>
+
 
 
           <div className="mt-10 md:mt-14 border-t border-divider pt-8 md:pt-10 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10">
