@@ -92,6 +92,23 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Running band */}
+      <section className="border-y border-divider bg-cream-dark py-5">
+        <div className="marquee">
+          {[0, 1].map((copy) => (
+            <div key={copy} className="marquee-track" aria-hidden={copy === 1}>
+              {marqueeItems.map((item) => (
+                <span key={item} className="flex items-center gap-12">
+                  <span className="font-serif italic text-2xl md:text-3xl text-ink">{item}</span>
+                  <span className="text-ink-muted text-xs">✳</span>
+                </span>
+              ))}
+            </div>
+          ))}
+        </div>
+      </section>
+
+
       {/* Work index — editorial rows */}
       <section id="work" className="section-padding scroll-mt-24 border-t border-divider">
         <div className="container-editorial">
