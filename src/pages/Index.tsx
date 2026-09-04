@@ -133,23 +133,24 @@ export default function Index() {
               return (
                 <ScrollReveal key={item.slug} delay={index * 60}>
                   <Link to={`/work/${project.slug}`} className="group block">
-                    <div className="overflow-hidden bg-cream-darker aspect-[4/3]">
+                    <div className="wipe-media bg-cream-darker aspect-[4/3]">
                       <img
                         src={projectImage(item.image)}
                         alt={`${project.title} — ${project.category}`}
                         loading="lazy"
-                        className="project-card-image w-full h-full object-cover"
+                        className="w-full h-full object-cover transition-transform duration-[1200ms] ease-editorial group-hover:scale-[1.06]"
                       />
                     </div>
 
-                    <div className="mt-6 flex items-baseline gap-4 border-t border-ink pt-4">
-                      <span className="font-serif text-2xl text-ink">
+                    <div className="draw-rule mt-6 flex items-baseline gap-4 border-t border-ink pt-4">
+                      <span className="font-serif text-2xl text-ink drift-num">
                         {String(index + 1).padStart(2, "0")}
                       </span>
                       <div>
-                        <h3 className="font-serif text-3xl md:text-4xl text-ink leading-tight group-hover:opacity-70 transition-opacity duration-300">
+                        <h3 className="font-serif text-3xl md:text-4xl text-ink leading-tight transition-transform duration-500 ease-editorial group-hover:translate-x-1">
                           {project.title}
                         </h3>
+
                         <p className="mt-2 text-[10px] uppercase tracking-[0.25em] text-ink-muted">
                           {project.category}
                         </p>
