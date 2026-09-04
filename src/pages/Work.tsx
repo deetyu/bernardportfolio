@@ -53,27 +53,7 @@ export default function Work() {
           </div>
         </div>
       </section>
-
-      {/* CTA */}
-      <section className="section-padding bg-cream-dark">
-        <div className="container-editorial px-6 md:px-12 lg:px-20">
-          <div className="max-w-2xl">
-            <ScrollReveal>
-              <p className="eyebrow mb-4">Have something in mind?</p>
-            </ScrollReveal>
-            <ScrollReveal delay={100}>
-              <h2 className="text-ink mb-6">
-                Let's discuss your project.
-              </h2>
-            </ScrollReveal>
-            <ScrollReveal delay={200}>
-              <p className="text-ink-light">
-                I'm always open to exploring new collaborations. Reach out to discuss how we might work together.
-              </p>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
     </Layout>
+
   );
 }
