@@ -8,12 +8,8 @@ const socialLinks = [
   { name: "Email", href: "mailto:boboteme@gmail.com" },
 ];
 
-const navLinks = [
-  { name: "Work", href: "/work" },
-  { name: "About", href: "/about" },
-  
-  { name: "Contact", href: "/contact" },
-];
+
+
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
