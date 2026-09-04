@@ -4,8 +4,8 @@ import { ScrollReveal } from "@/components/shared/ScrollReveal";
 
 const links = [
   { name: "Email", handle: "boboteme@gmail.com", href: "mailto:boboteme@gmail.com" },
-  { name: "LinkedIn", handle: "linkedin.com/in/boboteme", href: "https://www.linkedin.com/in/boboteme/" },
-  { name: "Behance", handle: "behance.net/btm20", href: "https://www.behance.net/btm20" },
+  { name: "LinkedIn", handle: "linkedin.com/in/bernardo-orozco", href: "https://www.linkedin.com/in/bernardo-orozco/" },
+  { name: "Behance", handle: "behance.net/btm20", href: "https://www.behance.net/btm20/" },
   { name: "Download CV", handle: "Download CV", href: "/Bernardo_Orozco_Portfolio.pdf" },
 ];
 

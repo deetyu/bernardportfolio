@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 
 const socialLinks = [
-  { name: "LinkedIn", href: "https://www.linkedin.com/in/boboteme/" },
-  { name: "Behance", href: "https://www.behance.net/btm20" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/bernardo-orozco/" },
+  { name: "Behance", href: "https://www.behance.net/btm20/" },
   
   { name: "Email", href: "mailto:boboteme@gmail.com" },
 ];
