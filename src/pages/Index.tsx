@@ -2,8 +2,20 @@ import { Link } from "react-router-dom";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
+import { MaskReveal } from "@/components/shared/MaskReveal";
 import { projects } from "@/data/projects";
 import { projectImage } from "@/data/projectImages";
+
+const marqueeItems = [
+  "Brand Identity",
+  "Visual Systems",
+  "Packaging",
+  "Art Direction",
+  "Campaigns",
+  "Editorial Design",
+  "Digital Storefronts",
+];
+
 
 const featured = [
   { slug: "arya-cosmetics", image: "arya-hero", ratio: "aspect-[4/5]", tags: ["Brand", "Packaging"] },
@@ -32,17 +44,20 @@ export default function Index() {
             </div>
           </ScrollReveal>
 
-          <ScrollReveal delay={80}>
-            <p className="font-serif text-[7vw] md:text-[4.6vw] lg:text-[3.8vw] leading-[1.05] tracking-[-0.02em] text-ink mt-8 md:mt-12">
+          <MaskReveal delay={120} className="mt-8 md:mt-12">
+            <span className="block font-serif text-[7vw] md:text-[4.6vw] lg:text-[3.8vw] leading-[1.05] tracking-[-0.02em] text-ink">
               Bernardo Orozco
-            </p>
-          </ScrollReveal>
+            </span>
+          </MaskReveal>
 
-          <ScrollReveal delay={140}>
-            <h1 className="font-serif text-[13vw] md:text-[8vw] lg:text-[6.6vw] leading-[0.95] tracking-[-0.04em] text-ink mt-2 md:mt-3 md:whitespace-nowrap">
-              Senior Brand &amp; Visual Designer
-            </h1>
-          </ScrollReveal>
+          <h1 className="mt-2 md:mt-3">
+            <MaskReveal delay={260}>
+              <span className="block font-serif text-[13vw] md:text-[8vw] lg:text-[6.6vw] leading-[0.95] tracking-[-0.04em] text-ink md:whitespace-nowrap">
+                Senior Brand &amp; Visual Designer
+              </span>
+            </MaskReveal>
+          </h1>
+
 
 
           <div className="mt-10 md:mt-14 border-t border-divider pt-8 md:pt-10 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10">
@@ -77,6 +92,23 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Running band */}
+      <section className="border-y border-divider bg-cream-dark py-5">
+        <div className="marquee">
+          {[0, 1].map((copy) => (
+            <div key={copy} className="marquee-track" aria-hidden={copy === 1}>
+              {marqueeItems.map((item) => (
+                <span key={item} className="flex items-center gap-12">
+                  <span className="font-serif italic text-2xl md:text-3xl text-ink">{item}</span>
+                  <span className="text-ink-muted text-xs">✳</span>
+                </span>
+              ))}
+            </div>
+          ))}
+        </div>
+      </section>
+
+
       {/* Work index — editorial rows */}
       <section id="work" className="section-padding scroll-mt-24 border-t border-divider">
         <div className="container-editorial">
@@ -101,23 +133,24 @@ export default function Index() {
               return (
                 <ScrollReveal key={item.slug} delay={index * 60}>
                   <Link to={`/work/${project.slug}`} className="group block">
-                    <div className="overflow-hidden bg-cream-darker aspect-[4/3]">
+                    <div className="wipe-media bg-cream-darker aspect-[4/3]">
                       <img
                         src={projectImage(item.image)}
                         alt={`${project.title} — ${project.category}`}
                         loading="lazy"
-                        className="project-card-image w-full h-full object-cover"
+                        className="w-full h-full object-cover transition-transform duration-[1200ms] ease-editorial group-hover:scale-[1.06]"
                       />
                     </div>
 
-                    <div className="mt-6 flex items-baseline gap-4 border-t border-ink pt-4">
-                      <span className="font-serif text-2xl text-ink">
+                    <div className="draw-rule mt-6 flex items-baseline gap-4 border-t border-ink pt-4">
+                      <span className="font-serif text-2xl text-ink drift-num">
                         {String(index + 1).padStart(2, "0")}
                       </span>
                       <div>
-                        <h3 className="font-serif text-3xl md:text-4xl text-ink leading-tight group-hover:opacity-70 transition-opacity duration-300">
+                        <h3 className="font-serif text-3xl md:text-4xl text-ink leading-tight transition-transform duration-500 ease-editorial group-hover:translate-x-1">
                           {project.title}
                         </h3>
+
                         <p className="mt-2 text-[10px] uppercase tracking-[0.25em] text-ink-muted">
                           {project.category}
                         </p>
