@@ -160,7 +160,71 @@
   .bento-tile {
     @apply relative overflow-hidden bg-cream-darker border border-divider transition-all duration-500 ease-editorial hover:border-ink/40;
   }
+
+  /* Continuous editorial marquee */
+  .marquee {
+    @apply relative flex overflow-hidden;
+    mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+    -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+  }
+
+  .marquee-track {
+    @apply flex shrink-0 items-center gap-12 pr-12 whitespace-nowrap;
+    animation: marquee-scroll 34s linear infinite;
+  }
+
+  .marquee:hover .marquee-track {
+    animation-play-state: paused;
+  }
+
+  /* Image mask that wipes open on hover */
+  .wipe-media {
+    @apply relative overflow-hidden;
+  }
+
+  .wipe-media::after {
+    content: '';
+    @apply absolute inset-0 bg-ink/0 transition-colors duration-700 ease-editorial;
+  }
+
+  .group:hover .wipe-media::after {
+    @apply bg-ink/[0.06];
+  }
+
+  /* Numeral that shifts as the row is hovered */
+  .drift-num {
+    @apply inline-block transition-transform duration-500 ease-editorial;
+  }
+
+  .group:hover .drift-num {
+    @apply -translate-y-1;
+  }
+
+  /* Rule that draws itself in on hover */
+  .draw-rule {
+    @apply relative;
+  }
+
+  .draw-rule::before {
+    content: '';
+    @apply absolute -top-px left-0 h-px w-full bg-ink origin-left scale-x-0 transition-transform duration-700 ease-editorial;
+  }
+
+  .group:hover .draw-rule::before {
+    @apply scale-x-100;
+  }
 }
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+  * { transition-duration: 0.01ms !important; }
+}
+
 
 @layer utilities {
   .text-ink {
