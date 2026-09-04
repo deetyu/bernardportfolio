@@ -35,23 +35,8 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="md:col-span-3 md:col-start-7">
-            <p className="eyebrow mb-6">Navigation</p>
-            <ul className="space-y-3">
-              {navLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-ink-light hover:text-ink transition-colors duration-300"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <div className="md:col-span-3 md:col-start-10">
 
-          <div className="md:col-span-3">
             <p className="eyebrow mb-6">Connect</p>
             <ul className="space-y-3">
               {socialLinks.map((link) => (
