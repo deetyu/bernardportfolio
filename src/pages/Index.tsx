@@ -9,12 +9,15 @@ import { projectImage } from "@/data/projectImages";
 const marqueeItems = [
   "Brand Identity",
   "Visual Systems",
-  "Packaging",
   "Art Direction",
-  "Campaigns",
-  "Editorial Design",
-  "Digital Storefronts",
+  "Packaging Design",
+  "Paid Social & Display",
+  "Landing Pages",
+  "Email Design",
+  "Infographics",
+  "Marketing Collateral",
 ];
+
 
 
 const featured = [
