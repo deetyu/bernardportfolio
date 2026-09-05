@@ -11,12 +11,8 @@ const marqueeItems = [
   "Visual Systems",
   "Art Direction",
   "Packaging Design",
-  "Paid Social & Display",
-  "Landing Pages",
-  "Email Design",
-  "Infographics",
-  "Marketing Collateral",
 ];
+
 
 
 
