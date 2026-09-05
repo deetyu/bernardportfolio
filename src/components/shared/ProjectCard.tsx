@@ -6,7 +6,7 @@ interface ProjectCardProps {
   slug: string;
   title: string;
   category: string;
-  year: string;
+  description?: string;
   image: string;
   className?: string;
   aspectRatio?: "landscape" | "portrait";
@@ -16,7 +16,7 @@ export function ProjectCard({
   slug,
   title,
   category,
-  year,
+  description,
   image,
   className,
   aspectRatio = "landscape",
@@ -36,6 +36,7 @@ export function ProjectCard({
         <img
           src={image}
           alt={title}
+          loading="lazy"
           className="project-card-image w-full h-full object-cover"
         />
         {/* Hover Overlay */}
@@ -47,16 +48,20 @@ export function ProjectCard({
       </div>
 
       {/* Text Content */}
-      <div className="space-y-2">
+      <div>
         <h3 className="font-serif text-xl md:text-2xl text-ink group-hover:opacity-70 transition-opacity duration-300">
           {title}
         </h3>
-        <div className="flex items-center gap-4 text-sm text-ink-muted">
-          <span className="uppercase tracking-wide">{category}</span>
-          <span className="w-1 h-1 rounded-full bg-ink-muted" />
-          <span>{year}</span>
-        </div>
+        <p className="mt-2 text-[10px] uppercase tracking-[0.25em] text-ink-muted">
+          {category}
+        </p>
+        {description && (
+          <p className="mt-4 text-sm md:text-base text-ink-light leading-relaxed line-clamp-3">
+            {description}
+          </p>
+        )}
       </div>
+
     </Link>
   );
 }

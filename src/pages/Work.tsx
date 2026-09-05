@@ -40,10 +40,11 @@ export default function Work() {
                   slug={project.slug}
                   title={project.title}
                   category={project.category}
-                  year={project.year}
+                  description={project.overview}
                   image={projectImages[project.slug]}
                   aspectRatio="landscape"
                 />
+
               </ScrollReveal>
             ))}
           </div>
