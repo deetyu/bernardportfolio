@@ -1,71 +1,78 @@
 import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { ProjectCard } from "@/components/shared/ProjectCard";
-import { projects } from "@/data/projects";
 
 import aryaHero from "@/assets/projects/arya-hero.jpg";
 import sturioHero from "@/assets/projects/sturio-hero.jpg";
 import haciendaHero from "@/assets/projects/hacienda-hero.jpg";
+
+import flowersPaid from "@/assets/projects/flowers-paid.jpg";
+import aryaLanding from "@/assets/projects/arya-landing.jpg";
+import sturioInfographic from "@/assets/projects/sturio-infographic.jpg";
+import salsaPackaging from "@/assets/projects/salsa-packaging.jpg";
+import amigurumiCollateral from "@/assets/projects/amigurumi-collateral.jpg";
 import marksHero from "@/assets/projects/marks-hero.jpg";
 
-import additional1 from "@/assets/projects/flowers-paid.jpg";
-import additional2 from "@/assets/projects/flowers-email.jpg";
-import additional3 from "@/assets/projects/salsa-packaging.jpg";
-import additional4 from "@/assets/projects/amigurumi-collateral.jpg";
-import additional5 from "@/assets/projects/sturio-infographic.jpg";
-import additional6 from "@/assets/projects/arya-landing.jpg";
+const featuredWork = [
+  {
+    slug: "arya-cosmetics",
+    title: "AR•YA",
+    category: "Brand Identity · Packaging · Digital",
+    description: "Identity and packaging system for a premium skincare brand.",
+    image: aryaHero,
+  },
+  {
+    slug: "sturio",
+    title: "Sturio",
+    category: "Brand Identity · B2B · Digital",
+    description: "Modular visual system for a B2B technology consultancy.",
+    image: sturioHero,
+  },
+  {
+    slug: "ex-hacienda-de-cedros",
+    title: "Ex Hacienda de Cedros",
+    category: "Brand Identity · Art Direction · Hospitality",
+    description: "Identity for a historic hacienda positioned as a premium event destination.",
+    image: haciendaHero,
+  },
+];
 
-const projectImages: Record<string, string> = {
-  "arya-cosmetics": aryaHero,
-  "sturio": sturioHero,
-  "ex-hacienda-de-cedros": haciendaHero,
-  "selected-marks": marksHero,
-};
-
-const shortDescriptions: Record<string, string> = {
-  "arya-cosmetics": "Brand identity and packaging system for a premium skincare brand.",
-  "sturio": "Modular visual system for a B2B technology consultancy.",
-  "ex-hacienda-de-cedros":
-    "Visual identity for a historic hacienda positioned as a premium event destination.",
-  "selected-marks": "A collection of logo redraws and mark refinements across industries.",
-};
-
-const additionalWork = [
+const selectedWork = [
   {
-    title: "Floral Retail Campaign",
-    category: "Marketing Design",
-    description: "Paid social and display campaign built on a single seasonal art direction.",
-    image: additional1,
+    title: "Flowers — Campaign",
+    category: "Campaign · Paid Social · Display",
+    description: "Seasonal art direction extended across paid social and display.",
+    image: flowersPaid,
   },
   {
-    title: "Email Design System",
-    category: "Digital Design",
-    description: "Modular email templates for promotional and lifecycle sends.",
-    image: additional2,
+    title: "AR•YA — Digital",
+    category: "Landing Page · E-commerce",
+    description: "Conversion-focused landing page built on the brand system.",
+    image: aryaLanding,
   },
   {
-    title: "Artisan Salsa Line",
-    category: "Packaging",
-    description: "Label system and shelf presence for a small-batch salsa range.",
-    image: additional3,
+    title: "Sturio — Marketing",
+    category: "Social · Collateral · Infographics",
+    description: "Marketing assets translating technical data into clear visuals.",
+    image: sturioInfographic,
   },
   {
-    title: "Craft Studio Collateral",
-    category: "Branding",
-    description: "Print collateral and social assets for an independent craft studio.",
-    image: additional4,
+    title: "Consumer Product",
+    category: "Packaging · Retail · Production",
+    description: "Label system and shelf presence for a small-batch range.",
+    image: salsaPackaging,
   },
   {
-    title: "Data Infographics",
-    category: "Illustration",
-    description: "Infographic set translating technical data into clear visual stories.",
-    image: additional5,
+    title: "Craft Studio",
+    category: "Branding · Collateral · Social",
+    description: "Print and social collateral for an independent craft studio.",
+    image: amigurumiCollateral,
   },
   {
-    title: "Skincare Landing Page",
-    category: "Digital Design",
-    description: "Conversion-focused landing page extending an existing brand system.",
-    image: additional6,
+    title: "Selected Marks",
+    category: "Logofolio · Mark Design · Vector",
+    description: "Logo redraws and mark refinements across industries.",
+    image: marksHero,
   },
 ];
 
@@ -84,21 +91,21 @@ export default function Work() {
         </div>
       </section>
 
-      {/* Case Studies */}
+      {/* Featured Work */}
       <section className="section-padding border-t border-divider">
         <div className="container-editorial px-6 md:px-12 lg:px-20">
           <ScrollReveal>
-            <p className="eyebrow mb-10 md:mb-14">Case Studies</p>
+            <p className="eyebrow mb-10 md:mb-14">Featured Work</p>
           </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14 md:gap-x-10 lg:gap-x-12">
-            {projects.map((project, index) => (
+            {featuredWork.map((project, index) => (
               <ScrollReveal key={project.slug} delay={(index % 3) * 80}>
                 <ProjectCard
                   slug={project.slug}
                   title={project.title}
                   category={project.category}
-                  description={shortDescriptions[project.slug] ?? project.overview}
-                  image={projectImages[project.slug]}
+                  description={project.description}
+                  image={project.image}
                   aspectRatio="landscape"
                   showCaseStudyLink
                 />
@@ -108,20 +115,20 @@ export default function Work() {
         </div>
       </section>
 
-      {/* Additional Work */}
+      {/* Selected Work */}
       <section className="section-padding border-t border-divider">
         <div className="container-editorial px-6 md:px-12 lg:px-20">
           <ScrollReveal>
-            <p className="eyebrow mb-10 md:mb-14">Additional Work</p>
+            <p className="eyebrow mb-10 md:mb-14">Selected Work</p>
           </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14 md:gap-x-10 lg:gap-x-12">
-            {additionalWork.map((item, index) => (
+            {selectedWork.map((item, index) => (
               <ScrollReveal key={item.title} delay={(index % 3) * 80}>
                 <article>
                   <div className="relative overflow-hidden bg-cream-darker mb-6 aspect-[16/10]">
                     <img
                       src={item.image}
-                      alt={item.title}
+                      alt={`${item.title} — ${item.category}`}
                       loading="lazy"
                       className="w-full h-full object-cover"
                     />
