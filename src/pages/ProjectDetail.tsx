@@ -14,12 +14,28 @@ import haciendaHero from "@/assets/projects/hacienda-hero.jpg";
 import haciendaDetail1 from "@/assets/projects/hacienda-detail-1.jpg";
 import haciendaDetail2 from "@/assets/projects/hacienda-detail-2.jpg";
 import marksHero from "@/assets/projects/marks-hero.jpg";
+import marksDetail1 from "@/assets/projects/marks-detail-1.jpg";
+import marksDetail2 from "@/assets/projects/marks-detail-2.jpg";
+import flowersPaid from "@/assets/projects/flowers-paid.jpg";
+import flowersEmail from "@/assets/projects/flowers-email.jpg";
+import flowersPrint from "@/assets/projects/flowers-print.jpg";
+import aryaLanding from "@/assets/projects/arya-landing.jpg";
+import sturioInfographic from "@/assets/projects/sturio-infographic.jpg";
+import sturioDisplay from "@/assets/projects/sturio-display.jpg";
+import salsaPackaging from "@/assets/projects/salsa-packaging.jpg";
+import amigurumiHero from "@/assets/projects/amigurumi-hero.jpg";
+import amigurumiCollateral from "@/assets/projects/amigurumi-collateral.jpg";
 
 const projectImages: Record<string, string[]> = {
   "arya-cosmetics": [aryaHero, aryaDetail1, aryaDetail2],
   "sturio": [sturioHero, sturioDetail1, sturioDetail2],
   "ex-hacienda-de-cedros": [haciendaHero, haciendaDetail1, haciendaDetail2],
-  "selected-marks": [marksHero, marksHero, marksHero],
+  "selected-marks": [marksHero, marksDetail1, marksDetail2],
+  "flowers-campaign": [flowersPaid, flowersEmail, flowersPrint],
+  "arya-digital": [aryaLanding, aryaDetail1, aryaDetail2],
+  "sturio-marketing": [sturioInfographic, sturioDisplay, sturioDetail1],
+  "consumer-product": [salsaPackaging, salsaPackaging, salsaPackaging],
+  "craft-studio": [amigurumiHero, amigurumiCollateral, amigurumiHero],
 };
 
 export default function ProjectDetail() {
