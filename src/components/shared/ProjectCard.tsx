@@ -10,6 +10,7 @@ interface ProjectCardProps {
   image: string;
   className?: string;
   aspectRatio?: "landscape" | "portrait";
+  showCaseStudyLink?: boolean;
 }
 
 export function ProjectCard({
@@ -20,6 +21,7 @@ export function ProjectCard({
   image,
   className,
   aspectRatio = "landscape",
+  showCaseStudyLink = false,
 }: ProjectCardProps) {
   return (
     <Link
