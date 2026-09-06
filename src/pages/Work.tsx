@@ -39,36 +39,42 @@ const featuredWork = [
 
 const selectedWork = [
   {
+    slug: "flowers-campaign",
     title: "Flowers — Campaign",
     category: "Campaign · Paid Social · Display",
     description: "Seasonal art direction extended across paid social and display.",
     image: flowersPaid,
   },
   {
+    slug: "arya-digital",
     title: "AR•YA — Digital",
     category: "Landing Page · E-commerce",
     description: "Conversion-focused landing page built on the brand system.",
     image: aryaLanding,
   },
   {
+    slug: "sturio-marketing",
     title: "Sturio — Marketing",
     category: "Social · Collateral · Infographics",
     description: "Marketing assets translating technical data into clear visuals.",
     image: sturioInfographic,
   },
   {
+    slug: "consumer-product",
     title: "Consumer Product",
     category: "Packaging · Retail · Production",
     description: "Label system and shelf presence for a small-batch range.",
     image: salsaPackaging,
   },
   {
+    slug: "craft-studio",
     title: "Craft Studio",
     category: "Branding · Collateral · Social",
     description: "Print and social collateral for an independent craft studio.",
     image: amigurumiCollateral,
   },
   {
+    slug: "selected-marks",
     title: "Selected Marks",
     category: "Logofolio · Mark Design · Vector",
     description: "Logo redraws and mark refinements across industries.",
