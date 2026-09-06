@@ -10,6 +10,7 @@ interface ProjectCardProps {
   image: string;
   className?: string;
   aspectRatio?: "landscape" | "portrait";
+  showCaseStudyLink?: boolean;
 }
 
 export function ProjectCard({
@@ -20,6 +21,7 @@ export function ProjectCard({
   image,
   className,
   aspectRatio = "landscape",
+  showCaseStudyLink = false,
 }: ProjectCardProps) {
   return (
     <Link
@@ -56,11 +58,17 @@ export function ProjectCard({
           {category}
         </p>
         {description && (
-          <p className="mt-4 text-sm md:text-base text-ink-light leading-relaxed line-clamp-3">
+          <p className="mt-4 text-sm md:text-base text-ink-light leading-relaxed">
             {description}
           </p>
         )}
+        {showCaseStudyLink && (
+          <span className="mt-5 inline-block text-[10px] uppercase tracking-[0.25em] text-ink-muted group-hover:text-ink transition-colors duration-300">
+            Read case study →
+          </span>
+        )}
       </div>
+
 
     </Link>
   );
