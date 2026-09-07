@@ -129,24 +129,16 @@ export default function Work() {
           </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14 md:gap-x-10 lg:gap-x-12">
             {selectedWork.map((item, index) => (
-              <ScrollReveal key={item.title} delay={(index % 3) * 80}>
-                <article>
-                  <div className="relative overflow-hidden bg-cream-darker mb-6 aspect-[16/10]">
-                    <img
-                      src={item.image}
-                      alt={`${item.title} — ${item.category}`}
-                      loading="lazy"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <h3 className="font-serif text-xl md:text-2xl text-ink">{item.title}</h3>
-                  <p className="mt-2 text-[10px] uppercase tracking-[0.25em] text-ink-muted">
-                    {item.category}
-                  </p>
-                  <p className="mt-4 text-sm md:text-base text-ink-light leading-relaxed">
-                    {item.description}
-                  </p>
-                </article>
+              <ScrollReveal key={item.slug} delay={(index % 3) * 80}>
+                <ProjectCard
+                  slug={item.slug}
+                  title={item.title}
+                  category={item.category}
+                  description={item.description}
+                  image={item.image}
+                  aspectRatio="landscape"
+                  showCaseStudyLink
+                />
               </ScrollReveal>
             ))}
           </div>
