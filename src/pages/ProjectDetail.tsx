@@ -53,7 +53,7 @@ export default function ProjectDetail() {
 
   const nextProject = projects[(projectIndex + 1) % projects.length];
   const heroNames: Record<string, string> = {
-    "arya-cosmetics": "arya-packaging",
+    "arya-cosmetics": "arya-product",
     sturio: "sturio-corporate",
     "ex-hacienda-de-cedros": "hacienda-signage",
     girasolia: "girasolia-identity",

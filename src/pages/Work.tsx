@@ -20,7 +20,7 @@ const featuredWork = [
     title: "AR•YA",
     category: "Brand Identity · Packaging · Digital",
     description: "Identity and packaging system for a premium skincare brand.",
-    image: projectImage("arya-packaging") ?? aryaHero,
+    image: projectImage("arya-product") ?? aryaHero,
   },
   {
     slug: "sturio",
