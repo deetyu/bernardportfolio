@@ -43,7 +43,7 @@ function Figure({
   return (
     <figure className="space-y-3">
       <div className={`overflow-hidden bg-cream-darker ${ratioClass[ratio] ?? ratioClass.landscape}`}>
-        <img src={src} alt={alt} loading="lazy" className="w-full h-full object-cover" />
+        <img src={src} alt={alt} loading="lazy" className="w-full h-full object-contain" />
       </div>
       {(label || caption) && (
         <figcaption className="flex flex-wrap items-baseline gap-x-3 gap-y-1 border-t border-divider pt-2">

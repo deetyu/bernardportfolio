@@ -12,6 +12,7 @@ import sturioInfographic from "@/assets/projects/sturio-infographic.jpg";
 import salsaPackaging from "@/assets/projects/salsa-packaging.jpg";
 import amigurumiCollateral from "@/assets/projects/amigurumi-collateral.jpg";
 import marksHero from "@/assets/projects/marks-hero.jpg";
+import { projectImage } from "@/data/projectImages";
 
 const featuredWork = [
   {
@@ -35,14 +36,21 @@ const featuredWork = [
     description: "Identity for a historic hacienda positioned as a premium event destination.",
     image: haciendaHero,
   },
+  {
+    slug: "girasolia",
+    title: "Girasolía",
+    category: "Brand Identity · Social · Campaign",
+    description: "A sunflower-led identity extended into social, campaigns and print.",
+    image: projectImage("girasolia-identity") ?? flowersPaid,
+  },
 ];
 
 const selectedWork = [
   {
     slug: "flowers-campaign",
-    title: "Flowers — Campaign",
+    title: "Girasolía — Campaign",
     category: "Campaign · Paid Social · Display",
-    description: "Seasonal art direction extended across paid social and display.",
+    description: "Campaign exploration across paid social, email and print.",
     image: flowersPaid,
   },
   {
@@ -68,9 +76,9 @@ const selectedWork = [
   },
   {
     slug: "craft-studio",
-    title: "Craft Studio",
+    title: "Amigurumi",
     category: "Branding · Collateral · Social",
-    description: "Print and social collateral for an independent craft studio.",
+    description: "Product sheets, cards and care guides for a handmade-goods brand.",
     image: amigurumiCollateral,
   },
   {
