@@ -12,6 +12,7 @@ import sturioInfographic from "@/assets/projects/sturio-infographic.jpg";
 import salsaPackaging from "@/assets/projects/salsa-packaging.jpg";
 import amigurumiCollateral from "@/assets/projects/amigurumi-collateral.jpg";
 import marksHero from "@/assets/projects/marks-hero.jpg";
+import { projectImage } from "@/data/projectImages";
 
 const featuredWork = [
   {
@@ -19,45 +20,52 @@ const featuredWork = [
     title: "AR•YA",
     category: "Brand Identity · Packaging · Digital",
     description: "Identity and packaging system for a premium skincare brand.",
-    image: aryaHero,
+    image: projectImage("arya-product") ?? aryaHero,
   },
   {
     slug: "sturio",
     title: "Sturio",
     category: "Brand Identity · B2B · Digital",
     description: "Modular visual system for a B2B technology consultancy.",
-    image: sturioHero,
+    image: projectImage("sturio-corporate") ?? sturioHero,
   },
   {
     slug: "ex-hacienda-de-cedros",
     title: "Ex Hacienda de Cedros",
     category: "Brand Identity · Art Direction · Hospitality",
     description: "Identity for a historic hacienda positioned as a premium event destination.",
-    image: haciendaHero,
+    image: projectImage("hacienda-signage") ?? haciendaHero,
+  },
+  {
+    slug: "girasolia",
+    title: "Girasolía",
+    category: "Brand Identity · Social · Campaign",
+    description: "A sunflower-led identity extended into social, campaigns and print.",
+    image: projectImage("girasolia-identity") ?? flowersPaid,
   },
 ];
 
 const selectedWork = [
   {
     slug: "flowers-campaign",
-    title: "Flowers — Campaign",
+    title: "Girasolía — Campaign",
     category: "Campaign · Paid Social · Display",
-    description: "Seasonal art direction extended across paid social and display.",
-    image: flowersPaid,
+    description: "Campaign exploration across paid social, email and print.",
+    image: projectImage("girasolia-paid") ?? flowersPaid,
   },
   {
     slug: "arya-digital",
     title: "AR•YA — Digital",
     category: "Landing Page · E-commerce",
     description: "Conversion-focused landing page built on the brand system.",
-    image: aryaLanding,
+    image: projectImage("arya-landing-pdf") ?? aryaLanding,
   },
   {
     slug: "sturio-marketing",
     title: "Sturio — Marketing",
     category: "Social · Collateral · Infographics",
     description: "Marketing assets translating technical data into clear visuals.",
-    image: sturioInfographic,
+    image: projectImage("sturio-infographic-pdf") ?? sturioInfographic,
   },
   {
     slug: "consumer-product",
@@ -68,9 +76,9 @@ const selectedWork = [
   },
   {
     slug: "craft-studio",
-    title: "Craft Studio",
+    title: "Amigurumi",
     category: "Branding · Collateral · Social",
-    description: "Print and social collateral for an independent craft studio.",
+    description: "Product sheets, cards and care guides for a handmade-goods brand.",
     image: amigurumiCollateral,
   },
   {

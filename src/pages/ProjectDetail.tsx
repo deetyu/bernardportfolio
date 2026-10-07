@@ -3,6 +3,9 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { projects } from "@/data/projects";
+import { caseStudies } from "@/data/caseStudies";
+import { ProjectSections } from "@/components/project/ProjectSections";
+import { projectImage } from "@/data/projectImages";
 
 import aryaHero from "@/assets/projects/arya-hero.jpg";
 import aryaDetail1 from "@/assets/projects/arya-detail-1.jpg";
@@ -49,7 +52,18 @@ export default function ProjectDetail() {
   }
 
   const nextProject = projects[(projectIndex + 1) % projects.length];
-  const images = projectImages[slug!] || [aryaHero];
+  const heroNames: Record<string, string> = {
+    "arya-cosmetics": "arya-product",
+    sturio: "sturio-corporate",
+    "ex-hacienda-de-cedros": "hacienda-signage",
+    girasolia: "girasolia-identity",
+    "flowers-campaign": "girasolia-paid",
+    "arya-digital": "arya-landing-pdf",
+    "sturio-marketing": "sturio-infographic-pdf",
+  };
+  const images = projectImages[project.slug] || [flowersPaid];
+  const hero = projectImage(heroNames[project.slug] ?? "") ?? images[0];
+  const caseStudy = caseStudies[project.slug];
 
   return (
     <Layout>
@@ -59,9 +73,9 @@ export default function ProjectDetail() {
           <ScrollReveal>
             <div className="aspect-[16/9] md:aspect-[21/9] overflow-hidden">
               <img
-                src={images[0]}
+                 src={hero}
                 alt={project.title}
-                className="w-full h-full object-cover"
+                 className="w-full h-full object-contain bg-cream-dark"
               />
             </div>
           </ScrollReveal>
@@ -121,10 +135,12 @@ export default function ProjectDetail() {
                       ))}
                     </ul>
                   </div>
-                  <div>
-                    <p className="eyebrow mb-2">Year</p>
-                    <p className="text-ink">{project.year}</p>
-                  </div>
+                   {caseStudy && (
+                     <div>
+                       <p className="eyebrow mb-2">Role</p>
+                       <p className="text-ink">{caseStudy.role}</p>
+                     </div>
+                   )}
                 </div>
               </ScrollReveal>
             </div>
@@ -132,6 +148,38 @@ export default function ProjectDetail() {
         </div>
       </section>
 
+      {caseStudy ? (
+        <>
+          {caseStudy.strategy && (
+            <section className="border-t border-divider pb-16 md:pb-24 pt-12">
+              <div className="container-editorial px-6 md:px-12 lg:px-20">
+                <ScrollReveal>
+                  <p className="eyebrow mb-4">Strategy</p>
+                  <h2 className="font-serif text-3xl md:text-4xl text-ink mb-6">{caseStudy.strategy.title}</h2>
+                  <p className="max-w-2xl text-ink-light leading-relaxed">{caseStudy.strategy.description}</p>
+                </ScrollReveal>
+              </div>
+            </section>
+          )}
+          <ProjectSections sections={caseStudy.sections} projectTitle={project.title} />
+          <section className="section-padding border-t border-divider">
+            <div className="container-editorial px-6 md:px-12 lg:px-20 grid grid-cols-1 md:grid-cols-2 gap-12">
+              <ScrollReveal>
+                <p className="eyebrow mb-6">Delivered</p>
+                <ul className="space-y-2 text-ink-light">
+                  {caseStudy.delivered.map((item) => <li key={item}>{item}</li>)}
+                </ul>
+              </ScrollReveal>
+              <ScrollReveal delay={100}>
+                <p className="eyebrow mb-6">Built to</p>
+                <p className="font-serif text-2xl md:text-3xl text-ink leading-relaxed">{caseStudy.builtTo}</p>
+                {caseStudy.note && <p className="mt-6 text-sm text-ink-muted leading-relaxed">{caseStudy.note}</p>}
+              </ScrollReveal>
+            </div>
+          </section>
+        </>
+      ) : (
+      <>
       {/* Image Gallery */}
       <section className="pb-16 md:pb-24">
         <div className="container-editorial px-6 md:px-12 lg:px-20">
@@ -182,6 +230,8 @@ export default function ProjectDetail() {
           </div>
         </div>
       </section>
+      </>
+      )}
 
       {/* Next Project */}
       <section className="border-t border-divider">
