@@ -52,7 +52,17 @@ export default function ProjectDetail() {
   }
 
   const nextProject = projects[(projectIndex + 1) % projects.length];
-  const images = projectImages[project.slug] || [projectImage("girasolia-identity") ?? flowersPaid];
+  const heroNames: Record<string, string> = {
+    "arya-cosmetics": "arya-packaging",
+    sturio: "sturio-corporate",
+    "ex-hacienda-de-cedros": "hacienda-signage",
+    girasolia: "girasolia-identity",
+    "flowers-campaign": "girasolia-paid",
+    "arya-digital": "arya-landing-pdf",
+    "sturio-marketing": "sturio-infographic-pdf",
+  };
+  const images = projectImages[project.slug] || [flowersPaid];
+  const hero = projectImage(heroNames[project.slug] ?? "") ?? images[0];
   const caseStudy = caseStudies[project.slug];
 
   return (
@@ -63,9 +73,9 @@ export default function ProjectDetail() {
           <ScrollReveal>
             <div className="aspect-[16/9] md:aspect-[21/9] overflow-hidden">
               <img
-                src={images[0]}
+                 src={hero}
                 alt={project.title}
-                className="w-full h-full object-cover"
+                 className="w-full h-full object-contain bg-cream-dark"
               />
             </div>
           </ScrollReveal>
