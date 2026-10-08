@@ -41,7 +41,7 @@ function Figure({
   if (!src) return null;
 
   return (
-    <figure className="space-y-3">
+    <figure className="space-y-2">
       <div className={`overflow-hidden bg-cream-darker ${ratioClass[ratio] ?? ratioClass.landscape}`}>
         <img src={src} alt={alt} loading="lazy" className="w-full h-full object-contain" />
       </div>
@@ -77,12 +77,12 @@ export function ProjectSections({
         return (
           <section
             key={section.title}
-            className={`section-padding ${i % 2 === 1 ? "bg-cream-dark" : ""}`}
+            className={`py-8 md:py-12 px-6 md:px-12 lg:px-20 ${i % 2 === 1 ? "bg-cream-dark" : ""}`}
           >
             <div className="container-editorial">
               {/* Editorial section header */}
               <ScrollReveal>
-                <div className="border-t border-ink pt-4 mb-10 md:mb-14 grid grid-cols-1 md:grid-cols-12 gap-6">
+                <div className="border-t border-ink pt-3 mb-6 md:mb-8 grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-6">
                   <div className="md:col-span-1">
                     <span className="font-serif text-2xl text-ink">
                       {String(i + 1).padStart(2, "0")}
@@ -106,7 +106,7 @@ export function ProjectSections({
                 </div>
               </ScrollReveal>
 
-              <div className={`grid ${cols} gap-8 md:gap-12`}>
+              <div className={`grid ${cols} gap-6 md:gap-8`}>
                 {section.items.map((item, j) => (
                   <ScrollReveal key={`${item.image}-${j}`} delay={j * 100}>
                     <Figure
@@ -122,7 +122,7 @@ export function ProjectSections({
 
               {section.footnote && (
                 <ScrollReveal>
-                  <p className="mt-10 md:mt-14 max-w-2xl font-serif italic text-xl md:text-2xl text-ink">
+                  <p className="mt-6 md:mt-8 max-w-2xl font-serif italic text-xl md:text-2xl text-ink">
                     {section.footnote}
                   </p>
                 </ScrollReveal>

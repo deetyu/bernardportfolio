@@ -68,7 +68,7 @@ export default function ProjectDetail() {
   return (
     <Layout>
       {/* Hero Image */}
-      <section className="pt-24 md:pt-32">
+      <section className="pt-20 md:pt-24">
         <div className="w-full">
           <ScrollReveal>
             <div className="aspect-[16/9] md:aspect-[21/9] overflow-hidden">
@@ -83,26 +83,26 @@ export default function ProjectDetail() {
       </section>
 
       {/* Project Info */}
-      <section className="section-padding">
-        <div className="container-editorial px-6 md:px-12 lg:px-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+      <section className="py-8 md:py-12 px-6 md:px-12 lg:px-20">
+        <div className="container-editorial">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             {/* Main Content */}
             <div className="lg:col-span-7">
               <ScrollReveal>
-                <p className="eyebrow mb-4">Overview</p>
+                <p className="eyebrow mb-3">Overview</p>
               </ScrollReveal>
               <ScrollReveal delay={100}>
-                <h1 className="font-serif text-4xl md:text-5xl text-ink mb-8">
+                <h1 className="font-serif text-4xl md:text-5xl text-ink mb-5">
                   {project.title}
                 </h1>
               </ScrollReveal>
               <ScrollReveal delay={200}>
-                <p className="text-xl text-ink-light leading-relaxed mb-8">
+                <p className="text-xl text-ink-light leading-relaxed mb-5">
                   {project.overview}
                 </p>
               </ScrollReveal>
               <ScrollReveal delay={300}>
-                <div className="space-y-6">
+                <div className="space-y-4">
                   <div>
                     <p className="eyebrow mb-2">The Challenge</p>
                     <p className="text-ink-light">{project.challenge}</p>
@@ -118,7 +118,7 @@ export default function ProjectDetail() {
             {/* Sidebar */}
             <div className="lg:col-span-4 lg:col-start-9">
               <ScrollReveal delay={200}>
-                <div className="lg:sticky lg:top-32 space-y-8">
+                <div className="lg:sticky lg:top-24 grid grid-cols-2 gap-5 lg:grid-cols-1">
                   <div>
                     <p className="eyebrow mb-2">Client</p>
                     <p className="text-ink">{project.client}</p>
@@ -151,29 +151,29 @@ export default function ProjectDetail() {
       {caseStudy ? (
         <>
           {caseStudy.strategy && (
-            <section className="border-t border-divider pb-16 md:pb-24 pt-12">
+            <section className="border-t border-divider py-8 md:py-10">
               <div className="container-editorial px-6 md:px-12 lg:px-20">
                 <ScrollReveal>
-                  <p className="eyebrow mb-4">Strategy</p>
-                  <h2 className="font-serif text-3xl md:text-4xl text-ink mb-6">{caseStudy.strategy.title}</h2>
+                  <p className="eyebrow mb-3">Strategy</p>
+                  <h2 className="font-serif text-3xl md:text-4xl text-ink mb-4">{caseStudy.strategy.title}</h2>
                   <p className="max-w-2xl text-ink-light leading-relaxed">{caseStudy.strategy.description}</p>
                 </ScrollReveal>
               </div>
             </section>
           )}
           <ProjectSections sections={caseStudy.sections} projectTitle={project.title} />
-          <section className="section-padding border-t border-divider">
-            <div className="container-editorial px-6 md:px-12 lg:px-20 grid grid-cols-1 md:grid-cols-2 gap-12">
+           <section className="py-8 md:py-12 px-6 md:px-12 lg:px-20 border-t border-divider">
+             <div className="container-editorial grid grid-cols-1 md:grid-cols-2 gap-8">
               <ScrollReveal>
-                <p className="eyebrow mb-6">Delivered</p>
+                 <p className="eyebrow mb-4">Delivered</p>
                 <ul className="space-y-2 text-ink-light">
                   {caseStudy.delivered.map((item) => <li key={item}>{item}</li>)}
                 </ul>
               </ScrollReveal>
               <ScrollReveal delay={100}>
-                <p className="eyebrow mb-6">Built to</p>
+                 <p className="eyebrow mb-4">Built to</p>
                 <p className="font-serif text-2xl md:text-3xl text-ink leading-relaxed">{caseStudy.builtTo}</p>
-                {caseStudy.note && <p className="mt-6 text-sm text-ink-muted leading-relaxed">{caseStudy.note}</p>}
+                 {caseStudy.note && <p className="mt-4 text-sm text-ink-muted leading-relaxed">{caseStudy.note}</p>}
               </ScrollReveal>
             </div>
           </section>
@@ -181,9 +181,9 @@ export default function ProjectDetail() {
       ) : (
       <>
       {/* Image Gallery */}
-      <section className="pb-16 md:pb-24">
+       <section className="pb-8 md:pb-12">
         <div className="container-editorial px-6 md:px-12 lg:px-20">
-          <div className="space-y-8 md:space-y-12">
+           <div className="space-y-6 md:space-y-8">
             {/* Full Width Image */}
             <ScrollReveal>
               <div className="aspect-[16/10] overflow-hidden">
@@ -196,7 +196,7 @@ export default function ProjectDetail() {
             </ScrollReveal>
 
             {/* Two Column */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               <ScrollReveal>
                 <div className="aspect-[4/5] overflow-hidden">
                   <img
@@ -239,7 +239,7 @@ export default function ProjectDetail() {
           to={`/work/${nextProject.slug}`}
           className="group block"
         >
-          <div className="container-editorial px-6 md:px-12 lg:px-20 py-16 md:py-24">
+           <div className="container-editorial px-6 md:px-12 lg:px-20 py-8 md:py-12">
             <div className="flex items-center justify-between">
               <div>
                 <p className="eyebrow mb-4">Next Project</p>
