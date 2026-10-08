@@ -7,5 +7,5 @@
 
 # Work visual coherence
 
-- [ ] Apply the selected aligned three-column composition without changing other pages or project content.
-- [ ] Verify image framing, text alignment, and case-study links across screen sizes.
+- [x] Apply the selected aligned three-column composition without changing other pages or project content.
+- [x] Verify image framing, text alignment, and case-study links across screen sizes.
