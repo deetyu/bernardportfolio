@@ -11,6 +11,7 @@ interface ProjectCardProps {
   className?: string;
   aspectRatio?: "landscape" | "portrait";
   showCaseStudyLink?: boolean;
+  imageFit?: "cover" | "contain";
 }
 
 export function ProjectCard({
@@ -22,24 +23,25 @@ export function ProjectCard({
   className,
   aspectRatio = "landscape",
   showCaseStudyLink = false,
+  imageFit = "cover",
 }: ProjectCardProps) {
   return (
     <Link
       to={`/work/${slug}`}
-      className={cn("project-card block group", className)}
+      className={cn("project-card flex h-full flex-col group focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-ink", className)}
     >
       {/* Image Container */}
       <div
         className={cn(
-          "relative overflow-hidden bg-cream-darker mb-6",
-          aspectRatio === "landscape" ? "aspect-[16/10]" : "aspect-[4/5]"
+          "relative shrink-0 overflow-hidden bg-cream-darker mb-8",
+          aspectRatio === "landscape" ? "aspect-[3/2]" : "aspect-[4/5]"
         )}
       >
         <img
           src={image}
           alt={title}
           loading="lazy"
-          className="project-card-image w-full h-full object-cover"
+          className={cn("project-card-image w-full h-full", imageFit === "contain" ? "object-contain" : "object-cover")}
         />
         {/* Hover Overlay */}
         <div className="absolute inset-0 bg-ink/0 group-hover:bg-ink/10 transition-colors duration-500 flex items-center justify-center">
@@ -50,20 +52,20 @@ export function ProjectCard({
       </div>
 
       {/* Text Content */}
-      <div>
-        <h3 className="font-serif text-xl md:text-2xl text-ink group-hover:opacity-70 transition-opacity duration-300">
+      <div className="flex flex-1 flex-col">
+        <h3 className="project-card-title mb-2 font-serif text-2xl leading-7 text-ink group-hover:opacity-70 transition-opacity duration-300">
           {title}
         </h3>
-        <p className="mt-2 text-[10px] uppercase tracking-[0.25em] text-ink-muted">
+        <p className="project-card-category mb-4 text-[10px] leading-[18px] uppercase tracking-[0.15em] text-ink-light">
           {category}
         </p>
         {description && (
-          <p className="mt-4 text-sm md:text-base text-ink-light leading-relaxed">
+          <p className="project-card-description mb-6 text-base leading-6 text-ink-light">
             {description}
           </p>
         )}
         {showCaseStudyLink && (
-          <span className="mt-5 inline-block text-[10px] uppercase tracking-[0.25em] text-ink-muted group-hover:text-ink transition-colors duration-300">
+          <span className="mt-auto inline-flex w-fit items-center gap-2 border-b border-transparent pb-1 text-[11px] leading-4 uppercase tracking-[0.2em] text-ink group-hover:border-ink transition-colors duration-300">
             Read case study →
           </span>
         )}
