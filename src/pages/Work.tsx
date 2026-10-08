@@ -93,9 +93,10 @@ const selectedWork = [
 export default function Work() {
   return (
     <Layout>
+      <div className="work-index">
       {/* Hero */}
-      <section className="pt-32 md:pt-40 pb-16 md:pb-24">
-        <div className="container-editorial px-6 md:px-12 lg:px-20">
+      <section className="pt-32 md:pt-40 pb-16 md:pb-20 px-6 md:px-16 lg:px-24">
+        <div className="container-editorial">
           <ScrollReveal>
             <p className="eyebrow mb-6">Portfolio</p>
           </ScrollReveal>
@@ -106,14 +107,14 @@ export default function Work() {
       </section>
 
       {/* Featured Work */}
-      <section className="section-padding border-t border-divider">
-        <div className="container-editorial px-6 md:px-12 lg:px-20">
+      <section className="pb-20 md:pb-24 px-6 md:px-16 lg:px-24">
+        <div className="container-editorial">
           <ScrollReveal>
-            <p className="eyebrow mb-10 md:mb-14">Featured Work</p>
+            <p className="mb-10 border-b border-divider pb-4 text-[10px] uppercase tracking-[0.2em] text-ink-light">Featured Work</p>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14 md:gap-x-10 lg:gap-x-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-20">
             {featuredWork.map((project, index) => (
-              <ScrollReveal key={project.slug} delay={(index % 3) * 80}>
+              <ScrollReveal key={project.slug} delay={(index % 3) * 80} className="h-full min-w-0">
                 <ProjectCard
                   slug={project.slug}
                   title={project.title}
@@ -121,6 +122,7 @@ export default function Work() {
                   description={project.description}
                   image={project.image}
                   aspectRatio="landscape"
+                  imageFit={project.slug === "girasolia" || project.slug === "arya-cosmetics" ? "contain" : "cover"}
                   showCaseStudyLink
                 />
               </ScrollReveal>
@@ -130,14 +132,14 @@ export default function Work() {
       </section>
 
       {/* Selected Work */}
-      <section className="section-padding border-t border-divider">
-        <div className="container-editorial px-6 md:px-12 lg:px-20">
+      <section className="pb-20 md:pb-24 px-6 md:px-16 lg:px-24">
+        <div className="container-editorial">
           <ScrollReveal>
-            <p className="eyebrow mb-10 md:mb-14">Selected Work</p>
+            <p className="mb-10 border-b border-divider pb-4 text-[10px] uppercase tracking-[0.2em] text-ink-light">Selected Work</p>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14 md:gap-x-10 lg:gap-x-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-20">
             {selectedWork.map((item, index) => (
-              <ScrollReveal key={item.slug} delay={(index % 3) * 80}>
+              <ScrollReveal key={item.slug} delay={(index % 3) * 80} className="h-full min-w-0">
                 <ProjectCard
                   slug={item.slug}
                   title={item.title}
@@ -145,6 +147,7 @@ export default function Work() {
                   description={item.description}
                   image={item.image}
                   aspectRatio="landscape"
+                  imageFit="contain"
                   showCaseStudyLink
                 />
               </ScrollReveal>
@@ -152,6 +155,7 @@ export default function Work() {
           </div>
         </div>
       </section>
+      </div>
     </Layout>
   );
 }

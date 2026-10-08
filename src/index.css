@@ -140,6 +140,46 @@
     @apply max-w-7xl mx-auto;
   }
 
+  /* Selected Work direction — scoped so other pages retain their styling. */
+  .work-index {
+    --cream: 42.857143 25.925926% 94.705882%;
+    --cream-darker: 38.181818 19.298246% 88.823529%;
+    --divider: 38.181818 19.298246% 88.823529%;
+    --ink: 0 0% 5.098039%;
+    --ink-light: 0 0% 17.647059%;
+    --ink-muted: 0 0% 17.647059%;
+    background-color: hsl(var(--cream));
+  }
+
+  .work-index h1,
+  .work-index h3 {
+    letter-spacing: 0;
+  }
+
+  .work-index .project-card-title {
+    min-height: 2.875rem;
+  }
+
+  .work-index .project-card-category {
+    min-height: 2.25rem;
+  }
+
+  .work-index .project-card-description {
+    min-height: 4.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .work-index .project-card-title {
+      min-height: 3.5rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .work-index .project-card-title {
+      min-height: 1.75rem;
+    }
+  }
+
   .project-card {
     @apply relative overflow-hidden;
   }

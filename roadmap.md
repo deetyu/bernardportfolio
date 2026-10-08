@@ -4,3 +4,8 @@
 - [x] Add Girasolía and retain existing selected-work pages and links.
 - [x] Use suitable PDF artwork where available; identify provisional campaign concepts accurately.
 - [x] Verify Work and all case-study pages.
+
+# Work visual coherence
+
+- [ ] Apply the selected aligned three-column composition without changing other pages or project content.
+- [ ] Verify image framing, text alignment, and case-study links across screen sizes.
