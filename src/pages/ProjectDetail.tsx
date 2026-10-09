@@ -243,7 +243,7 @@ export default function ProjectDetail() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="eyebrow mb-4">Next Project</p>
-                <h2 className="font-serif text-3xl md:text-4xl text-ink group-hover:opacity-70 transition-opacity duration-300">
+                <h2 className="font-serif text-2xl md:text-3xl text-ink group-hover:opacity-70 transition-opacity duration-300">
                   {nextProject.title}
                 </h2>
               </div>
