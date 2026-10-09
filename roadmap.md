@@ -13,3 +13,8 @@
 # Project page headings
 
 - [x] Reduce project titles, section headers, and the closing statement to a restrained editorial scale; verify hierarchy on rendered pages.
+
+# Editorial project reading
+
+- [ ] Reduce repetitive introductory text and alternate artwork with concise narrative sections without changing Work.
+- [ ] Remove duplicated artwork, preserve provisional labels, and verify project pages after refresh on desktop and mobile.
