@@ -172,7 +172,7 @@ export default function ProjectDetail() {
               </ScrollReveal>
               <ScrollReveal delay={100}>
                  <p className="eyebrow mb-4">Built to</p>
-                <p className="font-serif text-2xl md:text-3xl text-ink leading-relaxed">{caseStudy.builtTo}</p>
+                <p className="font-serif text-xl md:text-2xl text-ink leading-relaxed">{caseStudy.builtTo}</p>
                  {caseStudy.note && <p className="mt-4 text-sm text-ink-muted leading-relaxed">{caseStudy.note}</p>}
               </ScrollReveal>
             </div>
