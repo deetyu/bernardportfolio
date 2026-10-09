@@ -9,3 +9,7 @@
 
 - [x] Apply the selected aligned three-column composition without changing other pages or project content.
 - [x] Verify image framing, text alignment, and case-study links across screen sizes.
+
+# Project page headings
+
+- [x] Reduce project titles, section headers, and the closing statement to a restrained editorial scale; verify hierarchy on rendered pages.
