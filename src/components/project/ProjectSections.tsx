@@ -84,12 +84,12 @@ export function ProjectSections({
               <ScrollReveal>
                 <div className="border-t border-ink pt-3 mb-6 md:mb-8 grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-6">
                   <div className="md:col-span-1">
-                    <span className="font-serif text-2xl text-ink">
+                    <span className="font-serif text-base text-ink">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                   </div>
                   <div className="md:col-span-5">
-                    <h2 className="font-serif text-3xl md:text-4xl text-ink leading-tight">
+                    <h2 className="font-serif text-xl md:text-2xl text-ink leading-tight">
                       {section.title}
                     </h2>
                     {section.kicker && (
