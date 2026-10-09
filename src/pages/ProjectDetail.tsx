@@ -92,7 +92,7 @@ export default function ProjectDetail() {
                 <p className="eyebrow mb-3">Overview</p>
               </ScrollReveal>
               <ScrollReveal delay={100}>
-                <h1 className="font-serif text-4xl md:text-5xl text-ink mb-5">
+                <h1 className="font-serif text-2xl md:text-3xl text-ink mb-4">
                   {project.title}
                 </h1>
               </ScrollReveal>
@@ -155,7 +155,7 @@ export default function ProjectDetail() {
               <div className="container-editorial px-6 md:px-12 lg:px-20">
                 <ScrollReveal>
                   <p className="eyebrow mb-3">Strategy</p>
-                  <h2 className="font-serif text-3xl md:text-4xl text-ink mb-4">{caseStudy.strategy.title}</h2>
+                  <h2 className="font-serif text-xl md:text-2xl text-ink mb-3">{caseStudy.strategy.title}</h2>
                   <p className="max-w-2xl text-ink-light leading-relaxed">{caseStudy.strategy.description}</p>
                 </ScrollReveal>
               </div>
