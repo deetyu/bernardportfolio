@@ -71,7 +71,7 @@ export default function ProjectDetail() {
       <section className="pt-24 md:pt-28 px-6 md:px-12 lg:px-20">
         <div className="w-full max-w-6xl mx-auto">
           <ScrollReveal>
-            <div className="aspect-[16/9] max-h-[52vh] w-full overflow-hidden">
+            <div className="aspect-[21/9] max-h-[38vh] w-full overflow-hidden">
               <img
                  src={hero}
                 alt={project.title}
