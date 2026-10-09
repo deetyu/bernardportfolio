@@ -68,10 +68,10 @@ export default function ProjectDetail() {
   return (
     <Layout>
       {/* Hero Image */}
-      <section className="pt-20 md:pt-24">
-        <div className="w-full">
+      <section className="pt-24 md:pt-28 px-6 md:px-12 lg:px-20">
+        <div className="w-full max-w-6xl mx-auto">
           <ScrollReveal>
-            <div className="aspect-[16/9] md:aspect-[21/9] overflow-hidden">
+            <div className="aspect-[16/9] max-h-[52vh] w-full overflow-hidden">
               <img
                  src={hero}
                 alt={project.title}
