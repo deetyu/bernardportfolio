@@ -1,5 +1,6 @@
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { projectImage } from "@/data/projectImages";
+
 export type ProjectSectionItem = {
   image: string;
   label?: string;
@@ -7,12 +8,21 @@ export type ProjectSectionItem = {
   ratio?: string;
 };
 
+/**
+ * Reusable case-study layout patterns:
+ * - feature: full-width featured image (campaigns, websites)
+ * - split: image beside a short text column
+ * - two: two-image comparison / application layout
+ * - three: compact grid for related assets
+ * - single: alias of feature (legacy)
+ */
 export type ProjectSection = {
   title: string;
   kicker?: string;
   description?: string;
   footnote?: string;
-  layout?: "single" | "two" | "three";
+  group?: "identity" | "applications";
+  layout?: "single" | "feature" | "split" | "two" | "three";
   items: ProjectSectionItem[];
 };
 
@@ -24,32 +34,28 @@ const ratioClass: Record<string, string> = {
   poster: "aspect-[3/4]",
 };
 
-function Figure({
-  image,
-  label,
-  caption,
-  ratio = "landscape",
-  alt,
-}: {
-  image: string;
-  label?: string;
-  caption?: string;
-  ratio?: string;
-  alt: string;
-}) {
-  const src = projectImage(image);
-  if (!src) return null;
+const groupLabel: Record<string, string> = {
+  identity: "Identity",
+  applications: "Applications & Deliverables",
+};
 
+function Figure({ image, label, caption, ratio = "landscape", alt }: ProjectSectionItem & { alt: string }) {
+  const src = projectImage(image);
+  if (!src) {
+    return (
+      <div className={`flex items-center justify-center bg-cream-darker ${ratioClass[ratio] ?? ratioClass.landscape}`}>
+        <span className="text-[10px] uppercase tracking-[0.2em] text-ink-muted">Image placeholder</span>
+      </div>
+    );
+  }
   return (
-    <figure className="space-y-2">
+    <figure className="cs-figure">
       <div className={`overflow-hidden bg-cream-darker ${ratioClass[ratio] ?? ratioClass.landscape}`}>
-        <img src={src} alt={alt} loading="lazy" className="w-full h-full object-contain" />
+        <img src={src} alt={alt} loading="lazy" className="h-full w-full object-contain" />
       </div>
       {(label || caption) && (
-        <figcaption className="flex flex-wrap items-baseline gap-x-3 gap-y-1 border-t border-divider pt-2">
-          {label && (
-            <span className="text-[10px] uppercase tracking-[0.2em] text-ink">{label}</span>
-          )}
+        <figcaption className="cs-caption">
+          {label && <span className="cs-label">{label}</span>}
           {caption && <span className="text-sm text-ink-muted">{caption}</span>}
         </figcaption>
       )}
@@ -57,75 +63,76 @@ function Figure({
   );
 }
 
-export function ProjectSections({
-  sections,
-  projectTitle,
-}: {
-  sections: ProjectSection[];
-  projectTitle: string;
-}) {
+function SectionText({ section, index }: { section: ProjectSection; index: number }) {
+  return (
+    <div>
+      <p className="cs-label mb-2">
+        {String(index + 1).padStart(2, "0")}
+        {section.kicker && <span className="text-ink-muted"> — {section.kicker}</span>}
+      </p>
+      <h3 className="cs-heading">{section.title}</h3>
+      {section.description && <p className="cs-body mt-3">{section.description}</p>}
+    </div>
+  );
+}
+
+export function ProjectSections({ sections, projectTitle }: { sections: ProjectSection[]; projectTitle: string }) {
   return (
     <>
       {sections.map((section, i) => {
-        const cols =
-          section.layout === "single"
-            ? "grid-cols-1"
-            : section.layout === "three"
-            ? "grid-cols-1 md:grid-cols-3"
-            : "grid-cols-1 md:grid-cols-2";
+        const layout = section.layout === "single" ? "feature" : section.layout ?? "two";
+        const showGroup = section.group && section.group !== sections[i - 1]?.group;
+        const alt = (item: ProjectSectionItem) => `${projectTitle} — ${item.label ?? section.title}`;
+        const reverse = i % 2 === 1;
 
         return (
-          <section
-            key={section.title}
-            className={`py-8 md:py-12 px-6 md:px-12 lg:px-20 ${i % 2 === 1 ? "bg-cream-dark" : ""}`}
-          >
-            <div className="container-editorial">
-              {/* Editorial section header */}
-              <ScrollReveal>
-                <div className="border-t border-ink pt-3 mb-6 md:mb-8 grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-6">
-                  <div className="md:col-span-1">
-                    <span className="font-serif text-base text-ink">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                  </div>
-                  <div className="md:col-span-5">
-                    <h2 className="font-serif text-xl md:text-2xl text-ink leading-tight">
-                      {section.title}
-                    </h2>
-                    {section.kicker && (
-                      <p className="mt-2 text-[10px] uppercase tracking-[0.25em] text-ink-muted">
-                        {section.kicker}
-                      </p>
-                    )}
-                  </div>
-                  {section.description && (
-                    <div className="md:col-span-5 md:col-start-8">
-                      <p className="text-base text-ink-light">{section.description}</p>
-                    </div>
-                  )}
-                </div>
-              </ScrollReveal>
+          <section key={`${section.title}-${i}`} className="cs-section">
+            <div className="cs-container">
+              {showGroup && (
+                <p className="cs-group">{groupLabel[section.group!]}</p>
+              )}
 
-              <div className={`grid ${cols} gap-6 md:gap-8`}>
-                {section.items.map((item, j) => (
-                  <ScrollReveal key={`${item.image}-${j}`} delay={j * 100}>
-                    <Figure
-                      image={item.image}
-                      label={item.label}
-                      caption={item.caption}
-                      ratio={item.ratio}
-                      alt={`${projectTitle} — ${item.label ?? section.title}`}
-                    />
+              {layout === "split" ? (
+                <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-12 md:gap-10">
+                  <ScrollReveal className={`md:col-span-4 ${reverse ? "md:order-2 md:col-start-9" : ""}`}>
+                    <SectionText section={section} index={i} />
                   </ScrollReveal>
-                ))}
-              </div>
+                  <ScrollReveal className={`md:col-span-8 ${reverse ? "md:order-1" : ""}`} delay={100}>
+                    <div className="space-y-6">
+                      {section.items.map((item, j) => (
+                        <Figure key={`${item.image}-${j}`} {...item} alt={alt(item)} />
+                      ))}
+                    </div>
+                  </ScrollReveal>
+                </div>
+              ) : (
+                <>
+                  <ScrollReveal>
+                    <div className="mb-6 grid grid-cols-1 gap-3 md:grid-cols-12 md:gap-10">
+                      <div className="md:col-span-5">
+                        <SectionText section={{ ...section, description: undefined }} index={i} />
+                      </div>
+                      {section.description && (
+                        <p className="cs-body md:col-span-6 md:col-start-7 md:pt-6">{section.description}</p>
+                      )}
+                    </div>
+                  </ScrollReveal>
+                  <div
+                    className={`grid gap-6 md:gap-8 ${
+                      layout === "three" ? "grid-cols-1 md:grid-cols-3" : layout === "two" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"
+                    }`}
+                  >
+                    {section.items.map((item, j) => (
+                      <ScrollReveal key={`${item.image}-${j}`} delay={j * 100}>
+                        <Figure {...item} alt={alt(item)} />
+                      </ScrollReveal>
+                    ))}
+                  </div>
+                </>
+              )}
 
               {section.footnote && (
-                <ScrollReveal>
-                  <p className="mt-6 md:mt-8 max-w-2xl font-serif italic text-xl md:text-2xl text-ink">
-                    {section.footnote}
-                  </p>
-                </ScrollReveal>
+                <p className="mt-6 max-w-2xl font-serif text-lg italic text-ink md:text-xl">{section.footnote}</p>
               )}
             </div>
           </section>
