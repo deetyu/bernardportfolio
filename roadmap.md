@@ -18,3 +18,4 @@
 
 - [ ] Reduce repetitive introductory text and alternate artwork with concise narrative sections without changing Work.
 - [ ] Remove duplicated artwork, preserve provisional labels, and verify project pages after refresh on desktop and mobile.
+- [ ] Apply one shared case-study template to AR·YA, Sturio, Ex Hacienda de Cedros and Girasolía (hero, overview, strategy, identity, applications, delivered, built to, next project).
