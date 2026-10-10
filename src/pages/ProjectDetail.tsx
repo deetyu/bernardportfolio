@@ -67,113 +67,92 @@ export default function ProjectDetail() {
 
   return (
     <Layout>
-      {/* Hero Image */}
-      <section className="pt-24 md:pt-28 px-6 md:px-12 lg:px-20">
-        <div className="w-full max-w-6xl mx-auto">
+      {/* 1. Hero */}
+      <section className="cs-section pt-24 md:pt-28">
+        <div className="cs-container">
           <ScrollReveal>
-            <div className="aspect-[21/9] max-h-[38vh] w-full overflow-hidden">
-              <img
-                 src={hero}
-                alt={project.title}
-                 className="w-full h-full object-contain bg-cream-dark"
-              />
+            <div className="aspect-[21/9] max-h-[38vh] w-full overflow-hidden bg-cream-dark">
+              <img src={hero} alt={project.title} className="h-full w-full object-contain" />
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={100}>
+            <div className="mt-6 flex flex-col gap-2 border-t border-ink pt-4 md:flex-row md:items-baseline md:justify-between">
+              <h1 className="font-serif text-2xl text-ink md:text-3xl">{project.title}</h1>
+              <p className="cs-label text-ink-muted">{project.category}</p>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Project Info */}
-      <section className="py-8 md:py-12 px-6 md:px-12 lg:px-20">
-        <div className="container-editorial">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
-            {/* Main Content */}
-            <div className="lg:col-span-7">
-              <ScrollReveal>
-                <p className="eyebrow mb-3">Overview</p>
-              </ScrollReveal>
-              <ScrollReveal delay={100}>
-                <h1 className="font-serif text-2xl md:text-3xl text-ink mb-4">
-                  {project.title}
-                </h1>
-              </ScrollReveal>
-              <ScrollReveal delay={200}>
-                <p className="text-xl text-ink-light leading-relaxed mb-5">
-                  {project.overview}
-                </p>
-              </ScrollReveal>
-              <ScrollReveal delay={300}>
-                <div className="space-y-4">
-                  <div>
-                    <p className="eyebrow mb-2">The Challenge</p>
-                    <p className="text-ink-light">{project.challenge}</p>
-                  </div>
-                  <div>
-                    <p className="eyebrow mb-2">The Solution</p>
-                    <p className="text-ink-light">{project.solution}</p>
-                  </div>
-                </div>
-              </ScrollReveal>
+      {/* 2. Overview */}
+      <section className="cs-section pt-0 md:pt-0">
+        <div className="cs-container grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
+          <ScrollReveal className="md:col-span-7">
+            <p className="cs-label mb-3 text-ink-muted">Overview</p>
+            <p className="font-serif text-lg leading-relaxed text-ink md:text-xl">{project.overview}</p>
+            <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+              <div>
+                <p className="cs-label mb-2">The Challenge</p>
+                <p className="text-sm leading-relaxed text-ink-light">{project.challenge}</p>
+              </div>
+              <div>
+                <p className="cs-label mb-2">The Solution</p>
+                <p className="text-sm leading-relaxed text-ink-light">{project.solution}</p>
+              </div>
             </div>
-
-            {/* Sidebar */}
-            <div className="lg:col-span-4 lg:col-start-9">
-              <ScrollReveal delay={200}>
-                <div className="lg:sticky lg:top-24 grid grid-cols-2 gap-5 lg:grid-cols-1">
-                  <div>
-                    <p className="eyebrow mb-2">Client</p>
-                    <p className="text-ink">{project.client}</p>
-                  </div>
-                  <div>
-                    <p className="eyebrow mb-2">Industry</p>
-                    <p className="text-ink">{project.industry}</p>
-                  </div>
-                  <div>
-                    <p className="eyebrow mb-2">Services</p>
-                    <ul className="space-y-1">
-                      {project.services.map((service) => (
-                        <li key={service} className="text-ink">{service}</li>
-                      ))}
-                    </ul>
-                  </div>
-                   {caseStudy && (
-                     <div>
-                       <p className="eyebrow mb-2">Role</p>
-                       <p className="text-ink">{caseStudy.role}</p>
-                     </div>
-                   )}
+          </ScrollReveal>
+          <ScrollReveal className="md:col-span-4 md:col-start-9" delay={100}>
+            <dl className="grid grid-cols-2 gap-5 border-t border-divider pt-4 md:grid-cols-1">
+              {[
+                ["Client", project.client],
+                ["Industry", project.industry],
+                ...(caseStudy ? [["Role", caseStudy.role]] : []),
+              ].map(([k, v]) => (
+                <div key={k}>
+                  <dt className="cs-label mb-1 text-ink-muted">{k}</dt>
+                  <dd className="text-sm text-ink">{v}</dd>
                 </div>
-              </ScrollReveal>
-            </div>
-          </div>
+              ))}
+              <div>
+                <dt className="cs-label mb-1 text-ink-muted">Services</dt>
+                <dd className="text-sm text-ink">{project.services.join(" · ")}</dd>
+              </div>
+            </dl>
+          </ScrollReveal>
         </div>
       </section>
 
       {caseStudy ? (
         <>
+          {/* 3. Strategy */}
           {caseStudy.strategy && (
-            <section className="border-t border-divider py-8 md:py-10">
-              <div className="container-editorial px-6 md:px-12 lg:px-20">
-                <ScrollReveal>
-                  <p className="eyebrow mb-3">Strategy</p>
-                  <h2 className="font-serif text-xl md:text-2xl text-ink mb-3">{caseStudy.strategy.title}</h2>
-                  <p className="max-w-2xl text-ink-light leading-relaxed">{caseStudy.strategy.description}</p>
-                </ScrollReveal>
-              </div>
+            <section className="cs-section bg-cream-dark">
+              <ScrollReveal className="cs-container grid grid-cols-1 gap-3 md:grid-cols-12 md:gap-10">
+                <p className="cs-label text-ink-muted md:col-span-3">Strategy</p>
+                <div className="md:col-span-8 md:col-start-5">
+                  <h2 className="cs-heading">{caseStudy.strategy.title}</h2>
+                  <p className="cs-body mt-3">{caseStudy.strategy.description}</p>
+                </div>
+              </ScrollReveal>
             </section>
           )}
+
+          {/* 4–5. Identity, Applications & Deliverables */}
           <ProjectSections sections={caseStudy.sections} projectTitle={project.title} />
-           <section className="py-8 md:py-12 px-6 md:px-12 lg:px-20 border-t border-divider">
-             <div className="container-editorial grid grid-cols-1 md:grid-cols-2 gap-8">
-              <ScrollReveal>
-                 <p className="eyebrow mb-4">Delivered</p>
-                <ul className="space-y-2 text-ink-light">
+
+          {/* 6–7. Delivered, Built to */}
+          <section className="cs-section border-t border-divider">
+            <div className="cs-container grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
+              <ScrollReveal className="md:col-span-5">
+                <p className="cs-label mb-4 text-ink-muted">Delivered</p>
+                <ul className="grid grid-cols-1 gap-x-6 gap-y-2 text-sm text-ink-light sm:grid-cols-2">
                   {caseStudy.delivered.map((item) => <li key={item}>{item}</li>)}
                 </ul>
               </ScrollReveal>
-              <ScrollReveal delay={100}>
-                 <p className="eyebrow mb-4">Built to</p>
-                <p className="font-serif text-lg md:text-xl text-ink leading-relaxed">{caseStudy.builtTo}</p>
-                 {caseStudy.note && <p className="mt-4 text-sm text-ink-muted leading-relaxed">{caseStudy.note}</p>}
+              <ScrollReveal className="md:col-span-6 md:col-start-7" delay={100}>
+                <p className="cs-label mb-4 text-ink-muted">Built to</p>
+                <p className="font-serif text-lg leading-relaxed text-ink md:text-xl">{caseStudy.builtTo}</p>
+                {caseStudy.note && <p className="mt-4 text-sm leading-relaxed text-ink-muted">{caseStudy.note}</p>}
               </ScrollReveal>
             </div>
           </section>
