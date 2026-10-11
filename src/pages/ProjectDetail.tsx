@@ -72,7 +72,7 @@ export default function ProjectDetail() {
         <div className="cs-container">
           <ScrollReveal>
             <div className="aspect-[21/9] max-h-[38vh] w-full overflow-hidden bg-cream-dark">
-              <img src={hero} alt={project.title} className="h-full w-full object-contain" />
+              <img src={hero} alt={project.title} className="h-full w-full object-cover" />
             </div>
           </ScrollReveal>
           <ScrollReveal delay={100}>
@@ -124,20 +124,7 @@ export default function ProjectDetail() {
 
       {caseStudy ? (
         <>
-          {/* 3. Strategy */}
-          {caseStudy.strategy && (
-            <section className="cs-section bg-cream-dark">
-              <ScrollReveal className="cs-container grid grid-cols-1 gap-3 md:grid-cols-12 md:gap-10">
-                <p className="cs-label text-ink-muted md:col-span-3">Strategy</p>
-                <div className="md:col-span-8 md:col-start-5">
-                  <h2 className="cs-heading">{caseStudy.strategy.title}</h2>
-                  <p className="cs-body mt-3">{caseStudy.strategy.description}</p>
-                </div>
-              </ScrollReveal>
-            </section>
-          )}
-
-          {/* 4–5. Identity, Applications & Deliverables */}
+          {/* 3–4. Identity, Applications & Deliverables */}
           <ProjectSections sections={caseStudy.sections} projectTitle={project.title} />
 
           {/* 6–7. Delivered, Built to */}
