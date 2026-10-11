@@ -33,7 +33,7 @@ export default function Index() {
       <section className="min-h-dvh flex items-center pt-28 md:pt-32 pb-16 px-6 md:px-12 lg:px-20">
         <div className="container-editorial w-full">
           <ScrollReveal>
-            <div className="flex items-baseline justify-between border-b border-ink pb-4">
+            <div className="flex items-baseline justify-between">
               <p className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-ink-muted">
                 Portfolio
               </p>
@@ -59,7 +59,7 @@ export default function Index() {
 
 
 
-          <div className="mt-10 md:mt-14 border-t border-divider pt-8 md:pt-10 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10">
+          <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10">
             <ScrollReveal delay={180} className="md:col-span-7">
               <p className="font-serif text-2xl md:text-3xl leading-[1.25] text-ink">
                 Turning complex concepts into memorable identities through
@@ -70,7 +70,7 @@ export default function Index() {
 
 
           <ScrollReveal delay={400}>
-            <div className="mt-10 md:mt-14 flex flex-wrap gap-4 border-t border-ink pt-8">
+            <div className="mt-12 md:mt-16 flex flex-wrap gap-4">
               <a
                 href="#work"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-ink text-cream text-sm font-semibold hover:opacity-80 transition-opacity duration-200"
@@ -92,7 +92,7 @@ export default function Index() {
       </section>
 
       {/* Running band */}
-      <section className="border-y border-divider bg-cream-dark py-5">
+      <section className="bg-cream-dark py-6">
         <div className="marquee">
           <div className="marquee-inner">
             {[0, 1].map((copy) => (
@@ -112,10 +112,10 @@ export default function Index() {
 
 
       {/* Work index — editorial rows */}
-      <section id="work" className="section-padding scroll-mt-24 border-t border-divider">
+      <section id="work" className="section-padding scroll-mt-24">
         <div className="container-editorial">
           <ScrollReveal>
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-ink pb-4 mb-12 md:mb-16">
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 md:mb-16">
               <div>
                 <p className="eyebrow mb-4">Contents</p>
                 <h2 className="text-ink font-serif">Selected Work</h2>
@@ -144,7 +144,7 @@ export default function Index() {
                       />
                     </div>
 
-                    <div className="draw-rule mt-6 flex items-baseline gap-4 border-t border-ink pt-4">
+                    <div className="draw-rule mt-6 flex items-baseline gap-4">
                       <span className="font-serif text-2xl text-ink drift-num">
                         {String(index + 1).padStart(2, "0")}
                       </span>
@@ -182,7 +182,7 @@ export default function Index() {
       </section>
 
       {/* Closing CTA */}
-      <section className="border-t border-divider py-16 md:py-24 px-6 md:px-12 lg:px-20">
+      <section className="py-20 md:py-28 px-6 md:px-12 lg:px-20">
         <div className="container-editorial">
           <div className="max-w-3xl">
             <ScrollReveal>

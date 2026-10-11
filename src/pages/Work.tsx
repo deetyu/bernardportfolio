@@ -110,7 +110,7 @@ export default function Work() {
       <section className="pb-20 md:pb-24 px-6 md:px-16 lg:px-24">
         <div className="container-editorial">
           <ScrollReveal>
-            <p className="mb-10 border-b border-divider pb-4 text-[10px] uppercase tracking-[0.2em] text-ink-light">Featured Work</p>
+            <p className="mb-8 text-[10px] uppercase tracking-[0.2em] text-ink">Featured Work</p>
           </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-20">
             {featuredWork.map((project, index) => (
@@ -135,7 +135,7 @@ export default function Work() {
       <section className="pb-20 md:pb-24 px-6 md:px-16 lg:px-24">
         <div className="container-editorial">
           <ScrollReveal>
-            <p className="mb-10 border-b border-divider pb-4 text-[10px] uppercase tracking-[0.2em] text-ink-light">Selected Work</p>
+            <p className="mb-8 text-[10px] uppercase tracking-[0.2em] text-ink">Selected Work</p>
           </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-20">
             {selectedWork.map((item, index) => (

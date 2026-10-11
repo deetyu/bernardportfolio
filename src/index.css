@@ -142,13 +142,13 @@
 
   /* Shared case-study template */
   .cs-section {
-    @apply px-6 py-10 md:px-12 md:py-14 lg:px-20;
+    @apply px-6 py-8 md:px-12 md:py-11 lg:px-20;
   }
   .cs-container {
     @apply mx-auto w-full max-w-6xl;
   }
   .cs-group {
-    @apply mb-8 border-t border-ink pt-3 text-[11px] uppercase tracking-[0.2em] text-ink;
+    @apply mb-5 text-[11px] uppercase tracking-[0.2em] text-ink;
   }
   .cs-label {
     @apply text-[10px] uppercase tracking-[0.2em] text-ink;
@@ -163,7 +163,7 @@
     @apply space-y-2;
   }
   .cs-caption {
-    @apply flex flex-wrap items-baseline gap-x-3 gap-y-1 border-t border-divider pt-2;
+    @apply flex flex-wrap items-baseline gap-x-3 gap-y-1;
   }
 
   /* Selected Work direction — scoped so other pages retain their styling. */

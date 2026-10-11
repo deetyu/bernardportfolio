@@ -15,7 +15,7 @@ export default function Contact() {
       <section className="pt-32 md:pt-40 pb-20 md:pb-28 px-6 md:px-12 lg:px-20">
         <div className="container-editorial">
           <ScrollReveal>
-            <div className="flex items-baseline justify-between border-b border-ink pb-4">
+            <div className="flex items-baseline justify-between">
               <p className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-ink">Contact</p>
             </div>
           </ScrollReveal>
@@ -26,7 +26,7 @@ export default function Contact() {
             </h1>
           </ScrollReveal>
 
-          <div className="mt-10 md:mt-14 border-t border-divider pt-8 grid grid-cols-1 md:grid-cols-12 gap-10">
+          <div className="mt-10 md:mt-14 grid grid-cols-1 md:grid-cols-12 gap-10">
             <ScrollReveal delay={180} className="md:col-span-5">
               <p className="font-serif text-2xl md:text-3xl leading-[1.25] text-ink">
                 Open to senior brand &amp; visual design opportunities.
@@ -40,7 +40,7 @@ export default function Contact() {
                     href={link.href}
                     target={link.href.startsWith("mailto:") ? undefined : "_blank"}
                     rel="noopener noreferrer"
-                    className="group flex items-baseline justify-between gap-6 border-t border-divider py-5 last:border-b"
+                    className="group flex items-baseline justify-between gap-6 py-5"
                   >
                     <span className="text-[10px] uppercase tracking-[0.25em] text-ink-muted">
                       {link.name}

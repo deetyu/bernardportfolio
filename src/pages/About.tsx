@@ -51,7 +51,7 @@ export default function About() {
       </section>
 
       {/* Introduction */}
-      <section className="py-24 md:py-32 lg:py-40 px-6 md:px-12 lg:px-20 border-t border-divider">
+      <section className="py-24 md:py-32 lg:py-40 px-6 md:px-12 lg:px-20">
         <div className="container-editorial">
           <div className="max-w-3xl">
             <ScrollReveal>
@@ -100,7 +100,7 @@ export default function About() {
       </section>
 
       {/* Recognition */}
-      <section className="py-24 md:py-32 lg:py-40 px-6 md:px-12 lg:px-20 border-t border-divider">
+      <section className="py-24 md:py-32 lg:py-40 px-6 md:px-12 lg:px-20">
         <div className="container-editorial">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
             <div className="lg:col-span-4">
@@ -110,7 +110,7 @@ export default function About() {
               </ScrollReveal>
             </div>
             <div className="lg:col-span-7 lg:col-start-6">
-              <div className="divide-y divide-divider">
+              <div className="space-y-6">
                 {recognition.map((item, index) => (
                   <ScrollReveal key={item.name} delay={index * 50}>
                     <div className="py-7 flex items-center justify-between gap-6">
