@@ -89,7 +89,7 @@ export default function Services() {
       </section>
 
       {/* Services Grid */}
-      <section className="section-padding border-t border-divider">
+      <section className="section-padding">
         <div className="container-editorial px-6 md:px-12 lg:px-20">
           <ScrollReveal>
             <p className="eyebrow mb-16 md:mb-20">What I Offer</p>
@@ -98,7 +98,7 @@ export default function Services() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             {services.map((service, index) => (
               <ScrollReveal key={service.number} delay={index * 50}>
-                <div className="border-t border-divider pt-8 h-full flex flex-col">
+                <div className="h-full flex flex-col">
                   <div className="flex items-start justify-between mb-6">
                     <h3 className="font-serif text-2xl md:text-3xl text-ink">{service.title}</h3>
                     <span className="text-sm text-ink-muted">{service.number}</span>
