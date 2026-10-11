@@ -8,8 +8,8 @@ export const projects = [
     industry: "Beauty & Wellness",
     services: ["Brand Strategy", "Visual Identity", "Packaging Design", "Art Direction", "E-commerce Visual Strategy"],
     overview: "AR·YA is a professional skincare brand combining science, aesthetics and continuous education for beauty professionals. The project extends the identity into packaging, e-commerce and marketing applications.",
-    challenge: "The brand lacked a cohesive visual identity and felt generic in a highly competitive premium skincare market, making it difficult to stand out or build trust with a modern audience.",
-    solution: "I developed a minimalist monogram based on a geometric structure that integrates a double 'A', symbolizing unity and balance. The mark is built around a central point acting as its axis of symmetry — a timeless form that reads as clarity, purity, and elegance at any scale. The system was extended across packaging, e-commerce, and marketing to keep it consistent end to end.",
+    challenge: "The brand felt generic in a competitive premium skincare market and lacked a cohesive identity.",
+    solution: "A minimalist double-'A' monogram built on an axis of symmetry, extended across packaging, e-commerce and marketing.",
   },
   {
     slug: "sturio",
@@ -20,8 +20,8 @@ export const projects = [
     industry: "Technology / B2B",
     services: ["Brand Strategy", "Visual Identity", "Corporate Branding", "Marketing Assets"],
     overview: "Sturio is a technology-focused brand positioned as a strategic partner for digital transformation. A modular visual identity connects corporate communication, digital platforms and marketing assets.",
-    challenge: "Sturio needed a professional and trustworthy brand presence to support its role as a strategic partner for technology companies. The existing identity lacked clarity and did not reflect its focus on innovation, transparency, and long-term relationships.",
-    solution: "I developed a modular geometric identity inspired by digital systems and connectivity. The logo abstracts a structured 'S' form on a strict grid, creating a visual language that reflects flow, data, and transformation. The system was built to hold clarity at any scale, from a favicon to a conference banner.",
+    challenge: "The existing identity lacked clarity and didn't reflect Sturio's focus on innovation and long-term partnerships.",
+    solution: "A modular geometric identity: a structured 'S' built on a strict grid, designed to hold clarity from favicon to conference banner.",
   },
   {
     slug: "ex-hacienda-de-cedros",
@@ -32,8 +32,8 @@ export const projects = [
     industry: "Hospitality / Events",
     services: ["Brand Strategy", "Visual Identity", "Marketing Assets", "Art Direction"],
     overview: "A historic hospitality destination built around events and experiences. The visual identity and art direction connect the brand with the architecture, atmosphere and heritage of the property.",
-    challenge: "The hacienda required a refined visual presence to position itself as a premium destination for events and experiences — highlighting its architecture, atmosphere, and exclusivity with a consistent, elegant identity.",
-    solution: "I centered the identity around a cedar tree, symbolizing strength, longevity, and the natural essence of the hacienda. Surrounding branches form a circular composition inspired by the estate itself, evoking unity and heritage. The mark was paired with calligraphic type to introduce elegance and hospitality, then extended across print, signage, and digital touchpoints.",
+    challenge: "The hacienda needed a refined, consistent identity to position itself as a premium destination for events and experiences.",
+    solution: "An identity built around a cedar tree — strength, longevity, heritage — paired with calligraphic type and extended across print, signage and digital.",
   },
   {
     slug: "girasolia",
