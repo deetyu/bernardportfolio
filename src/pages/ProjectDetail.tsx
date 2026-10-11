@@ -76,7 +76,7 @@ export default function ProjectDetail() {
             </div>
           </ScrollReveal>
           <ScrollReveal delay={100}>
-            <div className="mt-6 flex flex-col gap-2 border-t border-ink pt-4 md:flex-row md:items-baseline md:justify-between">
+            <div className="mt-7 flex flex-col gap-2 md:flex-row md:items-baseline md:justify-between">
               <h1 className="font-serif text-2xl text-ink md:text-3xl">{project.title}</h1>
               <p className="cs-label text-ink-muted">{project.category}</p>
             </div>
@@ -102,7 +102,7 @@ export default function ProjectDetail() {
             </div>
           </ScrollReveal>
           <ScrollReveal className="md:col-span-4 md:col-start-9" delay={100}>
-            <dl className="grid grid-cols-2 gap-5 border-t border-divider pt-4 md:grid-cols-1">
+            <dl className="grid grid-cols-2 gap-5 md:grid-cols-1">
               {[
                 ["Client", project.client],
                 ["Industry", project.industry],
@@ -128,7 +128,7 @@ export default function ProjectDetail() {
           <ProjectSections sections={caseStudy.sections} projectTitle={project.title} />
 
           {/* 6–7. Delivered, Built to */}
-          <section className="cs-section border-t border-divider">
+          <section className="cs-section">
             <div className="cs-container grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
               <ScrollReveal className="md:col-span-5">
                 <p className="cs-label mb-4 text-ink-muted">Delivered</p>
@@ -200,7 +200,7 @@ export default function ProjectDetail() {
       )}
 
       {/* Next Project */}
-      <section className="border-t border-divider">
+      <section>
         <Link 
           to={`/work/${nextProject.slug}`}
           className="group block"
