@@ -1,5 +1,5 @@
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
-import { projectImage } from "@/data/projectImages";
+import { ProjectPlaceholder } from "@/components/project/ProjectPlaceholder";
 
 export type ProjectSectionItem = {
   image: string;
@@ -40,19 +40,9 @@ const groupLabel: Record<string, string> = {
 };
 
 function Figure({ image, label, caption, ratio = "landscape", alt }: ProjectSectionItem & { alt: string }) {
-  const src = projectImage(image);
-  if (!src) {
-    return (
-      <div className={`flex items-center justify-center bg-cream-darker ${ratioClass[ratio] ?? ratioClass.landscape}`}>
-        <span className="text-[10px] uppercase tracking-[0.2em] text-ink-muted">Image placeholder</span>
-      </div>
-    );
-  }
   return (
     <figure className="cs-figure">
-      <div className={`overflow-hidden bg-cream-darker ${ratioClass[ratio] ?? ratioClass.landscape}`}>
-        <img src={src} alt={alt} loading="lazy" className="h-full w-full object-contain" />
-      </div>
+      <ProjectPlaceholder label={label ?? alt} className={ratioClass[ratio] ?? ratioClass.landscape} />
       {(label || caption) && (
         <figcaption className="cs-caption">
           {label && <span className="cs-label">{label}</span>}
@@ -89,7 +79,7 @@ export function ProjectSections({ sections, projectTitle }: { sections: ProjectS
           <section key={`${section.title}-${i}`} className="cs-section">
             <div className="cs-container">
               {showGroup && (
-                <p className="cs-group">{groupLabel[section.group!]}</p>
+                <p className="cs-group">{section.group ? groupLabel[section.group] : ""}</p>
               )}
 
               {layout === "split" ? (
