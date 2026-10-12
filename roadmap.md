@@ -27,3 +27,7 @@
 # Temporary project placeholders
 
 - [x] Replace all artwork within project detail pages with labeled neutral placeholders, preserve original assets and Work thumbnails, and verify after refresh.
+
+# Unified Work index
+
+- [x] Show all ten projects in one continuous grid with no Featured/Selected grouping or section labels; verify cards, links, and alignment after refresh.
