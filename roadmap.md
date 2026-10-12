@@ -23,3 +23,7 @@
 # Seamless reading
 
 - [x] Remove every horizontal separator rule site-wide; keep sections distinct through spacing and tone shifts only, and verify no hairlines remain on rendered pages.
+
+# Temporary project placeholders
+
+- [ ] Replace all artwork within project detail pages with labeled neutral placeholders, preserve original assets and Work thumbnails, and verify after refresh.
