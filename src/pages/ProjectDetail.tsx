@@ -6,6 +6,7 @@ import { projects } from "@/data/projects";
 import { caseStudies } from "@/data/caseStudies";
 import { ProjectSections } from "@/components/project/ProjectSections";
 import { projectImage } from "@/data/projectImages";
+import { ProjectPlaceholder } from "@/components/project/ProjectPlaceholder";
 
 import aryaHero from "@/assets/projects/arya-hero.jpg";
 import aryaDetail1 from "@/assets/projects/arya-detail-1.jpg";
@@ -72,7 +73,7 @@ export default function ProjectDetail() {
         <div className="cs-container">
           <ScrollReveal>
             <div className="aspect-[21/9] max-h-[38vh] w-full overflow-hidden bg-cream-dark">
-              <img src={hero} alt={project.title} className="h-full w-full object-cover" />
+              <ProjectPlaceholder label={`${project.title} — Cover`} className="h-full" />
             </div>
           </ScrollReveal>
           <ScrollReveal delay={100}>
@@ -153,11 +154,7 @@ export default function ProjectDetail() {
             {/* Full Width Image */}
             <ScrollReveal>
               <div className="aspect-[16/10] overflow-hidden">
-                <img
-                  src={images[0]}
-                  alt={`${project.title} detail`}
-                  className="w-full h-full object-cover"
-                />
+                <ProjectPlaceholder label={`${project.title} — Visual 1`} className="h-full" />
               </div>
             </ScrollReveal>
 
@@ -165,20 +162,12 @@ export default function ProjectDetail() {
              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               <ScrollReveal>
                 <div className="aspect-[4/5] overflow-hidden">
-                  <img
-                    src={images[1]}
-                    alt={`${project.title} detail`}
-                    className="w-full h-full object-cover"
-                  />
+                  <ProjectPlaceholder label={`${project.title} — Visual 2`} className="h-full" />
                 </div>
               </ScrollReveal>
               <ScrollReveal delay={100}>
                 <div className="aspect-[4/5] overflow-hidden">
-                  <img
-                    src={images[2]}
-                    alt={`${project.title} detail`}
-                    className="w-full h-full object-cover"
-                  />
+                  <ProjectPlaceholder label={`${project.title} — Visual 3`} className="h-full" />
                 </div>
               </ScrollReveal>
             </div>
@@ -186,11 +175,7 @@ export default function ProjectDetail() {
             {/* Full Width Image */}
             <ScrollReveal>
               <div className="aspect-[21/9] overflow-hidden">
-                <img
-                  src={images[0]}
-                  alt={`${project.title} detail`}
-                  className="w-full h-full object-cover"
-                />
+                <ProjectPlaceholder label={`${project.title} — Visual 1`} className="h-full" />
               </div>
             </ScrollReveal>
           </div>
