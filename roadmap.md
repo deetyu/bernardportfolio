@@ -26,4 +26,4 @@
 
 # Temporary project placeholders
 
-- [ ] Replace all artwork within project detail pages with labeled neutral placeholders, preserve original assets and Work thumbnails, and verify after refresh.
+- [x] Replace all artwork within project detail pages with labeled neutral placeholders, preserve original assets and Work thumbnails, and verify after refresh.
