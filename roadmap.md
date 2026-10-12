@@ -27,6 +27,7 @@
 # Temporary project placeholders
 
 - [x] Replace all artwork within project detail pages with labeled neutral placeholders, preserve original assets and Work thumbnails, and verify after refresh.
+- [ ] Expand application-specific image slots across all projects, clarify their labels, distinguish proposed slots from existing references, and verify the rendered pages.
 
 # Unified Work index
 
