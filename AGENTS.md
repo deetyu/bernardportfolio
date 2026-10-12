@@ -4,3 +4,4 @@
 - Keep existing project slugs stable when updating names or content so previously shared links continue to work.
 - Scope Work index presentation tokens to its page wrapper and use the shared ProjectCard for aligned image/caption tracks so refinements do not restyle unrelated pages.
 - Render temporary project-detail image slots through ProjectPlaceholder, preserving source assets and section image references so artwork can be restored without changing Work cards.
+- Define proposed image slots without asset references and label them as pending in case-study data; this separates planned applications from documented artwork and delivered work.

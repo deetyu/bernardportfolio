@@ -2,7 +2,7 @@ import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { ProjectPlaceholder } from "@/components/project/ProjectPlaceholder";
 
 export type ProjectSectionItem = {
-  image: string;
+  image?: string;
   label?: string;
   caption?: string;
   ratio?: string;
@@ -39,7 +39,7 @@ const groupLabel: Record<string, string> = {
   applications: "Applications & Deliverables",
 };
 
-function Figure({ image, label, caption, ratio = "landscape", alt }: ProjectSectionItem & { alt: string }) {
+function Figure({ label, caption, ratio = "landscape", alt }: ProjectSectionItem & { alt: string }) {
   return (
     <figure className="cs-figure">
       <ProjectPlaceholder label={label ?? alt} className={ratioClass[ratio] ?? ratioClass.landscape} />
@@ -90,7 +90,7 @@ export function ProjectSections({ sections, projectTitle }: { sections: ProjectS
                   <ScrollReveal className={`md:col-span-8 ${reverse ? "md:order-1" : ""}`} delay={100}>
                     <div className="space-y-6">
                       {section.items.map((item, j) => (
-                        <Figure key={`${item.image}-${j}`} {...item} alt={alt(item)} />
+                        <Figure key={`${item.image ?? item.label}-${j}`} {...item} alt={alt(item)} />
                       ))}
                     </div>
                   </ScrollReveal>
@@ -113,7 +113,7 @@ export function ProjectSections({ sections, projectTitle }: { sections: ProjectS
                     }`}
                   >
                     {section.items.map((item, j) => (
-                      <ScrollReveal key={`${item.image}-${j}`} delay={j * 100}>
+                      <ScrollReveal key={`${item.image ?? item.label}-${j}`} delay={(j % 3) * 100}>
                         <Figure {...item} alt={alt(item)} />
                       </ScrollReveal>
                     ))}
