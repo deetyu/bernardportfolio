@@ -127,7 +127,7 @@ export default function Index() {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-12 gap-y-10 md:gap-y-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-5 gap-y-8">
             {featured.map((item, index) => {
               const project = bySlug[item.slug];
               if (!project) return null;
@@ -135,7 +135,7 @@ export default function Index() {
               return (
                 <ScrollReveal key={item.slug} delay={index * 60}>
                   <Link to={`/work/${project.slug}`} className="group block">
-                    <div className="wipe-media bg-cream-darker aspect-[16/10] overflow-hidden">
+                    <div className="wipe-media bg-cream-darker aspect-[5/4] overflow-hidden">
                       <img
                         src={projectImage(item.image)}
                         alt={`${project.title} — ${project.category}`}
@@ -144,24 +144,14 @@ export default function Index() {
                       />
                     </div>
 
-                    <div className="draw-rule mt-4 flex items-baseline gap-3">
-                      <span className="font-serif text-lg text-ink drift-num">
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
-                      <div>
-                        <h3 className="font-serif text-xl md:text-2xl text-ink leading-tight transition-transform duration-500 ease-editorial group-hover:translate-x-1">
-                          {project.title}
-                        </h3>
-
-                        <p className="mt-1 text-[10px] uppercase tracking-[0.25em] text-ink-muted">
-                          {project.category}
-                        </p>
-                      </div>
+                    <div className="mt-3">
+                      <h3 className="font-serif text-base md:text-lg text-ink leading-tight transition-opacity duration-300 group-hover:opacity-70">
+                        {project.title}
+                      </h3>
+                      <p className="mt-1 text-[9px] uppercase tracking-[0.2em] text-ink-muted">
+                        {project.category}
+                      </p>
                     </div>
-                    <span className="arrow-link mt-3 text-ink">
-                      Read case study
-                      <ArrowRight size={16} strokeWidth={1.5} />
-                    </span>
                   </Link>
                 </ScrollReveal>
               );
