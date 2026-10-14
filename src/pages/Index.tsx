@@ -127,7 +127,7 @@ export default function Index() {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 lg:gap-x-16 gap-y-16 md:gap-y-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-12 gap-y-10 md:gap-y-12">
             {featured.map((item, index) => {
               const project = bySlug[item.slug];
               if (!project) return null;
@@ -135,7 +135,7 @@ export default function Index() {
               return (
                 <ScrollReveal key={item.slug} delay={index * 60}>
                   <Link to={`/work/${project.slug}`} className="group block">
-                    <div className="wipe-media bg-cream-darker aspect-[4/3]">
+                    <div className="wipe-media bg-cream-darker aspect-[16/10] overflow-hidden">
                       <img
                         src={projectImage(item.image)}
                         alt={`${project.title} — ${project.category}`}
@@ -144,31 +144,21 @@ export default function Index() {
                       />
                     </div>
 
-                    <div className="draw-rule mt-6 flex items-baseline gap-4">
-                      <span className="font-serif text-2xl text-ink drift-num">
+                    <div className="draw-rule mt-4 flex items-baseline gap-3">
+                      <span className="font-serif text-lg text-ink drift-num">
                         {String(index + 1).padStart(2, "0")}
                       </span>
                       <div>
-                        <h3 className="font-serif text-3xl md:text-4xl text-ink leading-tight transition-transform duration-500 ease-editorial group-hover:translate-x-1">
+                        <h3 className="font-serif text-xl md:text-2xl text-ink leading-tight transition-transform duration-500 ease-editorial group-hover:translate-x-1">
                           {project.title}
                         </h3>
 
-                        <p className="mt-2 text-[10px] uppercase tracking-[0.25em] text-ink-muted">
+                        <p className="mt-1 text-[10px] uppercase tracking-[0.25em] text-ink-muted">
                           {project.category}
                         </p>
                       </div>
                     </div>
-                    <p className="mt-5 text-base text-ink-light leading-relaxed">
-                      {project.overview}
-                    </p>
-                    <div className="mt-5 flex flex-wrap gap-x-4 gap-y-1">
-                      {item.tags.map((tag) => (
-                        <span key={tag} className="text-[10px] uppercase tracking-[0.2em] text-ink-muted">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    <span className="arrow-link mt-6 text-ink">
+                    <span className="arrow-link mt-3 text-ink">
                       Read case study
                       <ArrowRight size={16} strokeWidth={1.5} />
                     </span>
