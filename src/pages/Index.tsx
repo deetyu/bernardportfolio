@@ -71,13 +71,13 @@ export default function Index() {
 
           <ScrollReveal delay={400}>
             <div className="mt-12 md:mt-16 flex flex-wrap gap-4">
-              <a
-                href="#work"
+              <Link
+                to="/work"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-ink text-cream text-sm font-semibold hover:opacity-80 transition-opacity duration-200"
               >
                 Explore Work
                 <ArrowRight size={16} strokeWidth={1.5} />
-              </a>
+              </Link>
               <a
                 href="/Bernardo_Orozco_Portfolio.pdf"
                 target="_blank"
