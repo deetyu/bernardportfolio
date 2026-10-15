@@ -20,7 +20,7 @@ const featured = [
   { slug: "arya-cosmetics", image: "arya-hero", ratio: "aspect-[4/5]", tags: ["Brand", "Packaging"] },
   { slug: "sturio", image: "sturio-hero", ratio: "aspect-[4/3]", tags: ["Brand", "Visual System"] },
   { slug: "ex-hacienda-de-cedros", image: "hacienda-hero", ratio: "aspect-[4/3]", tags: ["Brand", "Art Direction"] },
-  { slug: "selected-marks", image: "marks-hero", ratio: "aspect-[4/5]", tags: ["Logofolio"] },
+  { slug: "girasolia", image: "flowers-master", ratio: "aspect-[4/5]", tags: ["Brand", "Social"] },
 ];
 
 
