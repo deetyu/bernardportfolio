@@ -1,41 +1,80 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
-import { Button } from "@/components/ui/button";
 
-
-const values = [
+const expertise = [
   {
-    number: "01",
-    title: "Clarity over noise",
-    description: "The best identities are immediately understood. I distill brands to their essence, removing everything that doesn't serve the idea.",
+    title: "Brand Strategy & Positioning",
+    description: "Clarifying a brand's positioning, audience, and core idea to guide its visual direction.",
   },
   {
-    number: "02",
-    title: "Systems over one-offs",
-    description: "A logo alone isn't a brand. I build visual systems — type, color, layout, and application rules — that teams can use with confidence.",
+    title: "Visual Identity & Systems",
+    description: "Building logos, typography, color systems, graphic languages, and practical brand guidelines.",
   },
   {
-    number: "03",
-    title: "Strategy before aesthetics",
-    description: "Beautiful design without purpose is decoration. Every visual decision is grounded in positioning, audience, and business goals.",
+    title: "Packaging & Art Direction",
+    description: "Translating identity into packaging, product presentation, and cohesive visual direction.",
+  },
+  {
+    title: "Marketing & Campaign Design",
+    description: "Adapting brand systems across campaigns, social content, display, email, and marketing collateral.",
+  },
+  {
+    title: "Digital & E-commerce",
+    description: "Developing visual direction and design assets for landing pages, digital storefronts, and online brand experiences.",
   },
 ];
 
-const recognition = [
-  { name: "Experience", type: "Senior Brand & Visual Designer", year: "8+ years" },
-  { name: "Independent Studio", type: "Since 2022", year: "Guadalajara, Mexico" },
-  { name: "Core Disciplines", type: "Brand Identity, Visual Systems, Art Direction", year: "" },
-  { name: "Client Industries", type: "Technology, Esports, Hospitality, E-commerce, Consumer Brands", year: "LATAM & Remote" },
-  { name: "Behance", type: "Selected work", year: "behance.net/btm20" },
+const process = [
+  {
+    step: "01",
+    title: "Understand",
+    description: "Understand the business, audience, context, and challenges before making visual decisions.",
+  },
+  {
+    step: "02",
+    title: "Define",
+    description: "Establish the creative direction and the principles that guide the identity.",
+  },
+  {
+    step: "03",
+    title: "Build",
+    description: "Develop a cohesive visual system, including its core elements, rules, and applications.",
+  },
+  {
+    step: "04",
+    title: "Extend",
+    description: "Apply and adapt the system across the relevant physical and digital touchpoints.",
+  },
+];
+
+const principles = [
+  {
+    title: "Clarity over noise.",
+    description: "Every visual decision should serve a clear purpose.",
+  },
+  {
+    title: "Systems over one-offs.",
+    description: "Build identities that remain coherent beyond a single deliverable.",
+  },
+  {
+    title: "Consistency through design.",
+    description: "Make visual systems practical to apply across different touchpoints.",
+  },
+];
+
+const contactLinks = [
+  { name: "Email", href: "mailto:boboteme@gmail.com" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/bernardo-orozco/" },
+  { name: "Behance", href: "https://www.behance.net/btm20/" },
 ];
 
 export default function About() {
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="pt-32 md:pt-40 pb-16 md:pb-24">
+      {/* Section A — Introduction */}
+      <section className="pt-32 md:pt-40 pb-16 md:pb-24 px-6 md:px-12 lg:px-20">
         <div className="container-editorial">
           <div className="max-w-4xl">
             <ScrollReveal>
@@ -50,48 +89,91 @@ export default function About() {
         </div>
       </section>
 
-      {/* Introduction */}
-      <section className="py-24 md:py-32 lg:py-40 px-6 md:px-12 lg:px-20">
+      <section className="pb-20 md:pb-28 px-6 md:px-12 lg:px-20">
         <div className="container-editorial">
           <div className="max-w-3xl">
             <ScrollReveal>
-              <p className="text-2xl md:text-3xl text-ink leading-relaxed mb-10 md:mb-12 first-letter:text-8xl md:first-letter:text-9xl first-letter:font-serif first-letter:float-left first-letter:mr-4 first-letter:mt-0 first-letter:leading-[0.75]">
-                I'm a Senior Brand & Visual Designer with 8+ years of experience helping startups and growing businesses build distinctive, scalable brands.
+              <p className="text-lg md:text-xl text-ink-light leading-relaxed mb-8">
+                I'm Bernardo Orozco, a Senior Brand &amp; Visual Designer with 8+ years of experience building distinctive identities and visual systems for growing businesses.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={100}>
-              <p className="text-lg md:text-xl text-ink-light mb-10">
-                Since 2022 I've run my own independent studio in Guadalajara, Mexico, working directly with founders across technology, esports, hospitality, e-commerce, and consumer brands. My practice is built around one belief: the best identities are systems that teams can actually use long after the project ends.
-              </p>
-            </ScrollReveal>
-            <ScrollReveal delay={200}>
-              <p className="text-lg md:text-xl text-ink-light mb-10">
-                I specialize in moving brands from positioning through to the templates teams run independently — whether that's packaging, social content, corporate collateral, or a full digital storefront. Every system is designed for clarity, consistency, and real-world production.
-              </p>
-            </ScrollReveal>
-            <ScrollReveal delay={300}>
-              <p className="text-lg md:text-xl text-ink-light">
-                Outside the studio, I stay curious about architecture, typography, and the small details that make places and objects memorable. That curiosity feeds back into the work.
+              <p className="text-lg md:text-xl text-ink-light leading-relaxed">
+                I work across brand strategy, visual identity, packaging, art direction, and marketing design, helping translate a brand's positioning into a coherent visual language that works across different touchpoints.
               </p>
             </ScrollReveal>
           </div>
         </div>
       </section>
 
-      {/* Values */}
-      <section className="py-24 md:py-32 lg:py-40 px-6 md:px-12 lg:px-20 bg-cream-dark">
+      {/* Section B — Experience */}
+      <section className="section-padding bg-cream-dark">
         <div className="container-editorial">
           <ScrollReveal>
-            <p className="eyebrow mb-16 md:mb-20">Approach</p>
+            <p className="eyebrow mb-4">Experience</p>
+            <h2 className="text-ink font-serif max-w-3xl">Experience built across disciplines.</h2>
+          </ScrollReveal>
+          <ScrollReveal delay={100}>
+            <p className="mt-6 text-base md:text-lg text-ink-light max-w-2xl">
+              Since 2022, I've worked independently through Orion Studio, collaborating directly with founders and teams to develop brand identities, visual systems, packaging, and communication assets.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={200}>
+            <p className="mt-4 text-base md:text-lg text-ink-light max-w-2xl">
+              My experience also includes design work in esports, where I created visual content, promotional materials, and digital assets for competitive gaming environments.
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Section C — Expertise */}
+      <section className="section-padding">
+        <div className="container-editorial">
+          <ScrollReveal>
+            <p className="eyebrow mb-4">Expertise</p>
+            <h2 className="text-ink font-serif">What I do</h2>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
-            {values.map((value, index) => (
-              <ScrollReveal key={value.number} delay={index * 100}>
+          <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+            {expertise.map((item, index) => (
+              <ScrollReveal key={item.title} delay={index * 80}>
                 <div>
-                  <span className="text-sm text-ink-muted tracking-wide">{value.number}</span>
-                  <h3 className="font-serif text-2xl text-ink mt-4 mb-4">{value.title}</h3>
-                  <p className="text-lg text-ink-light">{value.description}</p>
+                  <h3 className="font-serif text-xl text-ink mb-3">{item.title}</h3>
+                  <p className="text-base text-ink-light leading-relaxed">{item.description}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+            <ScrollReveal delay={expertise.length * 80}>
+              <div className="md:col-span-2">
+                <p className="text-sm text-ink-muted">
+                  8+ years across brand identity, visual systems, packaging, art direction, and marketing design.
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Section D — How I Work */}
+      <section className="section-padding bg-cream-dark">
+        <div className="container-editorial">
+          <ScrollReveal>
+            <p className="eyebrow mb-4">How I Work</p>
+            <h2 className="text-ink font-serif max-w-3xl">A clear process. A consistent system.</h2>
+          </ScrollReveal>
+          <ScrollReveal delay={100}>
+            <p className="mt-6 text-base md:text-lg text-ink-light max-w-2xl">
+              I approach design as a connected process, from understanding the brand and defining its direction to building a visual system that can be applied consistently across touchpoints.
+            </p>
+          </ScrollReveal>
+
+          <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
+            {process.map((step, index) => (
+              <ScrollReveal key={step.step} delay={index * 100}>
+                <div>
+                  <span className="text-sm text-ink-muted tracking-wide">{step.step}</span>
+                  <h3 className="font-serif text-xl text-ink mt-3 mb-3">{step.title}</h3>
+                  <p className="text-sm text-ink-light leading-relaxed">{step.description}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -99,56 +181,76 @@ export default function About() {
         </div>
       </section>
 
-      {/* Recognition */}
-      <section className="py-24 md:py-32 lg:py-40 px-6 md:px-12 lg:px-20">
+      {/* Section E — Design Principles */}
+      <section className="section-padding">
         <div className="container-editorial">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-            <div className="lg:col-span-4">
-              <ScrollReveal>
-                <p className="eyebrow mb-4">At a Glance</p>
-                <h2 className="text-ink">Experience & Reach</h2>
+          <ScrollReveal>
+            <p className="eyebrow mb-4">Design Principles</p>
+            <h2 className="text-ink font-serif">Design principles</h2>
+          </ScrollReveal>
+
+          <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-10">
+            {principles.map((principle, index) => (
+              <ScrollReveal key={principle.title} delay={index * 100}>
+                <div>
+                  <h3 className="font-serif text-xl text-ink mb-3">{principle.title}</h3>
+                  <p className="text-base text-ink-light leading-relaxed">{principle.description}</p>
+                </div>
               </ScrollReveal>
-            </div>
-            <div className="lg:col-span-7 lg:col-start-6">
-              <div className="space-y-6">
-                {recognition.map((item, index) => (
-                  <ScrollReveal key={item.name} delay={index * 50}>
-                    <div className="py-7 flex items-center justify-between gap-6">
-                      <div>
-                        <h4 className="font-serif text-lg text-ink">{item.name}</h4>
-                        <p className="text-sm text-ink-muted">{item.type}</p>
-                      </div>
-                      <span className="text-sm text-ink-muted">{item.year}</span>
-                    </div>
-                  </ScrollReveal>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24 md:py-36 lg:py-44 px-6 md:px-12 lg:px-20 bg-cream-darker">
+      {/* Section F — Contact and CV */}
+      <section className="section-padding bg-cream-darker">
         <div className="container-editorial">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl">
             <ScrollReveal>
-              <h2 className="text-ink mb-6">
-                Let's work together.
+              <p className="eyebrow mb-4">Contact</p>
+              <h2 className="font-serif text-ink">
+                Let's build something meaningful.
               </h2>
             </ScrollReveal>
             <ScrollReveal delay={100}>
-              <p className="text-lg md:text-xl text-ink-light mb-10 max-w-xl mx-auto">
-                I'm open to senior brand & visual design roles and select long-term identity system projects.
+              <p className="mt-6 text-base md:text-lg text-ink-light max-w-xl">
+                I'm open to opportunities to collaborate with teams building thoughtful brands and visual experiences.
               </p>
             </ScrollReveal>
-            <ScrollReveal delay={200}>
-              <Button asChild>
-                <Link to="/contact" className="inline-flex items-center gap-2">
-                  Get in Touch
-                  <ArrowRight size={18} strokeWidth={1.5} />
+            <ScrollReveal delay={180}>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-ink text-cream text-sm font-semibold hover:opacity-80 transition-opacity duration-200"
+                >
+                  Contact me
+                  <ArrowRight size={16} strokeWidth={1.5} />
                 </Link>
-              </Button>
+                <a
+                  href="/Bernardo_Orozco_Portfolio.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-8 py-4 border border-divider text-ink text-sm font-semibold hover:border-ink transition-colors duration-200"
+                >
+                  Download CV
+                </a>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={260}>
+              <div className="mt-10 flex flex-wrap gap-x-6 gap-y-2">
+                {contactLinks.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    target={link.href.startsWith("mailto:") ? undefined : "_blank"}
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-sm text-ink-light hover:text-ink transition-colors duration-300"
+                  >
+                    {link.name}
+                    <ArrowUpRight size={13} strokeWidth={1.5} />
+                  </a>
+                ))}
+              </div>
             </ScrollReveal>
           </div>
         </div>
