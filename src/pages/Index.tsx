@@ -107,7 +107,7 @@ export default function Index() {
                 Portfolio
               </p>
               <p className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-ink-muted">
-                Vol. 01 — 2026
+                Senior Brand &amp; Visual Designer
               </p>
             </div>
           </ScrollReveal>
