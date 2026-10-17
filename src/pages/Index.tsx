@@ -26,19 +26,19 @@ const marqueeItems = [
 const brandSystems = [
   {
     title: "Identity Systems",
-    description: "Logos, typography, color and graphic languages that give a brand its foundation.",
+    description: "Logos, typography, color and graphic languages that give brands a clear and scalable foundation.",
     image: aryaHero,
     slug: "arya-cosmetics",
   },
   {
     title: "Brand Applications",
-    description: "Identity extended across packaging, signage, stationery and physical touchpoints.",
+    description: "Extending identity across packaging, signage, stationery and physical touchpoints with consistency.",
     image: haciendaHero,
     slug: "ex-hacienda-de-cedros",
   },
   {
     title: "Digital Touchpoints",
-    description: "Landing pages, e-commerce and digital storefronts built on the brand system.",
+    description: "Landing pages, e-commerce and digital experiences built on the same visual system.",
     image: aryaLanding,
     slug: "arya-digital",
   },
@@ -129,8 +129,10 @@ export default function Index() {
           <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10">
             <ScrollReveal delay={180} className="md:col-span-7">
               <p className="font-serif text-2xl md:text-3xl leading-[1.25] text-ink">
-                Turning complex concepts into memorable identities through
-                eight years of branding and art direction.
+                I build clear, scalable identity systems that work across packaging, digital and everyday communication.
+              </p>
+              <p className="mt-6 text-sm md:text-base text-ink-muted leading-relaxed max-w-xl">
+                8+ years helping startups and growing brands turn strategy into consistent visual systems.
               </p>
             </ScrollReveal>
           </div>

@@ -9,7 +9,7 @@ const expertise = [
     description: "Clarifying a brand's positioning, audience, and core idea to guide its visual direction.",
   },
   {
-    title: "Visual Identity & Systems",
+    title: "Visual Identity & Design Systems",
     description: "Building logos, typography, color systems, graphic languages, and practical brand guidelines.",
   },
   {
@@ -17,11 +17,11 @@ const expertise = [
     description: "Translating identity into packaging, product presentation, and cohesive visual direction.",
   },
   {
-    title: "Marketing & Campaign Design",
+    title: "Campaign & Marketing Design",
     description: "Adapting brand systems across campaigns, social content, display, email, and marketing collateral.",
   },
   {
-    title: "Digital & E-commerce",
+    title: "Digital & E-commerce Visuals",
     description: "Developing visual direction and design assets for landing pages, digital storefronts, and online brand experiences.",
   },
 ];
@@ -51,15 +51,15 @@ const process = [
 
 const principles = [
   {
-    title: "Clarity over noise.",
+    title: "Clarity over noise",
     description: "Every visual decision should serve a clear purpose.",
   },
   {
-    title: "Systems over one-offs.",
+    title: "Systems over one-offs",
     description: "Build identities that remain coherent beyond a single deliverable.",
   },
   {
-    title: "Consistency through design.",
+    title: "Consistency through design",
     description: "Make visual systems practical to apply across different touchpoints.",
   },
 ];
@@ -94,12 +94,12 @@ export default function About() {
           <div className="max-w-3xl">
             <ScrollReveal>
               <p className="text-lg md:text-xl text-ink-light leading-relaxed mb-8">
-                I'm Bernardo Orozco, a Senior Brand &amp; Visual Designer with 8+ years of experience building distinctive identities and visual systems for growing businesses.
+                Senior Brand &amp; Visual Designer with 8+ years of experience building brand identities, visual systems and packaging for startups and growing companies.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <p className="text-lg md:text-xl text-ink-light leading-relaxed">
-                I work across brand strategy, visual identity, packaging, art direction, and marketing design, helping translate a brand's positioning into a coherent visual language that works across different touchpoints.
+                I work across strategy, identity, packaging, digital and marketing design — helping brands move from a clear direction to consistent execution across touchpoints.
               </p>
             </ScrollReveal>
           </div>
@@ -115,12 +115,12 @@ export default function About() {
           </ScrollReveal>
           <ScrollReveal delay={100}>
             <p className="mt-6 text-base md:text-lg text-ink-light max-w-2xl">
-              Since 2022, I've worked independently through Orion Studio, collaborating directly with founders and teams to develop brand identities, visual systems, packaging, and communication assets.
+              Since 2022 I've led branding and visual projects independently through Orion Studio, collaborating directly with founders on identity systems, packaging and communication assets.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={200}>
             <p className="mt-4 text-base md:text-lg text-ink-light max-w-2xl">
-              My experience also includes design work in esports, where I created visual content, promotional materials, and digital assets for competitive gaming environments.
+              Previously, I worked in the esports industry creating broadcast graphics, promotional content and digital assets for live competitive environments.
             </p>
           </ScrollReveal>
         </div>
@@ -159,11 +159,11 @@ export default function About() {
         <div className="container-editorial">
           <ScrollReveal>
             <p className="eyebrow mb-4">How I Work</p>
-            <h2 className="text-ink font-serif max-w-3xl">A clear process. A consistent system.</h2>
+            <h2 className="text-ink font-serif max-w-3xl">Understand &rarr; Define &rarr; Build &rarr; Extend</h2>
           </ScrollReveal>
           <ScrollReveal delay={100}>
             <p className="mt-6 text-base md:text-lg text-ink-light max-w-2xl">
-              I approach design as a connected process, from understanding the brand and defining its direction to building a visual system that can be applied consistently across touchpoints.
+              I focus on creating visual systems that stay clear and consistent as the brand grows.
             </p>
           </ScrollReveal>
 
@@ -214,7 +214,7 @@ export default function About() {
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <p className="mt-6 text-base md:text-lg text-ink-light max-w-xl">
-                I'm open to opportunities to collaborate with teams building thoughtful brands and visual experiences.
+                Open to senior brand &amp; visual design roles where I can contribute to building strong, scalable brand systems.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={180}>
