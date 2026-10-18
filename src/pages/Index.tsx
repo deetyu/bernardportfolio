@@ -38,34 +38,34 @@ const brandSystems = [
   },
   {
     title: "Digital Touchpoints",
-    description: "Landing pages, e-commerce and digital experiences built on the same visual system.",
+    description: "Digital assets and visual content built on the same brand system.",
     image: aryaLanding,
     slug: "arya-digital",
   },
 ];
 
-const marketingDigital = [
+const marketingApplications = [
   {
     title: "Campaigns & Display",
-    description: "Campaign art direction adapted across paid social and display formats.",
+    description: "Banners, paid ads and display formats art-directed from the brand system.",
     image: flowersPaid,
     slug: "flowers-campaign",
   },
   {
-    title: "Web & E-commerce",
-    description: "Landing page design and e-commerce visual strategy built on brand identity.",
+    title: "Digital Marketing Assets",
+    description: "Visual assets for digital campaigns, social content and online brand presence.",
     image: aryaLanding,
     slug: "arya-digital",
   },
   {
     title: "Email & Social",
-    description: "Social templates and email directions that keep the identity consistent.",
+    description: "Email marketing templates and social content that keep the identity consistent.",
     image: flowersEmail,
     slug: "girasolia",
   },
   {
-    title: "Marketing Collateral",
-    description: "Infographics, presentation templates and collateral that make technical content clear.",
+    title: "Print & Brand Applications",
+    description: "Stationery, signage, event graphics and branded materials extending the identity.",
     image: sturioInfographic,
     slug: "sturio-marketing",
   },
@@ -213,27 +213,27 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Marketing & Digital */}
+      {/* Marketing & Brand Applications */}
       <section className="section-padding bg-cream-dark">
         <div className="container-editorial">
           <ScrollReveal>
-            <p className="eyebrow mb-4">Marketing &amp; Digital</p>
+            <p className="eyebrow mb-4">Marketing &amp; Brand Applications</p>
             <h2 className="text-ink font-serif max-w-3xl">From identity to everyday communication.</h2>
           </ScrollReveal>
           <ScrollReveal delay={100}>
             <p className="mt-6 text-base md:text-lg text-ink-light max-w-2xl">
-              Visual systems adapted across campaigns, digital platforms, and marketing touchpoints.
+              Brand systems adapted across banners, paid ads, email marketing, social content, print collateral and branded materials.
             </p>
           </ScrollReveal>
 
           <div className="mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
-            {marketingDigital.map((item, index) => (
+            {marketingApplications.map((item, index) => (
               <ScrollReveal key={item.title} delay={index * 80}>
                 <Link to={`/work/${item.slug}`} className="group block">
                   <div className="wipe-media bg-cream-darker aspect-[5/4] overflow-hidden">
                     <img
                       src={item.image}
-                      alt={`${item.title} — marketing and digital work`}
+                      alt={`${item.title} — marketing and brand applications`}
                       loading="lazy"
                       className="w-full h-full object-cover transition-transform duration-[1200ms] ease-editorial group-hover:scale-[1.06]"
                     />

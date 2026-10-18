@@ -5,12 +5,8 @@ import { ScrollReveal } from "@/components/shared/ScrollReveal";
 
 const expertise = [
   {
-    title: "Brand Strategy & Positioning",
+    title: "Brand Identity & Strategy",
     description: "Clarifying a brand's positioning, audience, and core idea to guide its visual direction.",
-  },
-  {
-    title: "Visual Identity & Design Systems",
-    description: "Building logos, typography, color systems, graphic languages, and practical brand guidelines.",
   },
   {
     title: "Packaging & Art Direction",
@@ -21,46 +17,8 @@ const expertise = [
     description: "Adapting brand systems across campaigns, social content, display, email, and marketing collateral.",
   },
   {
-    title: "Digital & E-commerce Visuals",
-    description: "Developing visual direction and design assets for landing pages, digital storefronts, and online brand experiences.",
-  },
-];
-
-const process = [
-  {
-    step: "01",
-    title: "Understand",
-    description: "Understand the business, audience, context, and challenges before making visual decisions.",
-  },
-  {
-    step: "02",
-    title: "Define",
-    description: "Establish the creative direction and the principles that guide the identity.",
-  },
-  {
-    step: "03",
-    title: "Build",
-    description: "Develop a cohesive visual system, including its core elements, rules, and applications.",
-  },
-  {
-    step: "04",
-    title: "Extend",
-    description: "Apply and adapt the system across the relevant physical and digital touchpoints.",
-  },
-];
-
-const principles = [
-  {
-    title: "Clarity over noise",
-    description: "Every visual decision should serve a clear purpose.",
-  },
-  {
-    title: "Systems over one-offs",
-    description: "Build identities that remain coherent beyond a single deliverable.",
-  },
-  {
-    title: "Consistency through design",
-    description: "Make visual systems practical to apply across different touchpoints.",
+    title: "Print & Brand Applications",
+    description: "Extending identity across stationery, signage, event graphics, and branded materials with consistency.",
   },
 ];
 
@@ -154,55 +112,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Section D — How I Work */}
-      <section className="section-padding bg-cream-dark">
-        <div className="container-editorial">
-          <ScrollReveal>
-            <p className="eyebrow mb-4">How I Work</p>
-            <h2 className="text-ink font-serif max-w-3xl">Understand &rarr; Define &rarr; Build &rarr; Extend</h2>
-          </ScrollReveal>
-          <ScrollReveal delay={100}>
-            <p className="mt-6 text-base md:text-lg text-ink-light max-w-2xl">
-              I focus on creating visual systems that stay clear and consistent as the brand grows.
-            </p>
-          </ScrollReveal>
-
-          <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
-            {process.map((step, index) => (
-              <ScrollReveal key={step.step} delay={index * 100}>
-                <div>
-                  <span className="text-sm text-ink-muted tracking-wide">{step.step}</span>
-                  <h3 className="font-serif text-xl text-ink mt-3 mb-3">{step.title}</h3>
-                  <p className="text-sm text-ink-light leading-relaxed">{step.description}</p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Section E — Design Principles */}
-      <section className="section-padding">
-        <div className="container-editorial">
-          <ScrollReveal>
-            <p className="eyebrow mb-4">Design Principles</p>
-            <h2 className="text-ink font-serif">Design principles</h2>
-          </ScrollReveal>
-
-          <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-10">
-            {principles.map((principle, index) => (
-              <ScrollReveal key={principle.title} delay={index * 100}>
-                <div>
-                  <h3 className="font-serif text-xl text-ink mb-3">{principle.title}</h3>
-                  <p className="text-base text-ink-light leading-relaxed">{principle.description}</p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Section F — Contact and CV */}
+      {/* Section D — Contact and CV */}
       <section className="section-padding bg-cream-darker">
         <div className="container-editorial">
           <div className="max-w-3xl">
