@@ -1,5 +1,6 @@
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { ProjectPlaceholder } from "@/components/project/ProjectPlaceholder";
+import { projectImage } from "@/data/projectImages";
 
 export type ProjectSectionItem = {
   image?: string;
@@ -39,10 +40,19 @@ const groupLabel: Record<string, string> = {
   applications: "Applications & Deliverables",
 };
 
-function Figure({ label, caption, ratio = "landscape", alt }: ProjectSectionItem & { alt: string }) {
+function Figure({ image, label, caption, ratio = "landscape", alt }: ProjectSectionItem & { alt: string }) {
+  const imageUrl = image ? projectImage(image) : undefined;
+  const frameClassName = ratioClass[ratio] ?? ratioClass.landscape;
+
   return (
     <figure className="cs-figure">
-      <ProjectPlaceholder label={label ?? alt} className={ratioClass[ratio] ?? ratioClass.landscape} />
+      {imageUrl ? (
+        <div className={frameClassName}>
+          <img src={imageUrl} alt={alt} className="h-full w-full object-contain bg-cream-darker" loading="lazy" />
+        </div>
+      ) : (
+        <ProjectPlaceholder label={label ?? alt} className={frameClassName} />
+      )}
       {(label || caption) && (
         <figcaption className="cs-caption">
           {label && <span className="cs-label">{label}</span>}
