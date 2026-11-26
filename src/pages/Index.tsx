@@ -4,48 +4,40 @@ import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { MaskReveal } from "@/components/shared/MaskReveal";
 
-import portraitMain from "@/assets/portrait-main.jpg";
-import workspace from "@/assets/workspace.jpg";
-
 import aryaHero from "@/assets/projects/arya-hero.jpg";
 import sturioHero from "@/assets/projects/sturio-hero.jpg";
 import haciendaHero from "@/assets/projects/hacienda-hero.jpg";
 import flowersPaid from "@/assets/projects/flowers-paid.jpg";
-import aryaLanding from "@/assets/projects/arya-landing.jpg";
-import sturioInfographic from "@/assets/projects/sturio-infographic.jpg";
-import salsaPackaging from "@/assets/projects/salsa-packaging.jpg";
-import amigurumiCollateral from "@/assets/projects/amigurumi-collateral.jpg";
-import marksHero from "@/assets/projects/marks-hero.jpg";
 
 const marqueeItems = [
-  "Identidad visual",
-  "Sistemas de marca",
-  "Dirección de arte",
-  "Diseño de embalaje",
+  "Brand Identity",
+  "Visual Systems",
+  "Art Direction",
+  "Packaging Design",
 ];
 
 const projects = [
   {
     title: "AR•YA Cosmetics",
-    category: "Identidad · Embalaje · Digital",
+    category: "Identity · Packaging · Digital",
     image: aryaHero,
     slug: "arya-cosmetics",
   },
   {
     title: "Sturio",
-    category: "Sistema visual · B2B",
+    category: "Visual System · B2B",
     image: sturioHero,
     slug: "sturio",
   },
   {
     title: "Ex Hacienda de Cedros",
-    category: "Identidad · Hospitalidad",
+    category: "Identity · Hospitality",
     image: haciendaHero,
     slug: "ex-hacienda-de-cedros",
   },
   {
     title: "Girasolía",
-    category: "Identidad · Social · Campaña",
+    category: "Identity · Social · Campaign",
     image: flowersPaid,
     slug: "girasolia",
   },
@@ -53,16 +45,16 @@ const projects = [
 
 const services = [
   {
-    title: "Identidad visual",
-    text: "Logos, tipografía, color y lenguajes gráficos que dan a las marcas una base clara y escalable.",
+    title: "Visual Identity",
+    text: "Logos, typography, color and graphic languages that give brands a clear, scalable foundation.",
   },
   {
-    title: "Aplicaciones de marca",
-    text: "Extender la identidad a embalaje, señalética, papelería y puntos de contacto físicos con coherencia.",
+    title: "Brand Applications",
+    text: "Extending identity across packaging, signage, stationery and physical touchpoints with consistency.",
   },
   {
-    title: "Dirección de arte",
-    text: "Campañas, contenido social y piezas visuales construidas sobre el mismo sistema de marca.",
+    title: "Art Direction",
+    text: "Campaigns, social content and visual pieces built on the same brand system.",
   },
 ];
 
@@ -87,7 +79,7 @@ export default function Index() {
                 Portfolio
               </p>
               <p className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-ink-muted">
-                Diseñador gráfico
+                Graphic Design
               </p>
             </div>
           </ScrollReveal>
@@ -101,30 +93,19 @@ export default function Index() {
           <h1 className="mt-2 md:mt-3">
             <MaskReveal delay={260}>
               <span className="block font-serif italic text-[13vw] md:text-[8vw] lg:text-[6.6vw] leading-[0.95] tracking-[-0.04em] text-ink md:whitespace-nowrap">
-                Diseño gráfico
+                Graphic Design
               </span>
             </MaskReveal>
           </h1>
 
           <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10">
-            <ScrollReveal delay={180} className="md:col-span-7">
-              <p className="font-serif text-2xl md:text-3xl leading-[1.25] text-ink">
-                Identidad visual, editorial y embalaje con orden, intención y detalle.
+            <ScrollReveal delay={180} className="md:col-span-12">
+              <p className="font-serif text-2xl md:text-3xl leading-[1.25] text-ink max-w-2xl">
+                Visual identity, editorial and packaging with order, intention and detail.
               </p>
               <p className="mt-6 text-sm md:text-base text-ink-muted leading-relaxed max-w-xl">
-                8+ años ayudando a startups y marcas en crecimiento a convertir su estrategia en sistemas visuales coherentes.
+                8+ years helping startups and growing brands turn strategy into coherent visual systems.
               </p>
-            </ScrollReveal>
-
-            <ScrollReveal delay={260} className="md:col-span-5">
-              <div className="aspect-[4/5] overflow-hidden bg-cream-darker">
-                <img
-                  src={portraitMain}
-                  alt="Bernardo Orozco — retrato"
-                  loading="lazy"
-                  className="w-full h-full object-cover grayscale contrast-[1.05]"
-                />
-              </div>
             </ScrollReveal>
           </div>
 
@@ -134,14 +115,14 @@ export default function Index() {
                 to="/work"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-ink text-cream text-sm font-semibold hover:opacity-80 transition-opacity duration-200"
               >
-                Ver proyectos
+                View work
                 <ArrowRight size={16} strokeWidth={1.5} />
               </Link>
               <Link
                 to="/about"
                 className="inline-flex items-center gap-2 px-8 py-4 border border-divider text-ink text-sm font-semibold hover:border-ink transition-colors duration-200"
               >
-                Sobre mí
+                About me
               </Link>
             </div>
           </ScrollReveal>
@@ -170,8 +151,8 @@ export default function Index() {
       <section className="section-padding">
         <div className="container-editorial">
           <ScrollReveal>
-            <p className="eyebrow mb-4">Proyectos</p>
-            <h2 className="text-ink font-serif italic max-w-3xl">De una idea desordenada a algo claro, coherente y con impacto.</h2>
+            <p className="eyebrow mb-4">Projects</p>
+            <h2 className="text-ink font-serif italic max-w-3xl">From a scattered idea to something clear, coherent and impactful.</h2>
           </ScrollReveal>
 
           <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 md:gap-y-16">
@@ -181,7 +162,7 @@ export default function Index() {
                   <div className="wipe-media bg-cream-darker aspect-[4/3] overflow-hidden">
                     <img
                       src={item.image}
-                      alt={`${item.title} — proyecto`}
+                      alt={`${item.title} — project`}
                       loading="lazy"
                       className="w-full h-full object-cover transition-transform duration-[1200ms] ease-editorial group-hover:scale-[1.06]"
                     />
@@ -201,20 +182,20 @@ export default function Index() {
 
           <ScrollReveal delay={200}>
             <Link to="/work" className="arrow-link mt-12 md:mt-16 inline-flex text-ink">
-              Ver todos los proyectos
+              View all projects
               <ArrowUpRight size={16} strokeWidth={1.5} />
             </Link>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Services — "De una idea desordenada…" */}
+      {/* Services */}
       <section className="section-padding bg-cream-dark">
         <div className="container-editorial">
           <ScrollReveal>
-            <p className="eyebrow mb-4">Servicios</p>
+            <p className="eyebrow mb-4">Services</p>
             <h2 className="text-ink font-serif italic max-w-3xl">
-              De una idea desordenada a algo claro, coherente y con impacto.
+              From a scattered idea to something clear, coherent and impactful.
             </h2>
           </ScrollReveal>
 
@@ -231,41 +212,28 @@ export default function Index() {
         </div>
       </section>
 
-      {/* About teaser — "Conoce a Bernardo." */}
+      {/* About teaser */}
       <section className="section-padding">
         <div className="container-editorial">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-            <ScrollReveal className="lg:col-span-5">
-              <div className="aspect-[4/5] overflow-hidden bg-cream-darker">
-                <img
-                  src={workspace}
-                  alt="Espacio de trabajo de Bernardo Orozco"
-                  loading="lazy"
-                  className="w-full h-full object-cover grayscale contrast-[1.05]"
-                />
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal className="lg:col-span-7" delay={100}>
-              <p className="eyebrow mb-4">Sobre mí</p>
-              <h2 className="font-serif text-ink max-w-2xl">
-                Conoce a Bernardo.
-              </h2>
-              <p className="mt-6 text-base md:text-lg text-ink-light max-w-xl">
-                Entiendo mi trabajo como una forma de aportar luz y orden. Me apasiona coger una idea que parece desordenada y transformarla en algo claro, coherente y con impacto visual.
-              </p>
-              <p className="mt-4 text-base md:text-lg text-ink-light max-w-xl">
-                Para mí el diseño no es solo que algo "se vea bien", sino que cada tipografía, cada color y cada espacio tengan un sentido y ayuden a comunicar mejor.
-              </p>
-              <p className="mt-4 text-sm text-ink-muted">
-                Identidad de marca · Sistemas visuales · Embalaje · Digital · Marketing
-              </p>
-              <Link to="/about" className="arrow-link mt-8 text-ink">
-                Más sobre mí
-                <ArrowRight size={16} strokeWidth={1.5} />
-              </Link>
-            </ScrollReveal>
-          </div>
+          <ScrollReveal className="lg:col-span-7">
+            <p className="eyebrow mb-4">About</p>
+            <h2 className="font-serif text-ink max-w-2xl">
+              Meet Bernardo.
+            </h2>
+            <p className="mt-6 text-base md:text-lg text-ink-light max-w-xl">
+              I see my work as a way of bringing light and order. I'm passionate about taking an idea that seems scattered and transforming it into something clear, coherent and visually impactful.
+            </p>
+            <p className="mt-4 text-base md:text-lg text-ink-light max-w-xl">
+              For me, design isn't just about making something "look good" — it's about making sure every typeface, every color and every space has a purpose and helps communicate better.
+            </p>
+            <p className="mt-4 text-sm text-ink-muted">
+              Brand identity · Visual systems · Packaging · Digital · Marketing
+            </p>
+            <Link to="/about" className="arrow-link mt-8 text-ink">
+              More about me
+              <ArrowRight size={16} strokeWidth={1.5} />
+            </Link>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -273,8 +241,8 @@ export default function Index() {
       <section className="section-padding bg-cream-dark">
         <div className="container-editorial">
           <ScrollReveal>
-            <p className="eyebrow mb-4">Herramientas</p>
-            <h2 className="font-serif text-ink italic">Lo que uso día a día.</h2>
+            <p className="eyebrow mb-4">Tools</p>
+            <h2 className="font-serif text-ink italic">What I use day to day.</h2>
           </ScrollReveal>
           <ScrollReveal delay={100}>
             <ul className="mt-10 flex flex-wrap gap-x-8 gap-y-4">
@@ -293,19 +261,19 @@ export default function Index() {
         <div className="container-editorial">
           <div className="max-w-3xl">
             <ScrollReveal>
-              <p className="eyebrow mb-4">Hablemos</p>
+              <p className="eyebrow mb-4">Let's talk</p>
               <h2 className="font-serif italic text-ink">
-                ¿Tienes un proyecto en mente?
+                Have a project in mind?
               </h2>
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <p className="mt-6 text-base md:text-lg text-ink-light max-w-xl">
-                Cuéntame tu proyecto. Respondo por correo o por LinkedIn. Abierto a oportunidades donde la identidad de marca, los sistemas visuales y el diseño bien hecho se encuentran.
+                Tell me about your project. I respond by email or LinkedIn. Open to opportunities where brand identity, visual systems and thoughtful design come together.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={180}>
               <Link to="/contact" className="arrow-link mt-8 text-ink">
-                Hablemos
+                Get in touch
                 <ArrowRight size={16} strokeWidth={1.5} />
               </Link>
             </ScrollReveal>

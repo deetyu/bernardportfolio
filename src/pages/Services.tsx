@@ -7,62 +7,62 @@ import { Button } from "@/components/ui/button";
 const services = [
   {
     number: "01",
-    title: "Estrategia de marca",
-    description: "Posicionamiento, definición de audiencia y marcos de mensaje que dan a tu marca una dirección clara antes de empezar a diseñar.",
-    deliverables: ["Posicionamiento de marca", "Auditoría competitiva", "Mapeo de audiencia", "Narrativa de marca"],
+    title: "Brand Strategy",
+    description: "Positioning, audience definition, and messaging frameworks that give your brand a clear direction before design begins.",
+    deliverables: ["Brand positioning", "Competitive audit", "Audience mapping", "Brand narrative"],
   },
   {
     number: "02",
-    title: "Identidad visual",
-    description: "Sistemas de logo distintivos, tipografía, color y reglas de aplicación construidos para escalar en cada canal.",
-    deliverables: ["Suite de logo", "Sistema tipográfico", "Paleta de color", "Guías de marca"],
+    title: "Visual Identity",
+    description: "Distinctive logo systems, typography, color, and application rules built to scale across every channel.",
+    deliverables: ["Logo suite", "Typography system", "Color palette", "Brand guidelines"],
   },
   {
     number: "03",
-    title: "Diseño de embalaje",
-    description: "Sistemas de embalaje que comunican calidad y presencia en estante manteniéndose fieles al posicionamiento de marca.",
-    deliverables: ["Conceptos de embalaje", "Sistemas de etiquetas", "Archivos listos para producción", "Mockups"],
+    title: "Packaging Design",
+    description: "Packaging systems that communicate quality and shelf presence while staying true to the brand's positioning.",
+    deliverables: ["Packaging concepts", "Label systems", "Production-ready files", "Mockups"],
   },
   {
     number: "04",
-    title: "Dirección de arte",
-    description: "Dirección creativa para fotografía, campañas y contenido digital que mantiene tu marca visualmente coherente.",
-    deliverables: ["Dirección de campaña", "Briefs de fotografía", "Plantillas social", "Activos de lanzamiento"],
+    title: "Art Direction",
+    description: "Creative direction for photography, campaigns, and digital content that keeps your brand visually consistent.",
+    deliverables: ["Campaign direction", "Photography briefs", "Social templates", "Launch assets"],
   },
   {
     number: "05",
-    title: "Activos de marketing",
-    description: "Plantillas y colateral que tu equipo puede usar con confianza, desde presentaciones hasta sistemas de contenido social.",
-    deliverables: ["Plantillas social", "Presentaciones", "Colateral impreso", "Anuncios digitales"],
+    title: "Marketing Assets",
+    description: "Templates and collateral your team can use confidently, from pitch decks to social content systems.",
+    deliverables: ["Social media templates", "Presentation decks", "Print collateral", "Digital ads"],
   },
   {
     number: "06",
-    title: "Refinamiento de marca",
-    description: "Modernizar una identidad existente sin perder reconocimiento — desde redibujos vectoriales hasta actualizaciones completas del sistema.",
-    deliverables: ["Refinamiento de logo", "Recreación vectorial", "Actualizaciones de sistema", "Reglas de uso"],
+    title: "Brand Refinement",
+    description: "Modernize an existing identity without losing recognition — from vector redraws to full system updates.",
+    deliverables: ["Logo refinement", "Vector recreation", "System updates", "Usage rules"],
   },
 ];
 
 const process = [
   {
     step: "01",
-    title: "Descubrimiento",
-    description: "Definimos el problema, la audiencia y los objetivos. Reviso referencias, competidores y materiales existentes para entender a dónde necesita llegar la marca.",
+    title: "Discovery",
+    description: "We define the problem, audience, and goals. I review references, competitors, and existing materials to understand where the brand needs to go.",
   },
   {
     step: "02",
-    title: "Estrategia",
-    description: "Posicionamiento, narrativa y dirección creativa se alinean en un brief claro que guía cada decisión de diseño.",
+    title: "Strategy",
+    description: "Positioning, narrative, and creative direction are aligned into a clear brief that guides every design decision.",
   },
   {
     step: "03",
-    title: "Diseño",
-    description: "Los conceptos se desarrollan y refinan en un sistema de identidad coherente, con espacio para feedback e iteración.",
+    title: "Design",
+    description: "Concepts are developed and refined into a cohesive identity system, with room for feedback and iteration.",
   },
   {
     step: "04",
-    title: "Entrega",
-    description: "Los activos finales, guías y plantillas se empaquetan para que tu equipo implemente la marca con confianza.",
+    title: "Delivery",
+    description: "Final assets, guidelines, and templates are packaged so your team can implement the brand with confidence.",
   },
 ];
 
@@ -73,17 +73,17 @@ export default function Services() {
       <section className="pt-32 md:pt-40 pb-16 md:pb-24">
         <div className="container-editorial px-6 md:px-12 lg:px-20">
           <ScrollReveal>
-            <p className="eyebrow mb-6">Servicios</p>
+            <p className="eyebrow mb-6">Services</p>
           </ScrollReveal>
           <ScrollReveal delay={100}>
             <h1 className="text-ink max-w-4xl mb-8">
-              <span className="block">Sistemas de marca</span>
-              <span className="block font-serif italic">construidos para durar.</span>
+              <span className="block">Brand systems</span>
+              <span className="block font-serif italic">built to last.</span>
             </h1>
           </ScrollReveal>
           <ScrollReveal delay={200}>
             <p className="text-lg text-ink-light max-w-2xl">
-              Ayudo a startups y negocios en crecimiento a pasar de la estrategia a la implementación con identidades que se mantienen coherentes en embalaje, digital y marketing.
+              I help startups and growing businesses move from strategy to implementation with identities that stay consistent across packaging, digital, and marketing touchpoints.
             </p>
           </ScrollReveal>
         </div>
@@ -93,7 +93,7 @@ export default function Services() {
       <section className="section-padding">
         <div className="container-editorial px-6 md:px-12 lg:px-20">
           <ScrollReveal>
-            <p className="eyebrow mb-16 md:mb-20">Lo que ofrezco</p>
+            <p className="eyebrow mb-16 md:mb-20">What I Offer</p>
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
@@ -124,7 +124,7 @@ export default function Services() {
       <section className="section-padding bg-cream-dark">
         <div className="container-editorial px-6 md:px-12 lg:px-20">
           <ScrollReveal>
-            <p className="eyebrow mb-16 md:mb-20">Proceso</p>
+            <p className="eyebrow mb-16 md:mb-20">Process</p>
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
@@ -147,19 +147,19 @@ export default function Services() {
           <div className="max-w-3xl mx-auto text-center">
             <ScrollReveal>
               <h2 className="text-ink mb-6">
-                <span className="block">¿List@ para construir</span>
-                <span className="block font-serif italic">tu marca?</span>
+                <span className="block">Ready to build</span>
+                <span className="block font-serif italic">your brand?</span>
               </h2>
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <p className="text-ink-light mb-10 max-w-xl mx-auto">
-                Cuéntame tu proyecto y encontraremos la forma adecuada de trabajar juntos.
+                Tell me about your project and we'll find the right way to work together.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <Button asChild>
                 <Link to="/contact" className="inline-flex items-center gap-2">
-                  Empezar un proyecto
+                  Start a Project
                   <ArrowRight size={18} strokeWidth={1.5} />
                 </Link>
               </Button>

@@ -16,7 +16,7 @@ export default function Footer() {
           <div>
             <p className="font-serif italic text-lg text-ink leading-tight">Bernardo Orozco</p>
             <p className="mt-1 text-[10px] uppercase tracking-[0.25em] text-ink-muted">
-              Diseñador gráfico
+              Graphic Design
             </p>
           </div>
 
@@ -36,7 +36,7 @@ export default function Footer() {
             ))}
           </ul>
 
-          <p className="text-xs text-ink-muted">© {currentYear} — Todos los derechos reservados.</p>
+          <p className="text-xs text-ink-muted">© {currentYear} — All rights reserved.</p>
         </div>
       </div>
     </footer>

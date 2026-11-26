@@ -4,24 +4,22 @@ import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { MaskReveal } from "@/components/shared/MaskReveal";
 
-import portraitMain from "@/assets/portrait-main.jpg";
-
 const expertise = [
   {
-    title: "Identidad y estrategia de marca",
-    description: "Clarificar el posicionamiento, la audiencia y la idea central de una marca para guiar su dirección visual.",
+    title: "Brand Identity & Strategy",
+    description: "Clarifying a brand's positioning, audience, and core idea to guide its visual direction.",
   },
   {
-    title: "Embalaje y dirección de arte",
-    description: "Traducir la identidad a embalaje, presentación de producto y dirección visual coherente.",
+    title: "Packaging & Art Direction",
+    description: "Translating identity into packaging, product presentation, and cohesive visual direction.",
   },
   {
-    title: "Campaña y diseño de marketing",
-    description: "Adaptar sistemas de marca a campañas, contenido social, display, email y colateral de marketing.",
+    title: "Campaign & Marketing Design",
+    description: "Adapting brand systems across campaigns, social content, display, email, and marketing collateral.",
   },
   {
-    title: "Impresos y aplicaciones de marca",
-    description: "Extender la identidad a papelería, señalética, gráfica de eventos y materiales de marca con coherencia.",
+    title: "Print & Brand Applications",
+    description: "Extending identity across stationery, signage, event graphics, and branded materials with consistency.",
   },
 ];
 
@@ -48,13 +46,13 @@ export default function About() {
         <div className="container-editorial">
           <div className="max-w-4xl">
             <ScrollReveal>
-              <p className="eyebrow mb-6">Sobre mí</p>
+              <p className="eyebrow mb-6">About</p>
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <h1 className="text-ink">
-                <span className="block">Diseñando identidades</span>
+                <span className="block">Designing identities</span>
                 <MaskReveal delay={200}>
-                  <span className="block font-serif italic">que crecen contigo.</span>
+                  <span className="block font-serif italic">that grow with you.</span>
                 </MaskReveal>
               </h1>
             </ScrollReveal>
@@ -62,35 +60,22 @@ export default function About() {
         </div>
       </section>
 
-      {/* Portrait + narrative */}
+      {/* Narrative */}
       <section className="pb-20 md:pb-28 px-6 md:px-12 lg:px-20">
         <div className="container-editorial">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-            <ScrollReveal className="lg:col-span-5">
-              <div className="aspect-[4/5] overflow-hidden bg-cream-darker">
-                <img
-                  src={portraitMain}
-                  alt="Bernardo Orozco — retrato"
-                  loading="lazy"
-                  className="w-full h-full object-cover grayscale contrast-[1.05]"
-                />
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal className="lg:col-span-7" delay={100}>
-              <div className="max-w-2xl">
-                <p className="text-lg md:text-xl text-ink-light leading-relaxed mb-6">
-                  Soy Bernardo Orozco, diseñador gráfico con 8+ años de experiencia construyendo identidades de marca, sistemas visuales y embalaje para startups y empresas en crecimiento.
-                </p>
-                <p className="text-lg md:text-xl text-ink-light leading-relaxed mb-6">
-                  Entiendo mi trabajo como una forma de aportar luz y orden. Me apasiona coger una idea que parece desordenada y transformarla en algo claro, coherente y con impacto visual. Para mí el diseño no es solo que algo "se vea bien", sino que cada tipografía, cada color y cada espacio tengan un sentido y ayuden a comunicar mejor.
-                </p>
-                <p className="text-lg md:text-xl text-ink-light leading-relaxed">
-                  Trabajo entre estrategia, identidad, embalaje, digital y diseño de marketing — ayudando a las marcas a pasar de una dirección clara a una ejecución coherente en todos los puntos de contacto.
-                </p>
-              </div>
-            </ScrollReveal>
-          </div>
+          <ScrollReveal>
+            <div className="max-w-2xl">
+              <p className="text-lg md:text-xl text-ink-light leading-relaxed mb-6">
+                I'm Bernardo Orozco, a graphic designer with 8+ years of experience building brand identities, visual systems and packaging for startups and growing companies.
+              </p>
+              <p className="text-lg md:text-xl text-ink-light leading-relaxed mb-6">
+                I see my work as a way of bringing light and order. I'm passionate about taking an idea that seems scattered and transforming it into something clear, coherent and visually impactful. For me, design isn't just about making something "look good" — it's about making sure every typeface, every color and every space has a purpose and helps communicate better.
+              </p>
+              <p className="text-lg md:text-xl text-ink-light leading-relaxed">
+                I work across strategy, identity, packaging, digital and marketing design — helping brands move from a clear direction to consistent execution across touchpoints.
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -98,17 +83,17 @@ export default function About() {
       <section className="section-padding bg-cream-dark">
         <div className="container-editorial">
           <ScrollReveal>
-            <p className="eyebrow mb-4">Experiencia</p>
-            <h2 className="text-ink font-serif italic max-w-3xl">Experiencia construida entre disciplinas.</h2>
+            <p className="eyebrow mb-4">Experience</p>
+            <h2 className="text-ink font-serif italic max-w-3xl">Experience built across disciplines.</h2>
           </ScrollReveal>
           <ScrollReveal delay={100}>
             <p className="mt-6 text-base md:text-lg text-ink-light max-w-2xl">
-              Desde 2022 llevo proyectos de branding y dirección visual de forma independiente a través de Orion Studio, colaborando directamente con fundadores en sistemas de identidad, embalaje y activos de comunicación.
+              Since 2022 I've led branding and visual projects independently through Orion Studio, collaborating directly with founders on identity systems, packaging and communication assets.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={200}>
             <p className="mt-4 text-base md:text-lg text-ink-light max-w-2xl">
-              Antes trabajé en la industria de los esports creando gráfica para retransmisiones, contenido promocional y activos digitales para entornos competitivos en directo.
+              Previously, I worked in the esports industry creating broadcast graphics, promotional content and digital assets for live competitive environments.
             </p>
           </ScrollReveal>
         </div>
@@ -118,8 +103,8 @@ export default function About() {
       <section className="section-padding">
         <div className="container-editorial">
           <ScrollReveal>
-            <p className="eyebrow mb-4">Experiencia</p>
-            <h2 className="text-ink font-serif">Lo que hago</h2>
+            <p className="eyebrow mb-4">Expertise</p>
+            <h2 className="text-ink font-serif">What I do</h2>
           </ScrollReveal>
 
           <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
@@ -134,7 +119,7 @@ export default function About() {
             <ScrollReveal delay={expertise.length * 80}>
               <div className="md:col-span-2">
                 <p className="text-sm text-ink-muted">
-                  8+ años en identidad de marca, sistemas visuales, embalaje, dirección de arte y diseño de marketing.
+                  8+ years across brand identity, visual systems, packaging, art direction, and marketing design.
                 </p>
               </div>
             </ScrollReveal>
@@ -146,8 +131,8 @@ export default function About() {
       <section className="section-padding bg-cream-dark">
         <div className="container-editorial">
           <ScrollReveal>
-            <p className="eyebrow mb-4">Herramientas</p>
-            <h2 className="font-serif text-ink italic">Lo que uso día a día.</h2>
+            <p className="eyebrow mb-4">Tools</p>
+            <h2 className="font-serif text-ink italic">What I use day to day.</h2>
           </ScrollReveal>
           <ScrollReveal delay={100}>
             <ul className="mt-10 flex flex-wrap gap-x-8 gap-y-4">
@@ -166,14 +151,14 @@ export default function About() {
         <div className="container-editorial">
           <div className="max-w-3xl">
             <ScrollReveal>
-              <p className="eyebrow mb-4">Contacto</p>
+              <p className="eyebrow mb-4">Contact</p>
               <h2 className="font-serif italic text-ink">
-                Construyamos algo con sentido.
+                Let's build something meaningful.
               </h2>
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <p className="mt-6 text-base md:text-lg text-ink-light max-w-xl">
-                Abierto a roles senior de marca y diseño visual donde pueda contribuir a construir sistemas de marca fuertes y escalables.
+                Open to senior brand & visual design roles where I can contribute to building strong, scalable brand systems.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={180}>
@@ -182,7 +167,7 @@ export default function About() {
                   to="/contact"
                   className="inline-flex items-center gap-2 px-8 py-4 bg-ink text-cream text-sm font-semibold hover:opacity-80 transition-opacity duration-200"
                 >
-                  Contáctame
+                  Contact me
                   <ArrowRight size={16} strokeWidth={1.5} />
                 </Link>
                 <a
@@ -191,7 +176,7 @@ export default function About() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-8 py-4 border border-divider text-ink text-sm font-semibold hover:border-ink transition-colors duration-200"
                 >
-                  Descargar CV
+                  Download CV
                 </a>
               </div>
             </ScrollReveal>
