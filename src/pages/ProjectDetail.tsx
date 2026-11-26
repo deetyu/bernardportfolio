@@ -89,15 +89,15 @@ export default function ProjectDetail() {
       <section className="cs-section pt-0 md:pt-0">
         <div className="cs-container grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
           <ScrollReveal className="md:col-span-7">
-            <p className="cs-label mb-3 text-ink-muted">Overview</p>
+            <p className="cs-label mb-3 text-ink-muted">Visión general</p>
             <p className="font-serif text-lg leading-relaxed text-ink md:text-xl">{project.overview}</p>
             <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
               <div>
-                <p className="cs-label mb-2">The Challenge</p>
+                <p className="cs-label mb-2">El reto</p>
                 <p className="text-sm leading-relaxed text-ink-light">{project.challenge}</p>
               </div>
               <div>
-                <p className="cs-label mb-2">The Solution</p>
+                <p className="cs-label mb-2">La solución</p>
                 <p className="text-sm leading-relaxed text-ink-light">{project.solution}</p>
               </div>
             </div>
@@ -105,8 +105,8 @@ export default function ProjectDetail() {
           <ScrollReveal className="md:col-span-4 md:col-start-9" delay={100}>
             <dl className="grid grid-cols-2 gap-5 md:grid-cols-1">
               {[
-                ["Client", project.client],
-                ["Industry", project.industry],
+                ["Cliente", project.client],
+                ["Industria", project.industry],
                 ...(caseStudy ? [["Role", caseStudy.role]] : []),
               ].map(([k, v]) => (
                 <div key={k}>
@@ -115,7 +115,7 @@ export default function ProjectDetail() {
                 </div>
               ))}
               <div>
-                <dt className="cs-label mb-1 text-ink-muted">Services</dt>
+                <dt className="cs-label mb-1 text-ink-muted">Servicios</dt>
                 <dd className="text-sm text-ink">{project.services.join(" · ")}</dd>
               </div>
             </dl>
@@ -132,13 +132,13 @@ export default function ProjectDetail() {
           <section className="cs-section">
             <div className="cs-container grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
               <ScrollReveal className="md:col-span-5">
-                <p className="cs-label mb-4 text-ink-muted">Delivered</p>
+                <p className="cs-label mb-4 text-ink-muted">Entregado</p>
                 <ul className="grid grid-cols-1 gap-x-6 gap-y-2 text-sm text-ink-light sm:grid-cols-2">
                   {caseStudy.delivered.map((item) => <li key={item}>{item}</li>)}
                 </ul>
               </ScrollReveal>
               <ScrollReveal className="md:col-span-6 md:col-start-7" delay={100}>
-                <p className="cs-label mb-4 text-ink-muted">Built to</p>
+                <p className="cs-label mb-4 text-ink-muted">Construido para</p>
                 <p className="font-serif text-lg leading-relaxed text-ink md:text-xl">{caseStudy.builtTo}</p>
                 {caseStudy.note && <p className="mt-4 text-sm leading-relaxed text-ink-muted">{caseStudy.note}</p>}
               </ScrollReveal>
@@ -193,7 +193,7 @@ export default function ProjectDetail() {
            <div className="container-editorial px-6 md:px-12 lg:px-20 py-8 md:py-12">
             <div className="flex items-center justify-between">
               <div>
-                <p className="eyebrow mb-4">Next Project</p>
+                <p className="eyebrow mb-4">Proyecto siguiente</p>
                 <h2 className="font-serif text-2xl md:text-3xl text-ink group-hover:opacity-70 transition-opacity duration-300">
                   {nextProject.title}
                 </h2>
@@ -216,7 +216,7 @@ export default function ProjectDetail() {
             className="inline-flex items-center gap-2 text-sm text-ink-muted hover:text-ink transition-colors duration-300"
           >
             <ArrowLeft size={16} strokeWidth={1.5} />
-            Back to all projects
+            Volver a todos los proyectos
           </Link>
         </div>
       </section>

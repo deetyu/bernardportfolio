@@ -4,12 +4,13 @@ import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { MaskReveal } from "@/components/shared/MaskReveal";
 
+import portraitMain from "@/assets/portrait-main.jpg";
+import workspace from "@/assets/workspace.jpg";
+
 import aryaHero from "@/assets/projects/arya-hero.jpg";
 import sturioHero from "@/assets/projects/sturio-hero.jpg";
 import haciendaHero from "@/assets/projects/hacienda-hero.jpg";
-import flowersMaster from "@/assets/projects/flowers-master.jpg";
 import flowersPaid from "@/assets/projects/flowers-paid.jpg";
-import flowersEmail from "@/assets/projects/flowers-email.jpg";
 import aryaLanding from "@/assets/projects/arya-landing.jpg";
 import sturioInfographic from "@/assets/projects/sturio-infographic.jpg";
 import salsaPackaging from "@/assets/projects/salsa-packaging.jpg";
@@ -17,88 +18,67 @@ import amigurumiCollateral from "@/assets/projects/amigurumi-collateral.jpg";
 import marksHero from "@/assets/projects/marks-hero.jpg";
 
 const marqueeItems = [
-  "Brand Identity",
-  "Visual Systems",
-  "Art Direction",
-  "Packaging Design",
+  "Identidad visual",
+  "Sistemas de marca",
+  "Dirección de arte",
+  "Diseño de embalaje",
 ];
 
-const brandSystems = [
+const projects = [
   {
-    title: "Identity Systems",
-    description: "Logos, typography, color and graphic languages that give brands a clear and scalable foundation.",
+    title: "AR•YA Cosmetics",
+    category: "Identidad · Embalaje · Digital",
     image: aryaHero,
     slug: "arya-cosmetics",
   },
   {
-    title: "Brand Applications",
-    description: "Extending identity across packaging, signage, stationery and physical touchpoints with consistency.",
+    title: "Sturio",
+    category: "Sistema visual · B2B",
+    image: sturioHero,
+    slug: "sturio",
+  },
+  {
+    title: "Ex Hacienda de Cedros",
+    category: "Identidad · Hospitalidad",
     image: haciendaHero,
     slug: "ex-hacienda-de-cedros",
   },
   {
-    title: "Digital Touchpoints",
-    description: "Digital assets and visual content built on the same brand system.",
-    image: aryaLanding,
-    slug: "arya-digital",
-  },
-];
-
-const marketingApplications = [
-  {
-    title: "Campaigns & Display",
-    description: "Banners, paid ads and display formats art-directed from the brand system.",
+    title: "Girasolía",
+    category: "Identidad · Social · Campaña",
     image: flowersPaid,
-    slug: "flowers-campaign",
-  },
-  {
-    title: "Digital Marketing Assets",
-    description: "Visual assets for digital campaigns, social content and online brand presence.",
-    image: aryaLanding,
-    slug: "arya-digital",
-  },
-  {
-    title: "Email & Social",
-    description: "Email marketing templates and social content that keep the identity consistent.",
-    image: flowersEmail,
     slug: "girasolia",
   },
+];
+
+const services = [
   {
-    title: "Print & Brand Applications",
-    description: "Stationery, signage, event graphics and branded materials extending the identity.",
-    image: sturioInfographic,
-    slug: "sturio-marketing",
+    title: "Identidad visual",
+    text: "Logos, tipografía, color y lenguajes gráficos que dan a las marcas una base clara y escalable.",
+  },
+  {
+    title: "Aplicaciones de marca",
+    text: "Extender la identidad a embalaje, señalética, papelería y puntos de contacto físicos con coherencia.",
+  },
+  {
+    title: "Dirección de arte",
+    text: "Campañas, contenido social y piezas visuales construidas sobre el mismo sistema de marca.",
   },
 ];
 
-const additionalWork = [
-  {
-    slug: "consumer-product",
-    title: "Consumer Product",
-    category: "Packaging · Retail · Production",
-    description: "Label system and shelf presence for a small-batch range.",
-    image: salsaPackaging,
-  },
-  {
-    slug: "craft-studio",
-    title: "Amigurumi",
-    category: "Branding · Collateral · Social",
-    description: "Product sheets, cards and care guides for a handmade-goods brand.",
-    image: amigurumiCollateral,
-  },
-  {
-    slug: "selected-marks",
-    title: "Selected Marks",
-    category: "Logofolio · Mark Design · Vector",
-    description: "Logo redraws and mark refinements across industries.",
-    image: marksHero,
-  },
+const tools = [
+  "Illustrator",
+  "Photoshop",
+  "InDesign",
+  "Figma",
+  "After Effects",
+  "Lightroom",
 ];
 
 export default function Index() {
   return (
     <Layout>
-      {/* Cover */}
+      {/* Hero */}
       <section className="min-h-dvh flex items-center pt-28 md:pt-32 pb-16 px-6 md:px-12 lg:px-20">
         <div className="container-editorial w-full">
           <ScrollReveal>
@@ -107,7 +87,7 @@ export default function Index() {
                 Portfolio
               </p>
               <p className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-ink-muted">
-                Senior Brand &amp; Visual Designer
+                Diseñador gráfico
               </p>
             </div>
           </ScrollReveal>
@@ -120,8 +100,8 @@ export default function Index() {
 
           <h1 className="mt-2 md:mt-3">
             <MaskReveal delay={260}>
-              <span className="block font-serif text-[13vw] md:text-[8vw] lg:text-[6.6vw] leading-[0.95] tracking-[-0.04em] text-ink md:whitespace-nowrap">
-                Senior Brand &amp; Visual Designer
+              <span className="block font-serif italic text-[13vw] md:text-[8vw] lg:text-[6.6vw] leading-[0.95] tracking-[-0.04em] text-ink md:whitespace-nowrap">
+                Diseño gráfico
               </span>
             </MaskReveal>
           </h1>
@@ -129,11 +109,22 @@ export default function Index() {
           <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10">
             <ScrollReveal delay={180} className="md:col-span-7">
               <p className="font-serif text-2xl md:text-3xl leading-[1.25] text-ink">
-                I build clear, scalable identity systems that work across packaging, digital and everyday communication.
+                Identidad visual, editorial y embalaje con orden, intención y detalle.
               </p>
               <p className="mt-6 text-sm md:text-base text-ink-muted leading-relaxed max-w-xl">
-                8+ years helping startups and growing brands turn strategy into consistent visual systems.
+                8+ años ayudando a startups y marcas en crecimiento a convertir su estrategia en sistemas visuales coherentes.
               </p>
+            </ScrollReveal>
+
+            <ScrollReveal delay={260} className="md:col-span-5">
+              <div className="aspect-[4/5] overflow-hidden bg-cream-darker">
+                <img
+                  src={portraitMain}
+                  alt="Bernardo Orozco — retrato"
+                  loading="lazy"
+                  className="w-full h-full object-cover grayscale contrast-[1.05]"
+                />
+              </div>
             </ScrollReveal>
           </div>
 
@@ -143,14 +134,14 @@ export default function Index() {
                 to="/work"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-ink text-cream text-sm font-semibold hover:opacity-80 transition-opacity duration-200"
               >
-                Explore Work
+                Ver proyectos
                 <ArrowRight size={16} strokeWidth={1.5} />
               </Link>
               <Link
                 to="/about"
                 className="inline-flex items-center gap-2 px-8 py-4 border border-divider text-ink text-sm font-semibold hover:border-ink transition-colors duration-200"
               >
-                About me
+                Sobre mí
               </Link>
             </div>
           </ScrollReveal>
@@ -175,147 +166,125 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Brand Systems */}
+      {/* Projects */}
       <section className="section-padding">
         <div className="container-editorial">
           <ScrollReveal>
-            <p className="eyebrow mb-4">Brand Systems</p>
-            <h2 className="text-ink font-serif max-w-3xl">More than a logo. A system built to work.</h2>
-          </ScrollReveal>
-          <ScrollReveal delay={100}>
-            <p className="mt-6 text-base md:text-lg text-ink-light max-w-2xl">
-              I build visual identities that extend across the touchpoints where brands meet their audiences.
-            </p>
+            <p className="eyebrow mb-4">Proyectos</p>
+            <h2 className="text-ink font-serif italic max-w-3xl">De una idea desordenada a algo claro, coherente y con impacto.</h2>
           </ScrollReveal>
 
-          <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-10">
-            {brandSystems.map((item, index) => (
-              <ScrollReveal key={item.title} delay={index * 100}>
+          <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 md:gap-y-16">
+            {projects.map((item, index) => (
+              <ScrollReveal key={item.slug} delay={(index % 2) * 100}>
                 <Link to={`/work/${item.slug}`} className="group block">
                   <div className="wipe-media bg-cream-darker aspect-[4/3] overflow-hidden">
                     <img
                       src={item.image}
-                      alt={`${item.title} — brand system example`}
+                      alt={`${item.title} — proyecto`}
                       loading="lazy"
                       className="w-full h-full object-cover transition-transform duration-[1200ms] ease-editorial group-hover:scale-[1.06]"
                     />
                   </div>
-                  <h3 className="mt-4 font-serif text-lg text-ink group-hover:opacity-70 transition-opacity duration-300">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-ink-light leading-relaxed">
-                    {item.description}
-                  </p>
+                  <div className="mt-4 flex items-baseline justify-between gap-4">
+                    <h3 className="font-serif text-xl md:text-2xl text-ink group-hover:opacity-70 transition-opacity duration-300">
+                      {item.title}
+                    </h3>
+                    <span className="text-[10px] uppercase tracking-[0.2em] text-ink-muted text-right">
+                      {item.category}
+                    </span>
+                  </div>
                 </Link>
               </ScrollReveal>
             ))}
           </div>
+
+          <ScrollReveal delay={200}>
+            <Link to="/work" className="arrow-link mt-12 md:mt-16 inline-flex text-ink">
+              Ver todos los proyectos
+              <ArrowUpRight size={16} strokeWidth={1.5} />
+            </Link>
+          </ScrollReveal>
         </div>
       </section>
 
-      {/* Marketing & Brand Applications */}
+      {/* Services — "De una idea desordenada…" */}
       <section className="section-padding bg-cream-dark">
         <div className="container-editorial">
           <ScrollReveal>
-            <p className="eyebrow mb-4">Marketing &amp; Brand Applications</p>
-            <h2 className="text-ink font-serif max-w-3xl">From identity to everyday communication.</h2>
-          </ScrollReveal>
-          <ScrollReveal delay={100}>
-            <p className="mt-6 text-base md:text-lg text-ink-light max-w-2xl">
-              Brand systems adapted across banners, paid ads, email marketing, social content, print collateral and branded materials.
-            </p>
+            <p className="eyebrow mb-4">Servicios</p>
+            <h2 className="text-ink font-serif italic max-w-3xl">
+              De una idea desordenada a algo claro, coherente y con impacto.
+            </h2>
           </ScrollReveal>
 
-          <div className="mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
-            {marketingApplications.map((item, index) => (
-              <ScrollReveal key={item.title} delay={index * 80}>
-                <Link to={`/work/${item.slug}`} className="group block">
-                  <div className="wipe-media bg-cream-darker aspect-[5/4] overflow-hidden">
-                    <img
-                      src={item.image}
-                      alt={`${item.title} — marketing and brand applications`}
-                      loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-[1200ms] ease-editorial group-hover:scale-[1.06]"
-                    />
-                  </div>
-                  <h3 className="mt-3 font-serif text-base text-ink group-hover:opacity-70 transition-opacity duration-300">
-                    {item.title}
-                  </h3>
-                  <p className="mt-1 text-xs text-ink-light leading-relaxed">
-                    {item.description}
-                  </p>
-                </Link>
+          <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-10">
+            {services.map((item, index) => (
+              <ScrollReveal key={item.title} delay={index * 100}>
+                <div className="draw-rule pt-6">
+                  <h3 className="font-serif text-xl text-ink mb-3">{item.title}</h3>
+                  <p className="text-sm text-ink-light leading-relaxed">{item.text}</p>
+                </div>
               </ScrollReveal>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Additional Work */}
+      {/* About teaser — "Conoce a Bernardo." */}
       <section className="section-padding">
         <div className="container-editorial">
-          <ScrollReveal>
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 md:mb-16">
-              <div>
-                <p className="eyebrow mb-4">Additional Work</p>
-                <h2 className="text-ink font-serif">Additional identities &amp; explorations</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+            <ScrollReveal className="lg:col-span-5">
+              <div className="aspect-[4/5] overflow-hidden bg-cream-darker">
+                <img
+                  src={workspace}
+                  alt="Espacio de trabajo de Bernardo Orozco"
+                  loading="lazy"
+                  className="w-full h-full object-cover grayscale contrast-[1.05]"
+                />
               </div>
-              <Link to="/work" className="arrow-link text-ink-muted hover:text-ink">
-                Full index
-                <ArrowUpRight size={16} strokeWidth={1.5} />
-              </Link>
-            </div>
-          </ScrollReveal>
+            </ScrollReveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-6 gap-y-8">
-            {additionalWork.map((item, index) => (
-              <ScrollReveal key={item.slug} delay={index * 80}>
-                <Link to={`/work/${item.slug}`} className="group block">
-                  <div className="wipe-media bg-cream-darker aspect-[16/10] overflow-hidden">
-                    <img
-                      src={item.image}
-                      alt={`${item.title} — ${item.category}`}
-                      loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-[1200ms] ease-editorial group-hover:scale-[1.06]"
-                    />
-                  </div>
-                  <h3 className="mt-3 font-serif text-base text-ink group-hover:opacity-70 transition-opacity duration-300">
-                    {item.title}
-                  </h3>
-                  <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-ink-muted">
-                    {item.category}
-                  </p>
-                  <p className="mt-2 text-xs text-ink-light leading-relaxed">
-                    {item.description}
-                  </p>
-                </Link>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* About Teaser */}
-      <section className="section-padding bg-cream-dark">
-        <div className="container-editorial">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
-            <ScrollReveal className="lg:col-span-7">
-              <p className="eyebrow mb-4">About</p>
+            <ScrollReveal className="lg:col-span-7" delay={100}>
+              <p className="eyebrow mb-4">Sobre mí</p>
               <h2 className="font-serif text-ink max-w-2xl">
-                Designing identities that grow with you.
+                Conoce a Bernardo.
               </h2>
               <p className="mt-6 text-base md:text-lg text-ink-light max-w-xl">
-                I'm a Senior Brand &amp; Visual Designer with 8+ years of experience building brand identities and visual systems across digital and physical touchpoints.
+                Entiendo mi trabajo como una forma de aportar luz y orden. Me apasiona coger una idea que parece desordenada y transformarla en algo claro, coherente y con impacto visual.
+              </p>
+              <p className="mt-4 text-base md:text-lg text-ink-light max-w-xl">
+                Para mí el diseño no es solo que algo "se vea bien", sino que cada tipografía, cada color y cada espacio tengan un sentido y ayuden a comunicar mejor.
               </p>
               <p className="mt-4 text-sm text-ink-muted">
-                Brand strategy · Visual identity · Packaging · Digital · Marketing
+                Identidad de marca · Sistemas visuales · Embalaje · Digital · Marketing
               </p>
               <Link to="/about" className="arrow-link mt-8 text-ink">
-                More about me
+                Más sobre mí
                 <ArrowRight size={16} strokeWidth={1.5} />
               </Link>
             </ScrollReveal>
           </div>
+        </div>
+      </section>
+
+      {/* Tools */}
+      <section className="section-padding bg-cream-dark">
+        <div className="container-editorial">
+          <ScrollReveal>
+            <p className="eyebrow mb-4">Herramientas</p>
+            <h2 className="font-serif text-ink italic">Lo que uso día a día.</h2>
+          </ScrollReveal>
+          <ScrollReveal delay={100}>
+            <ul className="mt-10 flex flex-wrap gap-x-8 gap-y-4">
+              {tools.map((tool) => (
+                <li key={tool} className="font-serif text-2xl md:text-3xl text-ink-light">
+                  {tool}
+                </li>
+              ))}
+            </ul>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -324,19 +293,19 @@ export default function Index() {
         <div className="container-editorial">
           <div className="max-w-3xl">
             <ScrollReveal>
-              <p className="eyebrow mb-4">Contact</p>
-              <h2 className="font-serif text-ink">
-                Have a project or role in mind?
+              <p className="eyebrow mb-4">Hablemos</p>
+              <h2 className="font-serif italic text-ink">
+                ¿Tienes un proyecto en mente?
               </h2>
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <p className="mt-6 text-base md:text-lg text-ink-light max-w-xl">
-                I'm open to opportunities where brand identity, visual systems, and thoughtful design come together.
+                Cuéntame tu proyecto. Respondo por correo o por LinkedIn. Abierto a oportunidades donde la identidad de marca, los sistemas visuales y el diseño bien hecho se encuentran.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={180}>
               <Link to="/contact" className="arrow-link mt-8 text-ink">
-                Get in touch
+                Hablemos
                 <ArrowRight size={16} strokeWidth={1.5} />
               </Link>
             </ScrollReveal>

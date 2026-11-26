@@ -36,8 +36,8 @@ const ratioClass: Record<string, string> = {
 };
 
 const groupLabel: Record<string, string> = {
-  identity: "Identity",
-  applications: "Applications & Deliverables",
+  identity: "Identidad",
+  applications: "Aplicaciones y entregables",
 };
 
 function Figure({ image, label, caption, ratio = "landscape", alt }: ProjectSectionItem & { alt: string }) {

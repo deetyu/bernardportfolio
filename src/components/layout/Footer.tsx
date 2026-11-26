@@ -14,9 +14,9 @@ export default function Footer() {
       <div className="container-editorial px-6 md:px-12 lg:px-20">
         <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-6">
           <div>
-            <p className="font-serif text-lg text-ink leading-tight">Bernardo Orozco</p>
+            <p className="font-serif italic text-lg text-ink leading-tight">Bernardo Orozco</p>
             <p className="mt-1 text-[10px] uppercase tracking-[0.25em] text-ink-muted">
-              Senior Brand &amp; Visual Designer
+              Diseñador gráfico
             </p>
           </div>
 
@@ -36,7 +36,7 @@ export default function Footer() {
             ))}
           </ul>
 
-          <p className="text-xs text-ink-muted">© {currentYear} — All rights reserved.</p>
+          <p className="text-xs text-ink-muted">© {currentYear} — Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

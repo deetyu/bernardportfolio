@@ -3,9 +3,9 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "Work", href: "/work" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "Proyectos", href: "/work" },
+  { label: "Sobre mí", href: "/about" },
+  { label: "Contacto", href: "/contact" },
 ];
 
 export default function Header() {
@@ -66,7 +66,7 @@ export default function Header() {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden p-2 text-ink"
-            aria-label="Toggle menu"
+            aria-label="Abrir menú"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

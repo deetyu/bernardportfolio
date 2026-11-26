@@ -46,7 +46,7 @@ export function ProjectCard({
         {/* Hover Overlay */}
         <div className="absolute inset-0 bg-ink/0 group-hover:bg-ink/10 transition-colors duration-500 flex items-center justify-center">
           <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-sm font-medium tracking-wide text-primary-foreground flex items-center gap-2">
-            View Project <ArrowRight size={16} strokeWidth={1.5} />
+            Ver proyecto <ArrowRight size={16} strokeWidth={1.5} />
           </span>
         </div>
       </div>
@@ -66,7 +66,7 @@ export function ProjectCard({
         )}
         {showCaseStudyLink && (
           <span className="mt-auto inline-flex w-fit items-center gap-2 border-b border-transparent pb-1 text-[11px] leading-4 uppercase tracking-[0.2em] text-ink group-hover:border-ink transition-colors duration-300">
-            Read case study →
+            Ver caso de estudio →
           </span>
         )}
       </div>

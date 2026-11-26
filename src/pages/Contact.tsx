@@ -6,7 +6,7 @@ const links = [
   { name: "Email", handle: "boboteme@gmail.com", href: "mailto:boboteme@gmail.com" },
   { name: "LinkedIn", handle: "linkedin.com/in/bernardo-orozco", href: "https://www.linkedin.com/in/bernardo-orozco/" },
   { name: "Behance", handle: "behance.net/btm20", href: "https://www.behance.net/btm20/" },
-  { name: "Download CV", handle: "Download CV", href: "/Bernardo_Orozco_Portfolio.pdf" },
+  { name: "CV", handle: "Descargar CV", href: "/Bernardo_Orozco_Portfolio.pdf" },
 ];
 
 export default function Contact() {
@@ -16,20 +16,23 @@ export default function Contact() {
         <div className="container-editorial">
           <ScrollReveal>
             <div className="flex items-baseline justify-between">
-              <p className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-ink">Contact</p>
+              <p className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-ink">Contacto</p>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={100}>
             <h1 className="font-serif italic text-ink mt-10 md:mt-14 max-w-4xl">
-              Let's talk.
+              Hablemos.
             </h1>
           </ScrollReveal>
 
           <div className="mt-10 md:mt-14 grid grid-cols-1 md:grid-cols-12 gap-10">
             <ScrollReveal delay={180} className="md:col-span-5">
               <p className="font-serif text-2xl md:text-3xl leading-[1.25] text-ink">
-                Open to senior brand &amp; visual design opportunities.
+                Cuéntame tu proyecto. Respondo por correo o por LinkedIn.
+              </p>
+              <p className="mt-6 text-base text-ink-light leading-relaxed max-w-md">
+                Abierto a oportunidades senior de marca y diseño visual donde la identidad, los sistemas visuales y el diseño bien hecho se encuentran.
               </p>
             </ScrollReveal>
 

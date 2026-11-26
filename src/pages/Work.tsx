@@ -18,80 +18,80 @@ const projects = [
   {
     slug: "arya-cosmetics",
     title: "AR•YA",
-    category: "Brand Identity · Packaging · Digital",
-    description: "Identity and packaging system for a premium skincare brand.",
+    category: "Identidad de marca · Embalaje · Digital",
+    description: "Identidad y sistema de embalaje para una marca premium de skincare.",
     image: projectImage("arya-product") ?? aryaHero,
     imageFit: "contain" as const,
   },
   {
     slug: "sturio",
     title: "Sturio",
-    category: "Brand Identity · B2B · Digital",
-    description: "Modular visual system for a B2B technology consultancy.",
+    category: "Identidad de marca · B2B · Digital",
+    description: "Sistema visual modular para una consultora tecnológica B2B.",
     image: projectImage("sturio-corporate") ?? sturioHero,
     imageFit: "cover" as const,
   },
   {
     slug: "ex-hacienda-de-cedros",
     title: "Ex Hacienda de Cedros",
-    category: "Brand Identity · Art Direction · Hospitality",
-    description: "Identity for a historic hacienda positioned as a premium event destination.",
+    category: "Identidad de marca · Dirección de arte · Hospitalidad",
+    description: "Identidad para una hacienda histórica posicionada como destino premium de eventos.",
     image: projectImage("hacienda-signage") ?? haciendaHero,
     imageFit: "cover" as const,
   },
   {
     slug: "girasolia",
     title: "Girasolía",
-    category: "Brand Identity · Social · Campaign",
-    description: "A sunflower-led identity extended into social, campaigns and print.",
+    category: "Identidad de marca · Social · Campaña",
+    description: "Una identidad del girasol extendida a social, campañas e impresos.",
     image: projectImage("girasolia-identity") ?? flowersPaid,
     imageFit: "contain" as const,
   },
   {
     slug: "flowers-campaign",
-    title: "Girasolía — Campaign",
-    category: "Campaign · Paid Social · Display",
-    description: "Campaign exploration across paid social, email and print.",
+    title: "Girasolía — Campaña",
+    category: "Campaña · Social · Display",
+    description: "Exploración de campaña en social, email e impresos.",
     image: projectImage("girasolia-paid") ?? flowersPaid,
     imageFit: "contain" as const,
   },
   {
     slug: "arya-digital",
     title: "AR•YA — Digital",
-    category: "Landing Page · E-commerce",
-    description: "Conversion-focused landing page built on the brand system.",
+    category: "Landing page · E-commerce",
+    description: "Landing page enfocada en conversión construida sobre el sistema de marca.",
     image: projectImage("arya-landing-pdf") ?? aryaLanding,
     imageFit: "contain" as const,
   },
   {
     slug: "sturio-marketing",
     title: "Sturio — Marketing",
-    category: "Social · Collateral · Infographics",
-    description: "Marketing assets translating technical data into clear visuals.",
+    category: "Social · Colateral · Infografías",
+    description: "Activos de marketing que traducen datos técnicos en visuales claros.",
     image: projectImage("sturio-infographic-pdf") ?? sturioInfographic,
     imageFit: "contain" as const,
   },
   {
     slug: "consumer-product",
-    title: "Consumer Product",
-    category: "Packaging · Retail · Production",
-    description: "Label system and shelf presence for a small-batch range.",
+    title: "Producto de consumo",
+    category: "Embalaje · Retail · Producción",
+    description: "Sistema de etiquetas y presencia en estante para una gama artesanal.",
     image: salsaPackaging,
     imageFit: "contain" as const,
   },
   {
     slug: "craft-studio",
     title: "Amigurumi",
-    category: "Branding · Collateral · Social",
-    description: "Product sheets, cards and care guides for a handmade-goods brand.",
+    category: "Branding · Colateral · Social",
+    description: "Fichas de producto, tarjetas y guía de cuidados para una marca artesanal.",
     image: amigurumiCollateral,
     imageFit: "contain" as const,
   },
   {
     slug: "selected-marks",
-    title: "Selected Marks",
-    category: "Logofolio · Mark Design · Vector",
-    description: "Logo redraws and mark refinements across industries.",
+    title: "Marcas seleccionadas",
+    category: "Logofolio · Diseño de marca · Vector",
+    description: "Redibujos de logos y refinamientos de marcas en varias industrias.",
     image: marksHero,
     imageFit: "contain" as const,
   },
@@ -108,7 +108,10 @@ export default function Work() {
               <p className="eyebrow mb-6">Portfolio</p>
             </ScrollReveal>
             <ScrollReveal delay={100}>
-              <h1 className="text-ink max-w-4xl">Selected Work</h1>
+              <h1 className="text-ink max-w-4xl">
+                <span className="block">Proyectos</span>
+                <span className="block font-serif italic">seleccionados</span>
+              </h1>
             </ScrollReveal>
           </div>
         </section>

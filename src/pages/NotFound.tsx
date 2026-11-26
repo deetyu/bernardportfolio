@@ -9,10 +9,10 @@ const NotFound = () => {
         <div className="container-editorial px-6 md:px-12 lg:px-20 text-center">
           <h1 className="text-ink mb-4">404</h1>
           <p className="text-xl text-ink-light mb-10">
-            The page you're looking for doesn't exist.
+            La página que buscas no existe.
           </p>
           <Button asChild>
-            <Link to="/">Return Home</Link>
+            <Link to="/">Volver al inicio</Link>
           </Button>
         </div>
       </section>
