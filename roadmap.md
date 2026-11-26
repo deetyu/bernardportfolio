@@ -32,3 +32,9 @@
 # Unified Work index
 
 - [x] Show all ten projects in one continuous grid with no Featured/Selected grouping or section labels; verify cards, links, and alignment after refresh.
+
+# Complete language switching
+
+- [ ] Add an EN / ES control across desktop and mobile, keeping the current page and chosen language on navigation and refresh.
+- [ ] Translate all live pages, project narratives, captions, placeholder labels, and accessibility text; preserve names, links, artwork and downloadable documents.
+- [ ] Test translation coverage and verify switching across every project and main page.
